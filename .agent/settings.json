@@ -1,0 +1,33 @@
+{
+  "terminal": {
+    "autoExecution": "alwaysProceed",
+    "denyList": ["rm -rf /", "format", "shutdown", "reboot", "dd if="]
+  },
+  "browser": {
+    "javascriptExecution": "alwaysProceed",
+    "allowList": [
+      "localhost", "127.0.0.1",
+      "*.vercel.app", "*.supabase.co",
+      "stripe.com", "github.com", "api.anthropic.com"
+    ]
+  },
+  "artifacts": { "reviewPolicy": "alwaysProceed" },
+  "models": {
+    "default": "claude-opus-4-6",
+    "agents": {
+      "meta-manager": "claude-opus-4-6",
+      "security-manager": "claude-sonnet-4-6",
+      "frontend-manager": "gemini-3.1-pro-preview",
+      "research-manager": "antigravity",
+      "sub-auth": "claude-sonnet-4-6",
+      "sub-payments": "claude-sonnet-4-6",
+      "sub-privacy": "claude-sonnet-4-6",
+      "sub-ui": "gemini-2.5-pro",
+      "sub-checkout": "gemini-2.5-pro",
+      "sub-automation": "gemini-2.5-pro"
+    }
+  },
+  "mcp": {
+    "servers": ["github-mcp", "supabase-mcp", "stripe-mcp", "vercel-mcp"]
+  }
+}

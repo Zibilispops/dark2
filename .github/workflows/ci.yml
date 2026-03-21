@@ -1,0 +1,76 @@
+name: Dark Factory CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      # 1. Dependency vulnerability scan
+      - name: Dependency audit
+        run: npm audit --audit-level=high
+      
+      # 2. Static analysis — secrets detection
+      - name: Secret scan
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: main
+          head: HEAD
+      
+      # 3. localStorage token detection
+      - name: localStorage auth scan
+        run: |
+          if grep -r "localStorage" --include="*.ts" --include="*.tsx" \
+            -l | xargs grep -l "token\|jwt\|session\|auth" 2>/dev/null; then
+            echo "FAIL: localStorage used for auth storage"
+            exit 1
+          fi
+      
+      # 4. Supabase RLS check
+      - name: RLS policy presence
+        run: |
+          NEW_TABLES=$(git diff origin/main...HEAD -- "*.sql" \
+            | grep "^+.*CREATE TABLE" | wc -l)
+          NEW_POLICIES=$(git diff origin/main...HEAD -- "*.sql" \
+            | grep "^+.*CREATE POLICY\|ENABLE ROW LEVEL" | wc -l)
+          if [ "$NEW_TABLES" -gt "$NEW_POLICIES" ]; then
+            echo "FAIL: New tables without RLS policies detected"
+            exit 1
+          fi
+      
+      # 5. Stripe webhook signature check
+      - name: Stripe webhook validation
+        run: |
+          WEBHOOK_FILES=$(grep -rl "stripe.*webhook\|webhook.*stripe" \
+            --include="*.ts" .)
+          for f in $WEBHOOK_FILES; do
+            if ! grep -q "constructEvent" "$f"; then
+              echo "FAIL: $f missing stripe.webhooks.constructEvent"
+              exit 1
+            fi
+          done
+      
+      # 6. Type safety
+      - name: TypeScript check
+        run: npx tsc --noEmit
+      
+      # 7. Lint
+      - name: ESLint
+        run: npx eslint . --ext .ts,.tsx --max-warnings 0
+      
+      # 8. Unit tests
+      - name: Tests
+        run: npm test -- --passWithNoTests
+
+  build:
+    needs: security-scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run build
