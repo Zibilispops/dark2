@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="p-12 bg-[#0c0c0c] border border-white/5 space-y-12">
           <div className="space-y-4">
             <h3 className="text-sm font-mono uppercase tracking-widest text-[#444]">[ The Pillars ]</h3>
-            <ul className="space-y-4 text-xl font-black italic tracking-tighter uppercase">
+            <ul className="space-y-6 sm:space-y-4 text-xl font-black italic tracking-tighter uppercase">
               {[
                 { label: "1. Comfort", detail: "7.4oz premium heavyweight focus." },
                 { label: "2. Authenticity", detail: "Authorized Bad Printer reseller." },
@@ -32,15 +32,15 @@ export default function AboutPage() {
                 { label: "4. Identity", detail: "Downloaded from digital to physical." },
                 { label: "5. Archive", detail: "Manifesting the Bad Printer registry." }
               ].map((pillar, i) => (
-                <li key={i} className="flex justify-between items-center group cursor-help transition-all duration-300 py-1.5 border-b border-transparent hover:border-white/5">
-                  <span className="group-hover:text-[var(--accent)] transition-colors">
+                <li key={i} className="flex flex-col sm:flex-row sm:justify-between sm:items-center group cursor-help transition-all duration-300 py-2 sm:py-1.5 border-b border-white/5 sm:border-transparent sm:hover:border-white/5">
+                  <span className="group-hover:text-[var(--accent)] transition-colors mb-1 sm:mb-0">
                     {pillar.label}
                   </span>
-                  <div className="grid">
-                    <span className="col-start-1 row-start-1 text-[10px] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity duration-300 whitespace-nowrap">
+                  <div className="grid sm:justify-items-end">
+                    <span className="col-start-1 row-start-1 text-[10px] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity duration-300 whitespace-nowrap text-left sm:text-right">
                       [Verified]
                     </span>
-                    <span className="col-start-1 row-start-1 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-right pointer-events-none">
+                    <span className="col-start-1 row-start-1 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-left sm:text-right pointer-events-none">
                       {pillar.detail}
                     </span>
                   </div>
