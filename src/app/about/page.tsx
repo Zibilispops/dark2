@@ -32,15 +32,15 @@ export default function AboutPage() {
                 { label: "4. Identity", detail: "Downloaded from digital to physical." },
                 { label: "5. Archive", detail: "Manifesting the Bad Printer registry." }
               ].map((pillar, i) => (
-                <li key={i} className="flex flex-col sm:flex-row sm:justify-between sm:items-center group cursor-help transition-all duration-300 py-2 sm:py-1.5 border-b border-white/5 sm:border-transparent sm:hover:border-white/5">
-                  <span className="group-hover:text-[var(--accent)] transition-colors mb-1 sm:mb-0">
+                <li key={i} className="flex flex-col sm:flex-row sm:items-baseline sm:gap-12 group cursor-help transition-all duration-300 py-2 sm:py-1.5 border-b border-white/5 sm:border-transparent sm:hover:border-white/5">
+                  <span className="group-hover:text-[var(--accent)] transition-colors mb-1 sm:mb-0 sm:min-w-[180px]">
                     {pillar.label}
                   </span>
-                  <div className="grid sm:justify-items-end">
-                    <span className="col-start-1 row-start-1 text-[10px] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity duration-300 whitespace-nowrap text-left sm:text-right">
+                  <div className="grid">
+                    <span className="col-start-1 row-start-1 text-[10px] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity duration-300 whitespace-nowrap text-left">
                       [Verified]
                     </span>
-                    <span className="col-start-1 row-start-1 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-left sm:text-right pointer-events-none">
+                    <span className="col-start-1 row-start-1 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-left pointer-events-none">
                       {pillar.detail}
                     </span>
                   </div>
