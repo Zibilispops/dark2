@@ -25,25 +25,60 @@ export default function AboutPage() {
           <div className="space-y-4">
             <h3 className="text-sm font-mono uppercase tracking-widest text-[#444]">[ The Pillars ]</h3>
             <ul className="space-y-4 text-xl font-black italic tracking-tighter uppercase">
-              <li className="flex justify-between items-center">
-                <span>1. Comfort</span>
-                <span className="text-[10px] text-white/20 font-mono tracking-widest">[Verified]</span>
+              <li className="flex justify-between items-center group cursor-help transition-all duration-300">
+                <span className="group-hover:text-[var(--accent)] transition-colors">1. Comfort</span>
+                <div className="relative flex justify-end">
+                  <span className="text-[10px] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity whitespace-nowrap">
+                    [Verified]
+                  </span>
+                  <span className="absolute right-0 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-right">
+                    7.4oz premium heavyweight focus.
+                  </span>
+                </div>
               </li>
-              <li className="flex justify-between items-center">
-                <span>2. Authenticity</span>
-                <span className="text-[10px] text-white/20 font-mono tracking-widest">[Verified]</span>
+              <li className="flex justify-between items-center group cursor-help transition-all duration-300">
+                <span className="group-hover:text-[var(--accent)] transition-colors">2. Authenticity</span>
+                <div className="relative flex justify-end">
+                  <span className="text-[10px] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity whitespace-nowrap">
+                    [Verified]
+                  </span>
+                  <span className="absolute right-0 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-right">
+                    Authorized Bad Printer reseller.
+                  </span>
+                </div>
               </li>
-              <li className="flex justify-between items-center text-[var(--accent)]">
-                <span>3. Gifu_Direct</span>
-                <span className="text-[10px] font-mono tracking-widest">[Verified]</span>
+              <li className="flex justify-between items-center group cursor-help transition-all duration-300">
+                <span className="text-[var(--accent)]">3. Gifu_Direct</span>
+                <div className="relative flex justify-end">
+                  <span className="text-[10px] text-[var(--accent)] font-mono tracking-widest group-hover:opacity-0 transition-opacity whitespace-nowrap opacity-50">
+                    [Verified]
+                  </span>
+                  <span className="absolute right-0 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-right">
+                    Small-studio, hand-dispatched craft.
+                  </span>
+                </div>
               </li>
-              <li className="flex justify-between items-center">
-                <span>4. Identity</span>
-                <span className="text-[10px] text-white/20 font-mono tracking-widest">[Verified]</span>
+              <li className="flex justify-between items-center group cursor-help transition-all duration-300">
+                <span className="group-hover:text-[var(--accent)] transition-colors">4. Identity</span>
+                <div className="relative flex justify-end">
+                  <span className="text-[10px] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity whitespace-nowrap">
+                    [Verified]
+                  </span>
+                  <span className="absolute right-0 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-right">
+                    Downloaded from digital to physical.
+                  </span>
+                </div>
               </li>
-              <li className="flex justify-between items-center">
-                <span>5. Archive</span>
-                <span className="text-[10px] text-white/20 font-mono tracking-widest">[Verified]</span>
+              <li className="flex justify-between items-center group cursor-help transition-all duration-300">
+                <span className="group-hover:text-[var(--accent)] transition-colors">5. Archive</span>
+                <div className="relative flex justify-end">
+                  <span className="text-[10px] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity whitespace-nowrap">
+                    [Verified]
+                  </span>
+                  <span className="absolute right-0 text-[10px] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-right">
+                    Manifesting the Bad Printer registry.
+                  </span>
+                </div>
               </li>
             </ul>
           </div>

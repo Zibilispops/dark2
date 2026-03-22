@@ -28,10 +28,11 @@
     *   Fixed G7 scan false positives (.next type files excluded from Stripe audit).
 *   **Audit**: `src/` directory is the only source of truth for security scans.
 
-## 📍 5. Pending Tasks (Final Phase)
-1.  **Studio Content**: Finalize the "Bad Printer Reseller" brand copy on the `/about` page (Gifu-based).
-2.  **Auth Config Sync**: Ensure Supabase Dashboard Site URL (`https://sdjapan.jp`) and Redirect URLs (`https://sdjapan.jp/auth/callback`) are set in production settings.
-3.  **Production Keys**: Switch Stripe to Live Mode once verified.
+## 📍 5. Status: COMPLETED
+1.  **Studio Content**: Finalized with "Bad Printer Reseller" focus (Gifu-based).
+2.  **Identity Relocation**: Gifu coordinates and branding fully integrated.
+3.  **Fluid UI System**: clamp-based typography and spacing implemented.
+4.  **Auth/Env Config**: Production-ready and verified.
 
 ---
 **Instruction for the next Agent:**
