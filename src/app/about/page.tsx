@@ -23,7 +23,7 @@ export default function AboutPage() {
         
         <div className="p-12 bg-[#0c0c0c] border border-white/5 space-y-12">
           <div className="space-y-4">
-            <h3 className="text-sm font-mono uppercase tracking-widest text-[var(--accent)]">The Pillars</h3>
+            <h3 className="text-2xl md:text-3xl font-mono uppercase tracking-widest text-[var(--accent)] mb-8">The Pillars</h3>
             <ul className="space-y-4 text-xl font-black italic tracking-tighter uppercase">
               {[
                 { label: "1. Comfort", detail: "7.4oz premium heavyweight focus." },
