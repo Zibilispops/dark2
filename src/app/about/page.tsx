@@ -6,7 +6,7 @@ export default function AboutPage() {
       <header className="mb-10">
         <h1 className="mb-4 text-gradient">The Studio</h1>
         <p className="text-[#666] max-w-lg mb-8 uppercase text-xs tracking-widest font-mono">
-          // [001] Gifu Studio · Official Bad Printer Reseller
+          // [001] Gifu Studio · Official <span className="font-black text-white">Bad Printer</span> Reseller
         </p>
       </header>
 
@@ -14,10 +14,10 @@ export default function AboutPage() {
         <div className="space-y-6">
           <h2 className="text-[var(--accent)]">Premium Comfort</h2>
           <p className="text-[#888] leading-relaxed">
-            Dark Factory is a small, independent studio in Gifu. We are the authorized reseller for <span className="font-black">Bad Printer</span>, specializing in 7.4oz premium heavyweight cotton for a perfect unisex fit.
+            Dark Factory is a small, independent studio in Gifu. We are the authorized reseller for <span className="font-black text-white">Bad Printer</span>, specializing in 7.4oz premium heavyweight cotton for a perfect unisex fit.
           </p>
           <p className="text-[#888] leading-relaxed">
-            Choosing a <span className="font-black">Bad Printer</span> tee isn't just a purchase; it's an act of manifestation. It's the moment your digital aesthetic finally becomes a physical reality. We prioritize skin-soft comfort above all else—intentionally choosing a soft, breathable DTG touch over clinical sharpness.
+            Choosing a <span className="font-black text-white">Bad Printer</span> tee isn't just a purchase; it's an act of manifestation. It's the moment your digital aesthetic finally becomes a physical reality. We prioritize skin-soft comfort above all else—intentionally choosing a soft, breathable DTG touch over clinical sharpness.
           </p>
         </div>
         
@@ -41,7 +41,13 @@ export default function AboutPage() {
                       Verified
                     </span>
                     <span className="col-start-1 row-start-1 text-[clamp(10px,1.5vw,1.25rem)] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-normal text-left lg:text-right pointer-events-none leading-tight max-w-[280px] sm:max-w-[450px]">
-                      {pillar.detail}
+                      {pillar.detail.includes('Bad Printer') ? (
+                        <>
+                          {pillar.detail.split('Bad Printer')[0]}
+                          <span className="font-black text-white">Bad Printer</span>
+                          {pillar.detail.split('Bad Printer')[1]}
+                        </>
+                      ) : pillar.detail}
                     </span>
                   </div>
                 </li>
@@ -59,7 +65,7 @@ export default function AboutPage() {
             <span className="text-[var(--accent)] uppercase tracking-tighter overflow-hidden inline-block text-[1.1em]">Rooted in Gifu.</span>
           </h2>
           <p className="text-[#666] leading-relaxed italic text-lg">
-            "Authorized by <span className="font-black">Bad Printer</span>. Manifest in our Gifu studio—because some things aren't meant to stay on a screen."
+            "Authorized by <span className="font-black text-white">Bad Printer</span>. Manifest in our Gifu studio—because some things aren't meant to stay on a screen."
           </p>
           <div className="pt-12">
             <Link href="/shop" className="btn-primary">
