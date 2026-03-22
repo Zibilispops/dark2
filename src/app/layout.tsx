@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { CartProvider } from "@/context/CartContext";
+import { AuthProvider } from "@/context/AuthContext";
 import { CustomCursor } from "@/components/CustomCursor";
 
 const geistSans = Geist({
@@ -32,10 +33,12 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col pt-16 bg-black text-white">
         <CustomCursor />
-        <CartProvider>
-          <Navbar />
-          {children}
-        </CartProvider>
+        <AuthProvider>
+          <CartProvider>
+            <Navbar />
+            {children}
+          </CartProvider>
+        </AuthProvider>
       </body>
     </html>
   );
