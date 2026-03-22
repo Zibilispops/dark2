@@ -66,7 +66,7 @@ export default async function ProductPage({
           </ul>
         </div>
 
-        <AddToCartButton product={product} />
+        <AddToCartButton product={JSON.parse(JSON.stringify(product))} />
         
         <div className="mt-8 flex justify-between p-4 border border-white/5 font-mono text-[10px] uppercase text-[#333]">
           <div>Ships Worldwide</div>
