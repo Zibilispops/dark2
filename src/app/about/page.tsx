@@ -27,7 +27,7 @@ export default function AboutPage() {
             <ul className="space-y-4 text-xl font-black italic tracking-tighter uppercase">
               {[
                 { label: "1. Comfort", detail: "7.4oz premium heavyweight focus." },
-                { label: "2. Gifu_Direct", detail: "Small-studio, hand-dispatched craft." },
+                { label: "2. Quality", detail: "7.4oz premium heavyweight focus." },
                 { label: "3. Authenticity", detail: "Authorized Bad Printer reseller." },
                 { label: "4. Identity", detail: "Downloaded from digital to physical." },
                 { label: "5. Archive", detail: "Manifesting the Bad Printer registry." }
