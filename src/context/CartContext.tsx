@@ -1,16 +1,18 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { Product } from '@/data/products';
 
 interface CartItem extends Product {
   quantity: number;
+  selectedSize: string;
+  cartKey: string; // product id + size
 }
 
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: Product) => void;
-  removeFromCart: (productId: string) => void;
+  addToCart: (product: Product, size: string) => void;
+  removeFromCart: (cartKey: string) => void;
   clearCart: () => void;
   totalItems: number;
   totalPrice: number;
@@ -21,22 +23,21 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
-  // Cart state initialization
-
-  const addToCart = (product: Product) => {
+  const addToCart = (product: Product, size: string) => {
+    const cartKey = `${product.id}-${size}`;
     setCart((prev) => {
-      const existing = prev.find((item) => item.id === product.id);
+      const existing = prev.find((item) => item.cartKey === cartKey);
       if (existing) {
         return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.cartKey === cartKey ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, { ...product, quantity: 1, selectedSize: size, cartKey }];
     });
   };
 
-  const removeFromCart = (productId: string) => {
-    setCart((prev) => prev.filter((item) => item.id !== productId));
+  const removeFromCart = (cartKey: string) => {
+    setCart((prev) => prev.filter((item) => item.cartKey !== cartKey));
   };
 
   const clearCart = () => setCart([]);

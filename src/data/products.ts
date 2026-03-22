@@ -6,6 +6,7 @@ export interface Product {
   description: string;
   features: string[];
   image: string;
+  sizes: string[];
 }
 
 export const products: Product[] = [
@@ -21,7 +22,8 @@ export const products: Product[] = [
       "Screen-accurate DTG printing",
       "Sustainable manufacturing in Tokyo"
     ],
-    image: "/products/vanguard_tee.png"
+    image: "/products/vanguard_tee.png",
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"]
   },
   {
     id: "dtg-002",
@@ -35,7 +37,8 @@ export const products: Product[] = [
       "Hidden side pockets",
       "Distressed hems"
     ],
-    image: "/products/archive_hoodie.png"
+    image: "/products/archive_hoodie.png",
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"]
   },
   {
     id: "dtg-003",
@@ -49,6 +52,7 @@ export const products: Product[] = [
       "Interior tech divider",
       "Embroidered signature logo"
     ],
-    image: "/products/monolith_tote.png"
+    image: "/products/monolith_tote.png",
+    sizes: ["ONE SIZE"]
   }
 ];

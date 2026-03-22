@@ -15,7 +15,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          items: cart.map(i => ({ id: i.id, quantity: i.quantity }))
+          items: cart.map(i => ({ id: i.id, quantity: i.quantity, size: i.selectedSize }))
         }),
       });
       const { url, error } = await res.json();
@@ -77,12 +77,12 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                             <p className="ml-4 font-black">${item.price}</p>
                           </div>
                           <p className="mt-1 text-[#444] text-[10px] font-mono uppercase tracking-widest leading-none">
-                            Qty: {item.quantity}
+                            Qty: {item.quantity} · Size: {item.selectedSize}
                           </p>
                         </div>
                         <div className="flex items-center justify-between">
                           <button
-                            onClick={() => removeFromCart(item.id)}
+                            onClick={() => removeFromCart(item.cartKey)}
                             className="text-[10px] font-mono uppercase text-[#444] hover:text-[var(--accent)] transition-colors flex items-center gap-1"
                           >
                             <Trash2 size={10} /> [Remove]
