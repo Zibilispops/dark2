@@ -168,7 +168,7 @@ export default function RegisterPage() {
         {/* Status bar */}
         <div className="mt-16 pt-6 border-t border-white/5 flex justify-between font-mono text-[9px] uppercase tracking-widest text-[#222]">
           <span>Protocol: Supabase Auth</span>
-          <span>Gate G6: No localStorage</span>
+          <span>Gate G6: Secure Cookies</span>
         </div>
       </div>
     </main>
