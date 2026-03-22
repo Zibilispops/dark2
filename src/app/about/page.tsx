@@ -16,7 +16,7 @@ export default function AboutPage() {
           <p className="text-[#888] leading-relaxed">
             Dark Factory is a small, independent studio in Gifu. We are the authorized reseller for **Bad Printer**, specializing in 7.4oz premium heavyweight cotton for a perfect unisex fit.
           </p>
-          <p className="text-[#888] leading-relaxed text-sm">
+          <p className="text-[#888] leading-relaxed">
             Choosing a Bad Printer tee isn't just a purchase; it's an act of manifestation. It's the moment your digital aesthetic finally becomes a physical reality. We prioritize skin-soft comfort above all else—intentionally choosing a soft, breathable DTG touch over clinical sharpness.
           </p>
         </div>
