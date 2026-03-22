@@ -19,7 +19,7 @@ export default function Navbar() {
       <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-4 h-[50px] flex justify-between items-center border-b border-white/5">
         <Link href="/" className="font-black text-xl md:text-2xl tracking-tighter uppercase italic group leading-[0.85] flex-shrink-0 flex flex-col md:flex-row md:gap-x-1.5 items-start md:items-center">
           <span>Dark</span>
-          <span className="text-[var(--accent)] group-hover:brightness-110 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)]">Factory</span>
+          <span className="text-[var(--accent)] ml-[15px] md:ml-0 group-hover:brightness-110 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)]">Factory</span>
         </Link>
         
         <div className="flex gap-[clamp(0.75rem,3vw,2rem)] text-[10px] items-center font-mono uppercase tracking-widest text-[#666] min-w-0 ml-3 md:ml-0">
