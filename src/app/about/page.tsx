@@ -32,15 +32,15 @@ export default function AboutPage() {
                 { label: "4. Identity", detail: "Downloaded from digital to physical." },
                 { label: "5. Archive", detail: "Manifesting the Bad Printer registry." }
               ].map((pillar, i) => (
-                <li key={i} className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline group cursor-help transition-all duration-300 py-3 border-b border-white/5 sm:border-transparent sm:hover:border-white/5 overflow-hidden">
-                  <span className="whitespace-nowrap group-hover:text-[var(--accent)] transition-colors mb-2 sm:mb-0">
+                <li key={i} className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline group cursor-help transition-all duration-300 py-3 border-b border-white/5 lg:border-transparent lg:hover:border-white/5 overflow-hidden gap-y-2">
+                  <span className="whitespace-nowrap group-hover:text-[var(--accent)] transition-colors">
                     {pillar.label}
                   </span>
-                  <div className="grid justify-items-end">
-                    <span className="col-start-1 row-start-1 text-[clamp(10px,1.5vw,1.25rem)] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity duration-300 whitespace-nowrap text-right">
+                  <div className="grid justify-items-start lg:justify-items-end lg:ml-auto">
+                    <span className="col-start-1 row-start-1 text-[clamp(10px,1.5vw,1.25rem)] text-white/20 font-mono tracking-widest group-hover:opacity-0 transition-opacity duration-300 whitespace-nowrap text-left lg:text-right">
                       Verified
                     </span>
-                    <span className="col-start-1 row-start-1 text-[clamp(10px,1.5vw,1.25rem)] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-normal text-right pointer-events-none leading-tight max-w-[280px] sm:max-w-[450px]">
+                    <span className="col-start-1 row-start-1 text-[clamp(10px,1.5vw,1.25rem)] text-[var(--accent)] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-normal text-left lg:text-right pointer-events-none leading-tight max-w-[280px] sm:max-w-[450px]">
                       {pillar.detail}
                     </span>
                   </div>

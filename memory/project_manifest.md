@@ -28,12 +28,14 @@
     *   Fixed G7 scan false positives (.next type files excluded from Stripe audit).
 *   **Audit**: `src/` directory is the only source of truth for security scans.
 
-## 📍 5. Status: COMPLETED
-1.  **Studio Content**: Finalized with "Bad Printer Reseller" focus (Gifu-based).
-2.  **Identity Relocation**: Gifu coordinates and branding fully integrated.
-3.  **Fluid UI System**: clamp-based typography and spacing implemented.
-4.  **Auth/Env Config**: Production-ready and verified.
+## 📍 5. Status: COMPLETED (Phase 1 Identity)
+1.  **Studio Content**: 100% established with "Bad Printer Reseller" focus (Gifu-based).
+2.  **Identity Relocation**: Gifu coordinates and brand copy fully integrated (Tokyo/S&D references removed).
+3.  **Fluid UI System**: clamp-based fluid typography and spacing implemented sitewide.
+4.  **Pillar Interaction**: Fully interactive "Reveal" system with ghostless grid-stacking.
+5.  **Navbar Stability**: Fluid gaps with fixed font-size for logo and links.
 
 ---
-**Instruction for the next Agent:**
+**📍 Memory Note for Next Agent:**
+Dark Factory is now a **Gifu-based studio**. All references to "Site & Design" or "Tokyo" have been purged. The current focus is a **Premium Streetwear Reseller** identity for **Bad Printer**. The UI uses a strictly **Fluid Design System** (typography-clamp and spacing-clamp in `globals.css`). The "Pillars" section on `/about` expects left-justified hover interactions. Everything is live at `sdjapan.jp`.
 *Consult `src/lib/pricing.ts` for all price updates. Verify order persistence in the Supabase Dashboard after successful test payments. Complete the brand story on `/about`.*
