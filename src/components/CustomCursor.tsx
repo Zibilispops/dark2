@@ -1,23 +1,37 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+
+// External store for hover media query to avoid state-in-effect issues
+const hoverStore = {
+  subscribe(onStoreChange: () => void) {
+    if (typeof window === 'undefined') return () => {};
+    const match = window.matchMedia('(hover: none)');
+    match.addEventListener('change', onStoreChange);
+    return () => match.removeEventListener('change', onStoreChange);
+  },
+  getSnapshot() {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(hover: none)').matches;
+  },
+  getServerSnapshot() {
+    return false;
+  }
+};
 
 export function CustomCursor() {
   const dot = useRef<HTMLDivElement>(null);
   const ring = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [isTouch, setIsTouch] = useState(false);
+  
+  const isTouch = useSyncExternalStore(
+    hoverStore.subscribe,
+    hoverStore.getSnapshot,
+    hoverStore.getServerSnapshot
+  );
 
   useEffect(() => {
-    // Check if it's a touch device
-    const touchQuery = window.matchMedia('(hover: none)');
-    setIsTouch(touchQuery.matches);
-
-    const handleTouchChange = (e: MediaQueryListEvent) => {
-      setIsTouch(e.matches);
-    };
-
-    touchQuery.addEventListener('change', handleTouchChange);
+    if (isTouch) return;
 
     let rafId: number;
     let mx = 0, my = 0;
@@ -49,11 +63,10 @@ export function CustomCursor() {
     rafId = requestAnimationFrame(tick);
 
     return () => {
-      touchQuery.removeEventListener('change', handleTouchChange);
       window.removeEventListener('mousemove', onMove);
       cancelAnimationFrame(rafId);
     };
-  }, [isVisible]);
+  }, [isVisible, isTouch]);
 
   if (isTouch) return null;
 
