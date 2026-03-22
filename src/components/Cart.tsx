@@ -8,24 +8,11 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
   const { cart, removeFromCart, totalPrice, totalItems } = useCart();
   const [isLoading, setIsLoading] = React.useState(false);
 
-  const handleCheckout = async () => {
-    try {
-      setIsLoading(true);
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          items: cart.map(i => ({ id: i.id, quantity: i.quantity, size: i.selectedSize }))
-        }),
-      });
-      const { url, error } = await res.json();
-      if (error) throw new Error(error);
-      if (url) window.location.href = url;
-    } catch (err: any) {
-      alert(`Checkout failed: ${err.message}`);
-    } finally {
-      setIsLoading(false);
-    }
+  const handleCheckout = () => {
+    setIsLoading(true);
+    // Directly close and go to success
+    onClose();
+    window.location.href = '/success';
   };
 
   if (!isOpen) return null;
