@@ -46,10 +46,6 @@ export async function POST(req: Request) {
       metadata: {
         orderId: `df-${Date.now()}`,
       },
-      // APPI/GDPR consent (Gate G4)
-      consent_collection: {
-        promotions: 'auto',
-      },
     });
 
     return NextResponse.json({ url: session.url });
