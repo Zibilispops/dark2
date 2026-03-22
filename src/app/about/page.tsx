@@ -26,7 +26,7 @@ export default function AboutPage() {
             <h3 className="text-2xl md:text-3xl font-mono uppercase tracking-widest text-[var(--accent)] mb-8">The Pillars</h3>
             <ul className="space-y-4 text-xl font-black italic tracking-tighter uppercase">
               {[
-                { label: "1. Comfort", detail: "7.4oz premium heavyweight focus." },
+                { label: "1. Comfort", detail: "DTG print for Zero touch feeling." },
                 { label: "2. Quality", detail: "7.4oz premium heavyweight focus." },
                 { label: "3. Authenticity", detail: "Authorized Bad Printer reseller." },
                 { label: "4. Identity", detail: "Downloaded from digital to physical." },
