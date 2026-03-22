@@ -29,7 +29,7 @@ export default function AboutPage() {
                 { label: "1. Comfort", detail: "DTG print for Zero touch feeling." },
                 { label: "2. Quality", detail: "7.4oz premium heavyweight focus." },
                 { label: "3. Authenticity", detail: "Authorized Bad Printer reseller." },
-                { label: "4. Identity", detail: "Downloaded from digital to physical." },
+                { label: "4. Identity", detail: "Small-studio, hand-dispatched craft." },
                 { label: "5. Archive", detail: "Downloaded from digital to physical." }
               ].map((pillar, i) => (
                 <li key={i} className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline group cursor-help transition-all duration-300 py-3 border-b border-white/5 lg:border-transparent lg:hover:border-white/5 overflow-hidden gap-y-2">
