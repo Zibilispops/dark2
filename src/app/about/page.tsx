@@ -12,7 +12,7 @@ export default function AboutPage() {
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-10">
         <div className="space-y-6">
-          <h2 className="">Premium Comfort</h2>
+          <h2 className="text-[var(--accent)]">Premium Comfort</h2>
           <p className="text-[#888] leading-relaxed">
             Dark Factory is a small, independent studio in Gifu. We are the authorized reseller for **Bad Printer**, specializing in 7.4oz premium heavyweight cotton for a perfect unisex fit.
           </p>
