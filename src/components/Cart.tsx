@@ -8,24 +8,11 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
   const { cart, removeFromCart, totalPrice, totalItems } = useCart();
   const [isLoading, setIsLoading] = React.useState(false);
 
-  const handleCheckout = async () => {
-    try {
-      setIsLoading(true);
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          items: cart.map(i => ({ id: i.id, quantity: i.quantity }))
-        }),
-      });
-      const { url, error } = await res.json();
-      if (error) throw new Error(error);
-      if (url) window.location.href = url;
-    } catch (err: any) {
-      alert(`Checkout failed: ${err.message}`);
-    } finally {
-      setIsLoading(false);
-    }
+  const handleCheckout = () => {
+    setIsLoading(true);
+    // Directly close and go to success
+    onClose();
+    window.location.href = '/success';
   };
 
   if (!isOpen) return null;
@@ -77,12 +64,12 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                             <p className="ml-4 font-black">${item.price}</p>
                           </div>
                           <p className="mt-1 text-[#444] text-[10px] font-mono uppercase tracking-widest leading-none">
-                            Qty: {item.quantity}
+                            Qty: {item.quantity} · Size: {item.selectedSize}
                           </p>
                         </div>
                         <div className="flex items-center justify-between">
                           <button
-                            onClick={() => removeFromCart(item.id)}
+                            onClick={() => removeFromCart(item.cartKey)}
                             className="text-[10px] font-mono uppercase text-[#444] hover:text-[var(--accent)] transition-colors flex items-center gap-1"
                           >
                             <Trash2 size={10} /> [Remove]

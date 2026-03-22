@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { CartProvider } from "@/context/CartContext";
+import { CustomCursor } from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,9 +20,6 @@ export const metadata: Metadata = {
   description: "High-fidelity garments for the digital vanguard. Tokyo-based DTG printing.",
 };
 
-import Navbar from "@/components/Navbar";
-import { CartProvider } from "@/context/CartContext";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,6 +31,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col pt-16 bg-black text-white">
+        <CustomCursor />
         <CartProvider>
           <Navbar />
           {children}

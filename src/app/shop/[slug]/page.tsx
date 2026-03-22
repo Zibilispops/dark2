@@ -2,6 +2,7 @@ import { products } from '@/data/products';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { AddToCartButton } from '@/components/AddToCartButton';
+import { ProductImage } from '@/components/ProductImage';
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -26,13 +27,14 @@ export default async function ProductPage({
       {/* Product Image */}
       <div className="flex-1 aspect-[4/5] bg-[#0c0c0c] border border-white/5 relative group p-12 overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02)_0%,transparent_100%)] pointer-events-none" />
-        <img 
-          src={product.image} 
-          alt={product.name}
-          className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-1000"
+        
+        <ProductImage 
+          frontImage={product.image} 
+          backImage={product.backImage}
+          name={product.name}
         />
         
-        <div className="absolute top-10 left-10 p-4 border border-white/5 font-mono text-[10px] uppercase text-[#444] tracking-widest leading-relaxed">
+        <div className="absolute top-10 left-10 p-4 border border-white/5 font-mono text-[10px] uppercase text-[#444] tracking-widest leading-relaxed pointer-events-none">
           Serial: {product.id}<br />
           Origin: Tokyo Studio<br />
           Type: [DTG-PRINT]
