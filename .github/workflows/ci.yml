@@ -64,11 +64,11 @@ jobs:
       
       # 7. Lint
       - name: ESLint
-        run: npx eslint . --ext .ts,.tsx --max-warnings 0
+        run: npm run lint
       
       # 8. Unit tests
       - name: Tests
-        run: npm test -- --passWithNoTests
+        run: npm test
 
   build:
     needs: security-scan
