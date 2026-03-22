@@ -28,7 +28,7 @@ jobs:
       # 3. localStorage token detection
       - name: localStorage auth scan
         run: |
-          if grep -r "localStorage" --include="*.ts" --include="*.tsx" \
+          if grep -r "localStorage" --include="*.ts" --include="*.tsx" --exclude-dir="node_modules" \
             -l | xargs grep -l "token\|jwt\|session\|auth" 2>/dev/null; then
             echo "FAIL: localStorage used for auth storage"
             exit 1
