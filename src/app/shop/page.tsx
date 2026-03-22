@@ -3,10 +3,10 @@ import { products } from '@/data/products';
 
 export default function ShopPage() {
   return (
-    <main className="min-h-screen bg-[#080808] text-white pt-32 pb-24 px-6 md:px-12">
+    <main className="min-h-screen bg-[#080808] text-white pt-12 pb-24 px-6 md:px-12">
 
       {/* ── Header ── */}
-      <header className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <header className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-3">
             // [001] Digital Vanguard Apparel
@@ -22,7 +22,7 @@ export default function ShopPage() {
       </header>
 
       {/* ── Divider ── */}
-      <div className="w-full h-px bg-white/5 mb-16" />
+      <div className="w-full h-px bg-white/5 mb-8" />
 
       {/* ── Product Grid ── */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">

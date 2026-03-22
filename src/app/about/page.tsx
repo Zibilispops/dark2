@@ -2,15 +2,15 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-black text-white pt-32 pb-20 px-6 md:px-12">
-      <header className="mb-20">
+    <main className="min-h-screen bg-black text-white pt-12 pb-20 px-6 md:px-12">
+      <header className="mb-10">
         <h1 className="text-6xl md:text-8xl font-black mb-4 tracking-tighter italic uppercase text-gradient">The Studio</h1>
         <p className="text-[#666] max-w-lg mb-8 uppercase text-xs tracking-widest font-mono">
           // [001] Digital Vanguard · DTG Printing Studio
         </p>
       </header>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-10">
         <div className="space-y-6">
           <h2 className="text-3xl font-black italic uppercase tracking-tighter">High-Fidelity Garments</h2>
           <p className="text-[#888] leading-relaxed">

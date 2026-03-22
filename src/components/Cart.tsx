@@ -8,11 +8,32 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
   const { cart, removeFromCart, totalPrice, totalItems } = useCart();
   const [isLoading, setIsLoading] = React.useState(false);
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     setIsLoading(true);
-    // Directly close and go to success
-    onClose();
-    window.location.href = '/success';
+    try {
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          items: cart.map((item) => ({
+            id: item.id,
+            quantity: item.quantity,
+            size: item.selectedSize,
+          })),
+        }),
+      });
+
+      const data = await response.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error(data.error || 'Failed to initialize checkout');
+      }
+    } catch (err) {
+      console.error('[STRIPE_PAYMENT_INIT_ERROR]', err);
+      alert('Checkout initialization failed. Please try again.');
+      setIsLoading(false);
+    }
   };
 
   if (!isOpen) return null;

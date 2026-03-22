@@ -19,7 +19,7 @@ export default async function AccountPage() {
     .order('created_at', { ascending: false });
 
   return (
-    <main className="min-h-screen bg-[#080808] text-white pt-32 pb-20 px-6 md:px-12">
+    <main className="min-h-screen bg-[#080808] text-white pt-12 pb-20 px-6 md:px-12">
       {/* Header */}
       <header className="mb-16">
         <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-4">
