@@ -16,12 +16,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-6 h-[50px] flex justify-between items-center border-b border-white/5">
-        <Link href="/" className="font-black text-xl md:text-2xl tracking-tighter uppercase italic group leading-none flex-shrink-0">
+      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-4 h-[50px] flex justify-between items-center border-b border-white/5">
+        <Link href="/" className="font-black text-2xl tracking-tighter uppercase italic group leading-none flex-shrink-0">
           Dark <span className="text-[var(--accent)] group-hover:brightness-110 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)]">Factory</span>
         </Link>
         
-        <div className="flex gap-3 md:gap-8 text-[9px] md:text-[10px] items-center font-mono uppercase tracking-widest text-[#666] min-w-0">
+        <div className="flex gap-[clamp(0.75rem,3vw,2rem)] text-[10px] items-center font-mono uppercase tracking-widest text-[#666] min-w-0">
           <Link 
             href="/shop" 
             className={`hover:text-white transition-colors ${pathname === '/shop' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
@@ -30,7 +30,7 @@ export default function Navbar() {
           </Link>
           <Link 
             href="/about" 
-            className={`hidden sm:block hover:text-white transition-colors ${pathname === '/about' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
+            className={`hover:text-white transition-colors ${pathname === '/about' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
           >
             Studio
           </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
                 }`}
               >
                 <User size={12} strokeWidth={1.5} />
-                <span className="hidden xs:inline">Account</span>
+                Account
               </Link>
             ) : (
               <Link
@@ -61,7 +61,7 @@ export default function Navbar() {
 
           <button 
             onClick={() => setIsCartOpen(true)}
-            className="text-[var(--accent)] font-bold decoration-dotted underline underline-offset-4 flex items-center gap-1 hover:brightness-110 transition-all font-mono whitespace-nowrap"
+            className="text-[var(--accent)] font-bold decoration-dotted underline underline-offset-4 flex items-center gap-1 hover:brightness-110 transition-all font-mono"
           >
             Cart [{totalItems}]
           </button>

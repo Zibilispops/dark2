@@ -34,6 +34,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  cursor: none;
 }
 
 /* ─── Custom Cursor ─── */
@@ -61,9 +62,7 @@ body {
   transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
   opacity: 0.4;
 }
-@media (hover: hover) {
-  body, body * { cursor: none !important; }
-}
+body * { cursor: none !important; }
 
 /* ─── Scan-line overlay ─── */
 body::before {
