@@ -139,7 +139,7 @@ h3 { font-size: var(--h3); }
 }
 
 /* ─── Logo Mobile Break ─── */
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   .logo-container {
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -149,7 +149,7 @@ h3 { font-size: var(--h3); }
     margin-left: 15px !important;
   }
 }
-@media (min-width: 501px) {
+@media (min-width: 451px) {
   .logo-container {
     flex-direction: row !important;
     align-items: center !important;
