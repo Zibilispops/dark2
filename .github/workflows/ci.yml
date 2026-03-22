@@ -50,7 +50,7 @@ jobs:
       - name: Stripe webhook validation
         run: |
           WEBHOOK_FILES=$(grep -rl "stripe.*webhook\|webhook.*stripe" \
-            --include="*.ts" .)
+            --include="*.ts" --exclude-dir="node_modules" .)
           for f in $WEBHOOK_FILES; do
             if ! grep -q "constructEvent" "$f"; then
               echo "FAIL: $f missing stripe.webhooks.constructEvent"
