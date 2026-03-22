@@ -6,7 +6,6 @@ export interface Product {
   description: string;
   features: string[];
   image: string;
-  backImage?: string;
   sizes: string[];
 }
 
@@ -16,15 +15,14 @@ export const products: Product[] = [
     "name": "Cyborg Girl Series",
     "slug": "cyborg-girl-series",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Cyborg Girl' archival artwork. Heavyweight 300GSM cotton tee with high-definition cybernetic details across the front and back.",
+    "description": "Limited edition DTG print featuring the 'Cyborg Girl' archival artwork. Heavyweight 300GSM cotton tee with high-definition cybernetic details .",
     "features": [
       "300GSM Heavyweight Jersey",
       "High-definition cybernetic DTG print",
-      "Dual-sided 'Frente & Costa' layout",
+      
       "Cyber-minimalist Tokyo aesthetic"
     ],
     "image": "/products/cyborg_girl_front.png",
-    "backImage": "/products/cyborg_girl_back.png",
     "sizes": [
       "XS",
       "S",
@@ -47,7 +45,6 @@ export const products: Product[] = [
       "Dropped shoulder silhouette"
     ],
     "image": "/products/digital_battle_front.png",
-    "backImage": "/products/digital_battle_back.png",
     "sizes": [
       "XS",
       "S",
@@ -70,7 +67,6 @@ export const products: Product[] = [
       "Standard-cut streetwear fit"
     ],
     "image": "/products/bp_ramen_front.png",
-    "backImage": "/products/bp_ramen_back.png",
     "sizes": [
       "XS",
       "S",
@@ -93,7 +89,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/boy_front.png",
-    "backImage": "/products/boy_back.png",
     "sizes": [
       "XS",
       "S",
@@ -116,7 +111,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/bp_ramen_front.png",
-    "backImage": "/products/bp_ramen_back.png",
     "sizes": [
       "XS",
       "S",
@@ -139,7 +133,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/breaking_hearts_front.png",
-    "backImage": "/products/breaking_hearts_back.png",
     "sizes": [
       "XS",
       "S",
@@ -162,7 +155,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/cafésarcasmo_front.png",
-    "backImage": "/products/cafésarcasmo_back.png",
     "sizes": [
       "XS",
       "S",
@@ -185,7 +177,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/chillout_front.png",
-    "backImage": "/products/chillout_back.png",
     "sizes": [
       "XS",
       "S",
@@ -208,7 +199,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/coffeeoclock_front.png",
-    "backImage": "/products/coffeeoclock_back.png",
     "sizes": [
       "XS",
       "S",
@@ -231,7 +221,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/culture_front.png",
-    "backImage": "/products/culture_back.png",
     "sizes": [
       "XS",
       "S",
@@ -254,7 +243,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/cyborg_girl_front.png",
-    "backImage": "/products/cyborg_girl_back.png",
     "sizes": [
       "XS",
       "S",
@@ -277,7 +265,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/digital_battle_front.png",
-    "backImage": "/products/digital_battle_back.png",
     "sizes": [
       "XS",
       "S",
@@ -300,7 +287,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/digitalbattle_front.png",
-    "backImage": "/products/digitalbattle_back.png",
     "sizes": [
       "XS",
       "S",
@@ -323,7 +309,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/einstein1_frame_front.png",
-    "backImage": "/products/einstein1_frame_back.png",
     "sizes": [
       "XS",
       "S",
@@ -368,7 +353,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/fibonacci_front.png",
-    "backImage": "/products/fibonacci_back.png",
     "sizes": [
       "XS",
       "S",
@@ -391,7 +375,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/fight_to_front.png",
-    "backImage": "/products/fight_to_back.png",
     "sizes": [
       "XS",
       "S",
@@ -414,7 +397,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/hit_girl_front.png",
-    "backImage": "/products/hit_girl_back.png",
     "sizes": [
       "XS",
       "S",
@@ -437,7 +419,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/ice_scream1_front.png",
-    "backImage": "/products/ice_scream1_back.png",
     "sizes": [
       "XS",
       "S",
@@ -460,7 +441,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/ice_scream2_front.png",
-    "backImage": "/products/ice_scream2_back.png",
     "sizes": [
       "XS",
       "S",
@@ -483,7 +463,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/ice_scream3_front.png",
-    "backImage": "/products/ice_scream3_back.png",
     "sizes": [
       "XS",
       "S",
@@ -506,7 +485,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/icecream1_front.png",
-    "backImage": "/products/icecream1_back.png",
     "sizes": [
       "XS",
       "S",
@@ -529,7 +507,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/icecream2_front.png",
-    "backImage": "/products/icecream2_back.png",
     "sizes": [
       "XS",
       "S",
@@ -552,7 +529,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/icescreamsoft_front.png",
-    "backImage": "/products/icescreamsoft_back.png",
     "sizes": [
       "XS",
       "S",
@@ -575,7 +551,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/iceskull_front.png",
-    "backImage": "/products/iceskull_back.png",
     "sizes": [
       "XS",
       "S",
@@ -598,7 +573,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/leisure_front.png",
-    "backImage": "/products/leisure_back.png",
     "sizes": [
       "XS",
       "S",
@@ -621,7 +595,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/lula_ramen_front.png",
-    "backImage": "/products/lula_ramen_back.png",
     "sizes": [
       "XS",
       "S",
@@ -644,7 +617,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/mundane_front.png",
-    "backImage": "/products/mundane_back.png",
     "sizes": [
       "XS",
       "S",
@@ -667,7 +639,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/pie_front.png",
-    "backImage": "/products/pie_back.png",
     "sizes": [
       "XS",
       "S",
@@ -690,7 +661,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/ramen3_front.png",
-    "backImage": "/products/ramen3_back.png",
     "sizes": [
       "XS",
       "S",
@@ -713,7 +683,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/ramendrop_front.png",
-    "backImage": "/products/ramendrop_back.png",
     "sizes": [
       "XS",
       "S",
@@ -736,7 +705,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/ramenmosnter_front.png",
-    "backImage": "/products/ramenmosnter_back.png",
     "sizes": [
       "XS",
       "S",
@@ -759,7 +727,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/ramenrider_front.png",
-    "backImage": "/products/ramenrider_back.png",
     "sizes": [
       "XS",
       "S",
@@ -782,7 +749,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/self_front.png",
-    "backImage": "/products/self_back.png",
     "sizes": [
       "XS",
       "S",
@@ -805,7 +771,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/silly_devil_front.png",
-    "backImage": "/products/silly_devil_back.png",
     "sizes": [
       "XS",
       "S",
@@ -828,7 +793,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/spacecoffe_front.png",
-    "backImage": "/products/spacecoffe_back.png",
     "sizes": [
       "XS",
       "S",
@@ -851,7 +815,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/super_cute_front.png",
-    "backImage": "/products/super_cute_back.png",
     "sizes": [
       "XS",
       "S",
@@ -874,7 +837,6 @@ export const products: Product[] = [
       "Sustainable production"
     ],
     "image": "/products/ultraramen_front.png",
-    "backImage": "/products/ultraramen_back.png",
     "sizes": [
       "XS",
       "S",

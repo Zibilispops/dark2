@@ -30,7 +30,6 @@ export default async function ProductPage({
         
         <ProductImage 
           frontImage={product.image} 
-          backImage={product.backImage}
           name={product.name}
         />
         

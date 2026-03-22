@@ -11,6 +11,7 @@ This is a high-fidelity e-commerce platform ("Dark Factory") built with a cyber-
 *   **DB (Supabase):** 
     *   Table: `orders` (Columns: `id`, `user_id`, `total_cents`, `currency`, `status`, `metadata`, `created_at`).
     *   Policy: RLS enabled. Users can view their own; service role can insert.
+*   **Asset Cleanup:** Removed all "Costa" (back view) images and corresponding `backImage` logic. The catalog is now focused on high-fidelity single-view DTG prints.
 *   **Collection Cleanup:** Removed "Alcoholdefense Edition" and original legacy items. Total collection size: **43 high-fidelity designs**.
 *   **Currency & Dynamic Pricing**: 
     *   Primary Currency: **JPY (¥)**.
