@@ -75,7 +75,7 @@ export async function sendOrderConfirmation({
       </table>
     </div>
     <p style="font-family:monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:#333;margin-top:48px;">
-      Dark Factory · Tokyo Studio · dark2-chi.vercel.app
+      Dark Factory · Tokyo Studio · sdjapan.jp
     </p>
   </div>
 </body>

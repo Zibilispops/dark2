@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { LogoutButton } from '@/components/LogoutButton';
+import { AccountEmailForm } from '@/components/AccountEmailForm';
 
 export default async function AccountPage() {
   const supabase = await createClient();
@@ -37,10 +38,7 @@ export default async function AccountPage() {
             [ Operator Profile ]
           </h2>
           <div className="space-y-4">
-            <div className="flex justify-between items-center border-b border-white/5 pb-3">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-[#555]">Email</span>
-              <span className="text-sm font-mono text-[var(--accent)]">{user.email}</span>
-            </div>
+            <AccountEmailForm currentEmail={user.email} />
             <div className="flex justify-between items-center border-b border-white/5 pb-3">
               <span className="font-mono text-[10px] uppercase tracking-widest text-[#555]">User ID</span>
               <span className="text-[10px] font-mono text-[#444]">{user.id.slice(0, 12)}...</span>

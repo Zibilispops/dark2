@@ -1,62 +1,38 @@
-# 🚀 Handover Protocol: Dark Factory v4
+# 🚀 Project Protocol: Dark Factory v5 [Consolidated]
 
-**Context for the next Assistant:**
-This is a high-fidelity e-commerce platform ("Dark Factory") built with a cyber-minimalist aesthetic. We have completed the core infrastructure, CI/CD pipeline, and a polished frontend. 
+## 🛠 1. Architecture Specs
+*   **Framework**: Next.js 16+ (App Router).
+*   **Aesthetic**: Cyber-minimalist / Tokyo-based Digital Vanguard.
+*   **Styling**: Tailwind CSS V4 (`globals.css` @import).
+*   **DB**: Supabase (Auth/SSR + CRUD).
+    *   `orders` table: `id`, `user_id`, `total_cents`, `currency`, `status`, `metadata`, `created_at`.
+*   **Auth**: Full cookie-based session management (`@supabase/ssr`). **Gate G6 Compliant** (No localStorage found in auth logic).
+*   **UI Layout**: Fixed **50px** Navbar. Global page padding starts at **pt-12** (plus layout-level 50px top offset).
 
----
+## 💎 2. Collection & Pricing Logic
+*   **Catalog**: 43 High-fidelity single-view DTG designs (Removed "Costa" back assets).
+*   **Dynamic JPY Protocol** (`src/lib/pricing.ts`):
+    *   **Tier 1**: ¥4,980 (XS, S, M, L).
+    *   **Tier 2**: ¥5,480 (XL, XXL).
+*   **Logic**: Cart frozen at addition time with size-specific JPY pricing.
 
-## 🛠 1. Tech Stack & Integration Specs
-*   **Framework:** Next.js 16+ (App Router). See `src/app`.
-*   **Styling:** Tailwind CSS V4. See `globals.css` (Scanline overlay, Custom Cursor).
-*   **DB (Supabase):** 
-    *   Table: `orders` (Columns: `id`, `user_id`, `total_cents`, `currency`, `status`, `metadata`, `created_at`).
-    *   Policy: RLS enabled. Users can view their own; service role can insert.
-*   **Asset Cleanup:** Removed all "Costa" (back view) images and corresponding `backImage` logic. The catalog is now focused on high-fidelity single-view DTG prints.
-*   **Collection Cleanup:** Removed "Alcoholdefense Edition" and original legacy items. Total collection size: **43 high-fidelity designs**.
-*   **Currency & Dynamic Pricing**: 
-    *   Primary Currency: **JPY (¥)**.
-    *   **Dynamic Tier Protocol**: Set prices to **¥4,980** (XS, S, M, L) and **¥5,480** (XL, XXL). 
-    *   `src/lib/pricing.ts` is the central source of truth for these tiers.
-*   **Payments (Stripe):** Currently in **BYPASS MODE**. 
-    *   `src/components/Cart.tsx`: `handleCheckout` redirects directly to `/success`. 
-    *   To re-enable, revert to the Stripe API call in the checkout handler.
-    *   `api/checkout/route.ts` is fully updated for size-aware JPY pricing.
-*   **UI Features:** Added `ProductImage` component supporting front/back image toggle.
-*   **Auth (Supabase):**
-    *   `@supabase/ssr` for cookie-based sessions (Gate G6 compliant — no localStorage).
-    *   Middleware at `src/middleware.ts` refreshes sessions on every request.
-    *   Login (`/login`), Register (`/register`), Account (`/account`) pages.
-    *   Auth callback at `/auth/callback` handles email verification.
-    *   `AuthContext` provides `user`, `loading`, `signOut` globally.
-    *   Navbar is auth-aware: shows "Account" when logged in, "Login" when logged out.
-*   **Email (Resend):** `src/lib/email.ts` is implemented. Requires `RESEND_API_KEY`.
-*   **CI/CD:** GitHub Actions `.github/workflows/ci.yml`. Enforces **Gates G1-G8**.
+## 💳 3. Checkout & Payment
+*   **Stripe Status**: **ACTIVATED** (Test Mode).
+*   **Internal Flow**: `Cart.tsx` → `POST /api/checkout` → Stripe Hosted Redirect.
+*   **Fulfillment**: `api/webhooks/stripe/route.ts` handles `checkout.session.completed`, logs to Supabase, and triggers Resend email.
+*   **Security**: Signature validation enforced (Gate G7).
 
----
+## 🚦 4. Security Gates [G1-G8]
+*   **Passed**: All CI/CD checks fixed in GitHub Actions.
+    *   Fixed G6 false positives (UI labels like "No localStorage" removed).
+    *   Fixed G7 scan false positives (.next type files excluded from Stripe audit).
+*   **Audit**: `src/` directory is the only source of truth for security scans.
 
-## ⚡ 2. Current Architecture Logic
-*   **Cart Logic:** `src/context/CartContext.tsx` uses a `cartKey` (`productId-size`). Users can add the same product in multiple sizes as separate items.
-*   **Product Gallery:** `src/components/ProductImage.tsx` handles front/back transitions on hover/click.
-*   **Auth Flow:** `src/lib/supabase/client.ts` (browser), `src/lib/supabase/server.ts` (server), `src/lib/supabase/middleware.ts` (session refresh). `AuthContext` wraps the app in `layout.tsx`.
-*   **Custom Cursor:** `src/components/CustomCursor.tsx` provides a dual-element lerp cursor. It is injected in `layout.tsx`.
-*   **Theme Tokens:** Colors defined in `globals.css`. Primary accent: `#cdff00`.
+## 📍 5. Pending Tasks (Final Phase)
+1.  **Studio Content**: The `/about` page requires finalized "Site & Design" brand copy.
+2.  **Auth Config Sync**: Ensure Supabase Dashboard Site URL (`https://sdjapan.jp`) and Redirect URLs (`https://sdjapan.jp/auth/callback`) are set in production settings.
+3.  **Production Keys**: Switch Stripe to Live Mode once verified.
 
 ---
-
-## 📍 3. Current Live State
-*   **Deployment:** [dark2-chi.vercel.app](https://dark2-chi.vercel.app) (Automatic deploy from `main` via GH Actions).
-*   **Branch Tracking:** Production deploys from `main`. 
-*   **G4 Security Compliance:** No sensitive PII in logs or Supabase metadata.
-*   **G6 Compliance:** Auth tokens stored in httpOnly cookies via `@supabase/ssr`. Zero localStorage usage.
-*   **Gate Verification:** G1-G8 gates passed.
-
----
-
-## ✅ 4. Immediate Next Steps / TODO
-1.  **Stripe Production:** Re-enable Stripe in `Cart.tsx` and confirm `STRIPE_WEBHOOK_SECRET` is set in Vercel.
-2.  **Supabase Config:** Set the Site URL and redirect URLs in Supabase Auth settings for production email verification.
-3.  **About Page:** Flush out `/about` (Studio) with the "Dark Factory" vision.
-
----
-**Instruction for the next Agent:** 
-*Verify Supabase Auth config (Site URL, Redirect URLs). Test `/login` → `/register` → email confirmation → `/account` flow. Then proceed to Stripe re-activation.*
+**Instruction for the next Agent:**
+*Consult `src/lib/pricing.ts` for all price updates. Verify order persistence in the Supabase Dashboard after successful test payments. Complete the brand story on `/about`.*
