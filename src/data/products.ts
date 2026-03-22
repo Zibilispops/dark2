@@ -30,7 +30,7 @@ export const products: Product[] = [
     name: "Archive Series Hoodie",
     slug: "archive-series-hoodie",
     price: 120,
-    description: "French Terrie construction with acid-wash finish. Minimalist branding on nape. Engineered for the digital vanguard.",
+    description: "French Terry construction with acid-wash finish. Minimalist branding on nape. Engineered for the digital vanguard.",
     features: [
       "450GSM Organic French Terry",
       "Dropped shoulders",
@@ -51,6 +51,51 @@ export const products: Product[] = [
       "MIL-SPEC webbing",
       "Interior tech divider",
       "Embroidered signature logo"
+    ],
+    image: "/products/monolith_tote.png",
+    sizes: ["ONE SIZE"]
+  },
+  {
+    id: "dtg-004",
+    name: "Phantom Long Sleeve",
+    slug: "phantom-long-sleeve",
+    price: 78,
+    description: "Ultra-lightweight 180GSM long-sleeve with a raw-cut hem finish. Features a tonal DTG sleeve print inspired by signal interference.",
+    features: [
+      "180GSM slub cotton jersey",
+      "Raw-cut hem & cuffs",
+      "Tonal sleeve DTG print",
+      "Relaxed unisex fit"
+    ],
+    image: "/products/vanguard_tee.png",
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"]
+  },
+  {
+    id: "dtg-005",
+    name: "Operator Cargo Pants",
+    slug: "operator-cargo-pants",
+    price: 148,
+    description: "6-pocket technical cargo pant in washed ripstop. Adjustable cinch waist and articulated knees for unrestricted movement.",
+    features: [
+      "240GSM ripstop nylon blend",
+      "YKK zippers throughout",
+      "Adjustable ankle cinch",
+      "Articulated knee paneling"
+    ],
+    image: "/products/archive_hoodie.png",
+    sizes: ["XS", "S", "M", "L", "XL", "XXL"]
+  },
+  {
+    id: "dtg-006",
+    name: "Signal Cap",
+    slug: "signal-cap",
+    price: 38,
+    description: "Structured 6-panel cap in washed twill. Embroidered Dark Factory wordmark on front panel. Adjustable strapback closure.",
+    features: [
+      "Washed cotton twill",
+      "Embroidered branding",
+      "Pre-curved brim",
+      "One size fits all"
     ],
     image: "/products/monolith_tote.png",
     sizes: ["ONE SIZE"]
