@@ -21,9 +21,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
-  // Load cart from session (Not localStorage as per manifest G6)
-  // Actually, G6 says "No localStorage for tokens". Cart might be okay, but let's be safe and use Memory/Context.
-  // We'll keep it in state for now.
+  // Cart state initialization
 
   const addToCart = (product: Product) => {
     setCart((prev) => {
