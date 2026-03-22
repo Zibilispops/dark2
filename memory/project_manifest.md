@@ -11,7 +11,7 @@ This is a high-fidelity e-commerce platform ("Dark Factory") built with a cyber-
 *   **DB (Supabase):** 
     *   Table: `orders` (Columns: `id`, `user_id`, `total_cents`, `currency`, `status`, `metadata`, `created_at`).
     *   Policy: RLS enabled. Users can view their own; service role can insert.
-*   **Collection Cleanup:** Removed the original three products (Vanguard Tee, Archive Hoodie, Monolith Tote). Total collection size: **44 high-fidelity designs**.
+*   **Collection Cleanup:** Removed "Alcoholdefense Edition" and original legacy items. Total collection size: **43 high-fidelity designs**.
 *   **Currency & Dynamic Pricing**: 
     *   Primary Currency: **JPY (¥)**.
     *   **Dynamic Tier Protocol**: Set prices to **¥4,980** (XS, S, M, L) and **¥5,480** (XL, XXL). 

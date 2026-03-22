@@ -61,12 +61,6 @@ export default function Home() {
           <Link href="/shop" className="btn-primary px-10 py-4 text-xs">
             Shop Collection →
           </Link>
-          <Link
-            href="/archive"
-            className="px-10 py-4 border border-white/10 hover:border-white/30 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:bg-white/5"
-          >
-            Explore Archive
-          </Link>
         </div>
 
         {/* Bottom status bar */}

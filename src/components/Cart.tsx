@@ -41,7 +41,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
               {cart.length === 0 ? (
                 <div className="h-[60vh] flex flex-col items-center justify-center space-y-6">
                   <ShoppingBag size={64} className="text-[#1a1a1a]" strokeWidth={1} />
-                  <p className="text-[#444] font-mono text-xs uppercase tracking-[0.2em]">Your archive is empty</p>
+                  <p className="text-[#444] font-mono text-xs uppercase tracking-[0.2em]">Your cart is empty</p>
                 </div>
               ) : (
                 <div className="space-y-12">

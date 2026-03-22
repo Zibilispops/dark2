@@ -81,29 +81,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "id": "dtg-010",
-    "name": "Alcoholdefense Edition",
-    "slug": "alcoholdefense",
-    "price": 4980,
-    "description": "A premium part of the Alcoholdefense series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
-    "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
-    ],
-    "image": "/products/alcoholdefense_front.png",
-    "backImage": "/products/alcoholdefense_back.png",
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ]
-  },
-  {
     "id": "dtg-011",
     "name": "Boy Edition",
     "slug": "boy",

@@ -29,12 +29,6 @@ export default function Navbar() {
             Shop
           </Link>
           <Link 
-            href="/archive" 
-            className={`hover:text-white transition-colors ${pathname === '/archive' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
-          >
-            Archive
-          </Link>
-          <Link 
             href="/about" 
             className={`hover:text-white transition-colors ${pathname === '/about' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
           >
