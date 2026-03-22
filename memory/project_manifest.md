@@ -11,10 +11,15 @@ This is a high-fidelity e-commerce platform ("Dark Factory") built with a cyber-
 *   **DB (Supabase):** 
     *   Table: `orders` (Columns: `id`, `user_id`, `total_cents`, `currency`, `status`, `metadata`, `created_at`).
     *   Policy: RLS enabled. Users can view their own; service role can insert.
-*   **Collection Expansion:** Successfully imported **41 new high-fidelity designs** (BP Ramen, Cyborg Girl, etc.) from the `prod/` assets. Total collection size: **47 items**.
+*   **Collection Cleanup:** Removed the original three products (Vanguard Tee, Archive Hoodie, Monolith Tote). Total collection size: **44 high-fidelity designs**.
+*   **Currency & Dynamic Pricing**: 
+    *   Primary Currency: **JPY (¥)**.
+    *   **Dynamic Tier Protocol**: Set prices to **¥4,980** (XS, S, M, L) and **¥5,480** (XL, XXL). 
+    *   `src/lib/pricing.ts` is the central source of truth for these tiers.
 *   **Payments (Stripe):** Currently in **BYPASS MODE**. 
     *   `src/components/Cart.tsx`: `handleCheckout` redirects directly to `/success`. 
     *   To re-enable, revert to the Stripe API call in the checkout handler.
+    *   `api/checkout/route.ts` is fully updated for size-aware JPY pricing.
 *   **UI Features:** Added `ProductImage` component supporting front/back image toggle.
 *   **Auth (Supabase):**
     *   `@supabase/ssr` for cookie-based sessions (Gate G6 compliant — no localStorage).

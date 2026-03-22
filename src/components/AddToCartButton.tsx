@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 import { Product } from '@/data/products';
+import { getPriceBySize } from '@/lib/pricing';
 
 export const AddToCartButton = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
@@ -17,6 +18,8 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   };
+
+  const currentPrice = selectedSize ? getPriceBySize(selectedSize) : null;
 
   return (
     <div className="space-y-4">
@@ -52,7 +55,15 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
         }`}
       >
         <span className="relative z-10">
-          {added ? '✓ Added' : !selectedSize ? 'Select a Size' : 'Add To Order'}
+          {added ? (
+            '✓ Added'
+          ) : !selectedSize ? (
+            'Select a Size'
+          ) : (
+            <>
+              Add To Order <span className="mx-2 opacity-30">·</span> ¥{currentPrice?.toLocaleString()}
+            </>
+          )}
         </span>
         {selectedSize && !added && (
           <span className="ml-4 opacity-30 group-hover:opacity-100 transition-opacity relative z-10">→</span>

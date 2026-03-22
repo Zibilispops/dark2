@@ -51,8 +51,8 @@ export default async function ProductPage({
           {product.name}
         </h1>
         
-        <div className="text-4xl font-black italic mb-12 tracking-tighter">
-          ${product.price}
+        <div className="text-4xl font-black italic mb-12 tracking-tighter text-[var(--accent)]">
+          ¥4,980~
         </div>
 
         <div className="space-y-6 mb-16">

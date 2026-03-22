@@ -123,7 +123,7 @@ export default async function AccountPage() {
                 </div>
                 <div className="flex items-center gap-8">
                   <span className="text-sm font-black">
-                    ${(order.total_cents / 100).toFixed(2)} {order.currency?.toUpperCase()}
+                    ¥{order.total_cents.toLocaleString()} {order.currency?.toUpperCase()}
                   </span>
                   <span className="font-mono text-[10px] text-[#333]">
                     {new Date(order.created_at).toLocaleDateString()}

@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState } from 'react';
 import { Product } from '@/data/products';
+import { getPriceBySize } from '@/lib/pricing';
 
 interface CartItem extends Product {
   quantity: number;
@@ -25,6 +26,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const addToCart = (product: Product, size: string) => {
     const cartKey = `${product.id}-${size}`;
+    const price = getPriceBySize(size);
+    
     setCart((prev) => {
       const existing = prev.find((item) => item.cartKey === cartKey);
       if (existing) {
@@ -32,7 +35,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
           item.cartKey === cartKey ? { ...item, quantity: item.quantity + 1 } : item
         );
       }
-      return [...prev, { ...product, quantity: 1, selectedSize: size, cartKey }];
+      return [...prev, { ...product, price, quantity: 1, selectedSize: size, cartKey }];
     });
   };
 

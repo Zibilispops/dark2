@@ -49,7 +49,7 @@ export default function ShopPage() {
                   {product.id}
                 </span>
                 <span className="text-2xl font-black italic tracking-tighter text-white">
-                  ${product.price}
+                  ¥4,980~
                 </span>
               </div>
 

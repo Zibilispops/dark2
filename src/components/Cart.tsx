@@ -61,7 +61,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                             <h3 className="text-lg font-bold italic tracking-tighter uppercase leading-tight">
                               {item.name}
                             </h3>
-                            <p className="ml-4 font-black">${item.price}</p>
+                            <p className="ml-4 font-black">¥{item.price.toLocaleString()}</p>
                           </div>
                           <p className="mt-1 text-[#444] text-[10px] font-mono uppercase tracking-widest leading-none">
                             Qty: {item.quantity} · Size: {item.selectedSize}
@@ -85,7 +85,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
             <div className="border-t border-white/10 py-8 px-8 bg-[#0d0d0d]">
               <div className="flex justify-between text-base font-black mb-1">
                 <p className="uppercase text-xs font-mono text-[#666] tracking-widest">Subtotal</p>
-                <p>${totalPrice}</p>
+                <p>¥{totalPrice.toLocaleString()}</p>
               </div>
               <p className="mt-0.5 text-[10px] font-mono text-[#444] uppercase tracking-widest mb-8">
                 // Shipping and taxes calculated at entry

@@ -6,6 +6,7 @@ const CheckoutSchema = z.object({
   items: z.array(z.object({
     id: z.string(),
     quantity: z.number().min(1),
+    size: z.string(),
   })).min(1),
 });
 
@@ -14,24 +15,27 @@ export async function POST(req: Request) {
     const body = await req.json();
     const validated = CheckoutSchema.parse(body);
 
-    // Map products from local data (source of truth for prices)
     const { products } = await import('@/data/products');
+    const { getPriceBySize } = await import('@/lib/pricing');
     
     const line_items = validated.items.map((item) => {
       const product = products.find((p) => p.id === item.id);
       if (!product) throw new Error(`Product ${item.id} not found`);
 
+      const price = getPriceBySize(item.size);
+
       return {
         price_data: {
-          currency: 'usd',
+          currency: 'jpy',
           product_data: {
-            name: product.name,
+            name: `${product.name} (${item.size})`,
             images: [product.image.startsWith('/') ? `${process.env.NEXT_PUBLIC_BASE_URL}${product.image}` : product.image],
             metadata: {
               id: product.id,
+              size: item.size,
             },
           },
-          unit_amount: Math.round(product.price * 100),
+          unit_amount: price,
         },
         quantity: item.quantity,
       };
