@@ -1,6 +1,7 @@
 import { products } from '@/data/products';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { AddToCartButton } from '@/components/AddToCartButton';
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -65,9 +66,7 @@ export default async function ProductPage({
           </ul>
         </div>
 
-        <button className="btn-primary w-full py-6 text-base tracking-widest group">
-          Add To Order <span className="ml-4 opacity-30 group-hover:opacity-100 transition-opacity">→</span>
-        </button>
+        <AddToCartButton product={product} />
         
         <div className="mt-8 flex justify-between p-4 border border-white/5 font-mono text-[10px] uppercase text-[#333]">
           <div>Ships Worldwide</div>
