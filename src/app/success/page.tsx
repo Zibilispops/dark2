@@ -18,7 +18,7 @@ export default function SuccessPage() {
           // Order Confirmed
         </p>
 
-        <h1 className="text-7xl md:text-9xl font-black italic tracking-tighter leading-[0.85] mb-8">
+        <h1 className="mb-8">
           Order<br />Received
         </h1>
 

@@ -46,7 +46,7 @@ export default function Home() {
         </p>
 
         {/* Big headline */}
-        <h1 className="fade-in-up delay-100 relative z-10 text-[clamp(4rem,14vw,12rem)] leading-[0.82] tracking-tighter font-black italic mb-6 text-gradient">
+        <h1 className="fade-in-up delay-100 relative z-10 text-[var(--h0)] leading-[0.82] tracking-tighter font-black italic mb-6 text-gradient">
           Wear The<br />Future
         </h1>
 

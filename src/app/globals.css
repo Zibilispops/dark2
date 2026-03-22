@@ -9,6 +9,16 @@
   --muted: #141414;
   --card: #0f0f0f;
   --border: #1e1e1e;
+
+  /* Fluid Typography Tokens */
+  --h0: clamp(4rem, 14vw, 12rem);
+  --h1: clamp(3rem, 11vw, 10rem);
+  --h2: clamp(2.2rem, 8vw, 6rem);
+  --h3: clamp(1.4rem, 4vw, 3rem);
+  --body: clamp(0.9rem, 1.1vw, 1.05rem);
+  
+  /* Fluid Spacing */
+  --section-py: clamp(4rem, 12vh, 10rem);
 }
 
 /* ─── Reset & Base ─── */
@@ -20,6 +30,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: var(--body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -74,8 +85,11 @@ h1, h2, h3 {
   letter-spacing: -0.04em;
   font-weight: 900;
   text-transform: uppercase;
-  line-height: 0.9;
+  line-height: 0.85;
 }
+h1 { font-size: var(--h1); font-style: italic; }
+h2 { font-size: var(--h2); font-style: italic; }
+h3 { font-size: var(--h3); }
 
 /* ─── Theme ─── */
 @theme {

@@ -46,7 +46,7 @@ export default async function ProductPage({
           ← Back to Collection
         </Link>
         
-        <h1 className="text-6xl md:text-8xl font-black italic tracking-tighter leading-[0.8] mb-8">
+        <h1 className="mb-8">
           {product.name}
         </h1>
         

@@ -29,7 +29,7 @@
 *   **Audit**: `src/` directory is the only source of truth for security scans.
 
 ## 📍 5. Pending Tasks (Final Phase)
-1.  **Studio Content**: The `/about` page requires finalized "Site & Design" brand copy.
+1.  **Studio Content**: Finalize the "Bad Printer Reseller" brand copy on the `/about` page (Gifu-based).
 2.  **Auth Config Sync**: Ensure Supabase Dashboard Site URL (`https://sdjapan.jp`) and Redirect URLs (`https://sdjapan.jp/auth/callback`) are set in production settings.
 3.  **Production Keys**: Switch Stripe to Live Mode once verified.
 

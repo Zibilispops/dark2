@@ -16,12 +16,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-6 h-[50px] flex justify-between items-center border-b border-white/5">
-        <Link href="/" className="font-black text-2xl tracking-tighter uppercase italic group leading-none">
+      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-[clamp(1rem,3vw,1.5rem)] h-[50px] flex justify-between items-center border-b border-white/5">
+        <Link href="/" className="font-black text-2xl tracking-tighter uppercase italic group leading-none flex-shrink-0">
           Dark <span className="text-[var(--accent)] group-hover:brightness-110 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)]">Factory</span>
         </Link>
         
-        <div className="flex gap-8 text-[10px] items-center font-mono uppercase tracking-widest text-[#666]">
+        <div className="flex gap-[clamp(0.75rem,3vw,2rem)] text-[10px] items-center font-mono uppercase tracking-widest text-[#666] min-w-0">
           <Link 
             href="/shop" 
             className={`hover:text-white transition-colors ${pathname === '/shop' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
