@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="space-y-6">
           <h2 className="text-3xl font-black italic uppercase tracking-tighter">High-Fidelity Garments</h2>
           <p className="text-[#888] leading-relaxed">
-            Dark Factory is a direct-to-garment (DTG) printing studio based in Tokyo, Japan. Based on the philosophy of minimalist design and high-fidelity output, we specialize in high-end apparel for the digital vanguard.
+            Dark Factory is a direct-to-garment (DTG) printing studio based in Gifu, Japan. Based on the philosophy of minimalist design and high-fidelity output, we specialize in high-end apparel for the digital vanguard.
           </p>
           <p className="text-[#888] leading-relaxed">
             Our studio is a solo founder operation, ensuring every piece is reviewed and handled with absolute care. We don't believe in mass production—we believe in high-quality, print-on-demand assets that serve as the uniform for modern makers.

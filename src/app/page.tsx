@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 const marqueeItems = [
   'DIGITAL VANGUARD APPAREL',
   'DTG PRINT ON DEMAND',
-  'TOKYO STUDIO',
+  'GIFU STUDIO',
   'COLLECTION 001',
   'LIMITED AVAILABILITY',
   'SHIPS WORLDWIDE',
@@ -42,7 +42,7 @@ export default function Home() {
 
         {/* Tag line */}
         <p className="fade-in-up text-[var(--accent)] font-mono text-[10px] mb-8 tracking-[0.35em] uppercase z-10">
-          // [001] DTG Studio · Tokyo JP · Est. 2024
+          // [001] DTG Studio · Gifu JP · Est. 2024
         </p>
 
         {/* Big headline */}
@@ -53,7 +53,7 @@ export default function Home() {
         {/* Sub */}
         <p className="fade-in-up delay-200 text-[#555] text-base md:text-lg max-w-md mb-12 leading-relaxed z-10 font-light">
           High-fidelity garments for the digital vanguard.<br />
-          Designed in Tokyo, printed on demand, shipped globally.
+          Designed in Gifu, printed on demand, shipped globally.
         </p>
 
         {/* CTAs */}
@@ -66,7 +66,7 @@ export default function Home() {
         {/* Bottom status bar */}
         <div className="fade-in-up delay-500 absolute bottom-10 left-8 md:left-16 right-8 md:right-16 flex justify-between items-end">
           <div className="text-white/15 text-[9px] font-mono leading-relaxed uppercase tracking-widest">
-            LAT: 35.6762° N<br />LONG: 139.6503° E<br />
+            LAT: 35.4233° N<br />LONG: 136.7606° E<br />
             <LiveClock />
           </div>
           <div className="text-white/15 text-[9px] font-mono leading-relaxed text-right uppercase tracking-widest">

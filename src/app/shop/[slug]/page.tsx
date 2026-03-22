@@ -35,7 +35,7 @@ export default async function ProductPage({
         
         <div className="absolute top-10 left-10 p-4 border border-white/5 font-mono text-[10px] uppercase text-[#444] tracking-widest leading-relaxed pointer-events-none">
           Serial: {product.id}<br />
-          Origin: Tokyo Studio<br />
+          Origin: Gifu Studio<br />
           Type: [DTG-PRINT]
         </div>
       </div>

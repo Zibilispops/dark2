@@ -2,7 +2,7 @@
 
 ## 🛠 1. Architecture Specs
 *   **Framework**: Next.js 16+ (App Router).
-*   **Aesthetic**: Cyber-minimalist / Tokyo-based Digital Vanguard.
+*   **Aesthetic**: Cyber-minimalist / Gifu-based Digital Vanguard.
 *   **Styling**: Tailwind CSS V4 (`globals.css` @import).
 *   **DB**: Supabase (Auth/SSR + CRUD).
     *   `orders` table: `id`, `user_id`, `total_cents`, `currency`, `status`, `metadata`, `created_at`.

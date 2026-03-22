@@ -20,7 +20,7 @@ export const products: Product[] = [
       "300GSM Heavyweight Jersey",
       "High-definition cybernetic DTG print",
       
-      "Cyber-minimalist Tokyo aesthetic"
+      "Cyber-minimalist Gifu aesthetic"
     ],
     "image": "/products/cyborg_girl_front.png",
     "sizes": [

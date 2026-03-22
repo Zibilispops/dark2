@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Dark Factory — Digital Vanguard DTG",
-  description: "High-fidelity garments for the digital vanguard. Tokyo-based DTG printing.",
+  description: "High-fidelity garments for the digital vanguard. Gifu-based DTG printing.",
 };
 
 export default function RootLayout({

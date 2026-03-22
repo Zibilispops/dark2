@@ -25,7 +25,7 @@ export default function SuccessPage() {
         <p className="text-[#555] text-sm font-mono leading-relaxed mb-12">
           Your registry entry has been logged.<br />
           Production begins within 48 hours.<br />
-          Tokyo Studio will dispatch when ready.
+          Gifu Studio will dispatch when ready.
         </p>
 
         <div className="border border-white/5 p-6 mb-12 text-left font-mono text-[10px] uppercase tracking-widest text-[#333] space-y-2">
@@ -39,7 +39,7 @@ export default function SuccessPage() {
           </div>
           <div className="flex justify-between">
             <span>Origin</span>
-            <span>Tokyo Studio</span>
+            <span>Gifu Studio</span>
           </div>
         </div>
 
