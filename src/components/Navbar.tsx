@@ -21,7 +21,7 @@ export default function Navbar() {
           Dark <span className="text-[var(--accent)] group-hover:brightness-110 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)]">Factory</span>
         </Link>
         
-        <div className="flex gap-3 md:gap-8 text-[9px] md:text-[10px] items-center font-mono uppercase tracking-widest text-[#666] min-w-0 ml-4">
+        <div className="flex gap-3 md:gap-8 text-[9px] md:text-[10px] items-center font-mono uppercase tracking-widest text-[#666] min-w-0">
           <Link 
             href="/shop" 
             className={`hover:text-white transition-colors ${pathname === '/shop' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
