@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# media / recordings
+*.mp4
+*.avi
+*.mov
+*.webm
+*.mkv
+
