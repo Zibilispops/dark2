@@ -20,10 +20,12 @@ export async function sendOrderConfirmation({
     return;
   }
 
-  const formattedTotal = new Intl.NumberFormat('en-US', {
+  // JPY is a zero-decimal currency — Stripe sends the actual amount (e.g. 4980 = ¥4,980)
+  const isZeroDecimal = currency.toUpperCase() === 'JPY';
+  const formattedTotal = new Intl.NumberFormat('ja-JP', {
     style: 'currency',
     currency: currency.toUpperCase(),
-  }).format(totalCents / 100);
+  }).format(isZeroDecimal ? totalCents : totalCents / 100);
 
   const itemsHtml = items
     ? items
@@ -51,7 +53,7 @@ export async function sendOrderConfirmation({
     </h1>
     <p style="color:#555;font-size:13px;line-height:1.6;margin-bottom:32px;">
       Your registry entry has been logged. Production begins within 48 hours.
-      Tokyo Studio will dispatch when ready.
+      Gifu Studio will dispatch when ready.
     </p>
     <div style="border:1px solid #1a1a1a;padding:20px;margin-bottom:32px;">
       <table style="width:100%;border-collapse:collapse;">
@@ -99,6 +101,6 @@ export async function sendOrderConfirmation({
     const err = await response.text();
     console.error('[EMAIL_SEND_ERROR]', err);
   } else {
-    console.log(`[EMAIL_SENT] Confirmation sent to ${toEmail}`);
+    console.log(`[EMAIL_SENT] Confirmation sent to ${toEmail.replace(/(.{2}).*(@.*)/, '$1***$2')}`);
   }
 }
