@@ -15,16 +15,16 @@ export const products: Product[] = [
     "name": "Cyborg Girl Series",
     "slug": "cyborg-girl-series",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Cyborg Girl' archival artwork. Heavyweight 300GSM cotton tee with high-definition cybernetic details .",
+    "description": "Limited edition DTG print featuring the 'Cyborg Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "300GSM Heavyweight Jersey",
-      "High-definition cybernetic DTG print",
-      
-      "Cyber-minimalist Gifu aesthetic"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/cyborg_girl_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -37,16 +37,16 @@ export const products: Product[] = [
     "name": "Digital Battle Series",
     "slug": "digital-battle-series",
     "price": 4980,
-    "description": "The 'Digital Battle' series explores the intersection of kinetic movement and digital aesthetics. Premium oversized fit with high-fidelity front-to-back graphics.",
+    "description": "Limited edition DTG print featuring the 'Digital Battle' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "240GSM Organic Slub Cotton",
-      "Kinetic glitch DTG printing",
-      "Full torso graphic coverage",
-      "Dropped shoulder silhouette"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/digital_battle_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -59,16 +59,16 @@ export const products: Product[] = [
     "name": "BP Ramen Concept",
     "slug": "bp-ramen-concept",
     "price": 4980,
-    "description": "A signature Dark Factory spin on street iconography. Featuring 'BP Ramen' high-res concept art in neon-digital tones.",
+    "description": "Limited edition DTG print featuring the 'BP Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "100% Combed Cotton",
-      "Neon-digital print tech",
-      "Signature Dark branding on nape",
-      "Standard-cut streetwear fit"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/bp_ramen_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -81,16 +81,16 @@ export const products: Product[] = [
     "name": "Boy Edition",
     "slug": "boy",
     "price": 4980,
-    "description": "A premium part of the Boy series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Boy' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/boy_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -103,16 +103,16 @@ export const products: Product[] = [
     "name": "Bp Ramen Edition",
     "slug": "bp-ramen",
     "price": 4980,
-    "description": "A premium part of the Bp Ramen series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Bp Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/bp_ramen_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -125,16 +125,16 @@ export const products: Product[] = [
     "name": "Breaking Hearts Edition",
     "slug": "breaking-hearts",
     "price": 4980,
-    "description": "A premium part of the Breaking Hearts series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Breaking Hearts' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/breaking_hearts_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -147,16 +147,16 @@ export const products: Product[] = [
     "name": "Cafésarcasmo Edition",
     "slug": "cafésarcasmo",
     "price": 4980,
-    "description": "A premium part of the Cafésarcasmo series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Cafésarcasmo' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/cafésarcasmo_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -169,16 +169,16 @@ export const products: Product[] = [
     "name": "Chillout Edition",
     "slug": "chillout",
     "price": 4980,
-    "description": "A premium part of the Chillout series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Chillout' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/chillout_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -191,16 +191,16 @@ export const products: Product[] = [
     "name": "Coffeeoclock Edition",
     "slug": "coffeeoclock",
     "price": 4980,
-    "description": "A premium part of the Coffeeoclock series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Coffeeoclock' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/coffeeoclock_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -213,16 +213,16 @@ export const products: Product[] = [
     "name": "Culture Edition",
     "slug": "culture",
     "price": 4980,
-    "description": "A premium part of the Culture series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Culture' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/culture_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -235,16 +235,16 @@ export const products: Product[] = [
     "name": "Cyborg Girl Edition",
     "slug": "cyborg-girl",
     "price": 4980,
-    "description": "A premium part of the Cyborg Girl series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Cyborg Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/cyborg_girl_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -257,16 +257,16 @@ export const products: Product[] = [
     "name": "Digital Battle Edition",
     "slug": "digital-battle",
     "price": 4980,
-    "description": "A premium part of the Digital Battle series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Digital Battle' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/digital_battle_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -279,16 +279,16 @@ export const products: Product[] = [
     "name": "Digitalbattle Edition",
     "slug": "digitalbattle",
     "price": 4980,
-    "description": "A premium part of the Digitalbattle series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Digitalbattle' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/digitalbattle_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -301,16 +301,16 @@ export const products: Product[] = [
     "name": "Einstein1 Frame Edition",
     "slug": "einstein1-frame",
     "price": 4980,
-    "description": "A premium part of the Einstein1 Frame series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Einstein1 Frame' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/einstein1_frame_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -323,16 +323,16 @@ export const products: Product[] = [
     "name": "Fast Food Racer Edition",
     "slug": "fast-food-racer",
     "price": 4980,
-    "description": "A premium part of the Fast Food Racer series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Fast Food Racer' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/fast_food_racer_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -345,16 +345,16 @@ export const products: Product[] = [
     "name": "Fibonacci Edition",
     "slug": "fibonacci",
     "price": 4980,
-    "description": "A premium part of the Fibonacci series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Fibonacci' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/fibonacci_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -367,16 +367,16 @@ export const products: Product[] = [
     "name": "Fight To Edition",
     "slug": "fight-to",
     "price": 4980,
-    "description": "A premium part of the Fight To series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Fight To' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/fight_to_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -389,16 +389,16 @@ export const products: Product[] = [
     "name": "Hit Girl Edition",
     "slug": "hit-girl",
     "price": 4980,
-    "description": "A premium part of the Hit Girl series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Hit Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/hit_girl_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -411,16 +411,16 @@ export const products: Product[] = [
     "name": "Ice Scream1 Edition",
     "slug": "ice-scream1",
     "price": 4980,
-    "description": "A premium part of the Ice Scream1 series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Ice Scream1' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/ice_scream1_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -433,16 +433,16 @@ export const products: Product[] = [
     "name": "Ice Scream2 Edition",
     "slug": "ice-scream2",
     "price": 4980,
-    "description": "A premium part of the Ice Scream2 series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Ice Scream2' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/ice_scream2_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -455,16 +455,16 @@ export const products: Product[] = [
     "name": "Ice Scream3 Edition",
     "slug": "ice-scream3",
     "price": 4980,
-    "description": "A premium part of the Ice Scream3 series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Ice Scream3' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/ice_scream3_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -477,16 +477,16 @@ export const products: Product[] = [
     "name": "Icecream1 Edition",
     "slug": "icecream1",
     "price": 4980,
-    "description": "A premium part of the Icecream1 series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Icecream1' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/icecream1_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -499,16 +499,16 @@ export const products: Product[] = [
     "name": "Icecream2 Edition",
     "slug": "icecream2",
     "price": 4980,
-    "description": "A premium part of the Icecream2 series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Icecream2' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/icecream2_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -521,16 +521,16 @@ export const products: Product[] = [
     "name": "Icescreamsoft Edition",
     "slug": "icescreamsoft",
     "price": 4980,
-    "description": "A premium part of the Icescreamsoft series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Icescreamsoft' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/icescreamsoft_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -543,16 +543,16 @@ export const products: Product[] = [
     "name": "Iceskull Edition",
     "slug": "iceskull",
     "price": 4980,
-    "description": "A premium part of the Iceskull series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Iceskull' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/iceskull_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -565,16 +565,16 @@ export const products: Product[] = [
     "name": "Leisure Edition",
     "slug": "leisure",
     "price": 4980,
-    "description": "A premium part of the Leisure series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Leisure' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/leisure_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -587,16 +587,16 @@ export const products: Product[] = [
     "name": "Lula Ramen Edition",
     "slug": "lula-ramen",
     "price": 4980,
-    "description": "A premium part of the Lula Ramen series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Lula Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/lula_ramen_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -609,16 +609,16 @@ export const products: Product[] = [
     "name": "Mundane Edition",
     "slug": "mundane",
     "price": 4980,
-    "description": "A premium part of the Mundane series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Mundane' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/mundane_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -631,16 +631,16 @@ export const products: Product[] = [
     "name": "Pie Edition",
     "slug": "pie",
     "price": 4980,
-    "description": "A premium part of the Pie series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Pie' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/pie_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -653,16 +653,16 @@ export const products: Product[] = [
     "name": "Ramen3 Edition",
     "slug": "ramen3",
     "price": 4980,
-    "description": "A premium part of the Ramen3 series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Ramen3' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/ramen3_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -675,16 +675,16 @@ export const products: Product[] = [
     "name": "Ramendrop Edition",
     "slug": "ramendrop",
     "price": 4980,
-    "description": "A premium part of the Ramendrop series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Ramendrop' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/ramendrop_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -697,16 +697,16 @@ export const products: Product[] = [
     "name": "Ramenmosnter Edition",
     "slug": "ramenmosnter",
     "price": 4980,
-    "description": "A premium part of the Ramenmosnter series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Ramenmosnter' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/ramenmosnter_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -719,16 +719,16 @@ export const products: Product[] = [
     "name": "Ramenrider Edition",
     "slug": "ramenrider",
     "price": 4980,
-    "description": "A premium part of the Ramenrider series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Ramenrider' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/ramenrider_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -741,16 +741,16 @@ export const products: Product[] = [
     "name": "Self Edition",
     "slug": "self",
     "price": 4980,
-    "description": "A premium part of the Self series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Self' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/self_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -763,16 +763,16 @@ export const products: Product[] = [
     "name": "Silly Devil Edition",
     "slug": "silly-devil",
     "price": 4980,
-    "description": "A premium part of the Silly Devil series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Silly Devil' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/silly_devil_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -785,16 +785,16 @@ export const products: Product[] = [
     "name": "Spacecoffe Edition",
     "slug": "spacecoffe",
     "price": 4980,
-    "description": "A premium part of the Spacecoffe series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Spacecoffe' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/spacecoffe_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -807,16 +807,16 @@ export const products: Product[] = [
     "name": "Super Cute Edition",
     "slug": "super-cute",
     "price": 4980,
-    "description": "A premium part of the Super Cute series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Super Cute' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/super_cute_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -829,16 +829,16 @@ export const products: Product[] = [
     "name": "Ultraramen Edition",
     "slug": "ultraramen",
     "price": 4980,
-    "description": "A premium part of the Ultraramen series. High-fidelity DTG print on heavyweight cotton, designed for the digital vanguard.",
+    "description": "Limited edition DTG print featuring the 'Ultraramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
     "features": [
-      "Heavyweight 300GSM Cotton",
-      "High-definition DTG graphics",
-      "Reinforced neck & shoulder seams",
-      "Sustainable production"
+      "Super Heavyweight 7.4 oz (250 g/m²)",
+      "14/- Jersey, 100% Cotton",
+      "Seamless tubular construction",
+      "1x1 ribbed crew neck",
+      "Double-stitched hem and cuffs"
     ],
     "image": "/products/ultraramen_front.png",
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",

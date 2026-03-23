@@ -37,7 +37,7 @@ export default async function ProductPage({
   return (
     <main className="min-h-screen bg-black text-white pt-12 pb-20 px-6 lg:px-12 flex flex-col lg:flex-row gap-8 lg:gap-16">
       {/* Product Image */}
-      <div className="flex-1 aspect-[4/5] bg-[#0c0c0c] border border-white/5 relative group p-6 lg:p-12 overflow-hidden flex items-center justify-center">
+      <div className="flex-1 bg-[#0c0c0c] border border-white/5 relative group p-6 lg:p-12 overflow-hidden flex items-center justify-center self-start lg:sticky lg:top-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02)_0%,transparent_100%)] pointer-events-none" />
         
         <ProductImage 

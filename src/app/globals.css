@@ -195,11 +195,11 @@ h3 { font-size: var(--h3); }
 /* ─── Product card hover ─── */
 .product-card-img {
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease;
-  filter: grayscale(30%) brightness(0.85);
+  filter: brightness(0.85);
 }
 .product-card:hover .product-card-img {
   transform: scale(1.06);
-  filter: grayscale(0%) brightness(1);
+  filter: brightness(1);
 }
 .product-card-border {
   transition: border-color 0.4s ease, box-shadow 0.4s ease;

@@ -72,7 +72,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                         <img
                           src={item.image}
                           alt={item.name}
-                          className="h-full w-full object-cover grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-500"
+                          className="h-full w-full object-cover brightness-75 hover:brightness-100 transition-all duration-500"
                         />
                       </div>
 
