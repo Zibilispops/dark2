@@ -1,7 +1,19 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { products } from '@/data/products';
+import { supabase } from '@/lib/supabase';
+import type { Product } from '@/data/products';
 
-export default function ShopPage() {
+export const revalidate = 60; // Revalidate the shop page every 60 seconds
+
+export default async function ShopPage() {
+  const { data, error } = await supabase.from('products').select('*').order('id');
+  
+  if (error) {
+    console.error('Error fetching products:', error);
+  }
+  
+  const products = (data as Product[]) || [];
+
   return (
     <main className="min-h-screen bg-[#080808] text-white pt-12 pb-24 px-6 md:px-12">
 
@@ -49,7 +61,7 @@ export default function ShopPage() {
                   {product.id}
                 </span>
                 <span className="text-2xl font-black italic tracking-tighter text-white">
-                  ¥4,980~
+                  ¥{product.price.toLocaleString()}~
                 </span>
               </div>
 

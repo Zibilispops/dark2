@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
+import { supabase } from '@/lib/supabase';
 import { z } from 'zod';
 
 const CheckoutSchema = z.object({
@@ -15,14 +16,22 @@ export async function POST(req: Request) {
     const body = await req.json();
     const validated = CheckoutSchema.parse(body);
 
-    const { products } = await import('@/data/products');
     const { getPriceBySize } = await import('@/lib/pricing');
+    
+    const { data: products, error } = await supabase
+      .from('products')
+      .select('*')
+      .in('id', validated.items.map((i) => i.id));
+
+    if (error || !products) {
+      throw new Error('Failed to verify products against database');
+    }
     
     const line_items = validated.items.map((item) => {
       const product = products.find((p) => p.id === item.id);
       if (!product) throw new Error(`Product ${item.id} not found`);
 
-      const price = getPriceBySize(item.size);
+      const price = getPriceBySize(product.price, item.size);
 
       return {
         price_data: {

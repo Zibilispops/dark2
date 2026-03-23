@@ -19,11 +19,31 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
     setTimeout(() => setAdded(false), 1500);
   };
 
-  const currentPrice = selectedSize ? getPriceBySize(selectedSize) : null;
+  const currentPrice = selectedSize ? getPriceBySize(product.price, selectedSize) : null;
 
   return (
-    <div className="space-y-4">
-      {/* Size selector — hide if only one size */}
+    <div className="flex flex-col">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 leading-[0.85] text-balance break-normal uppercase font-black italic tracking-tighter">{product.name}</h2>
+      
+      <div className="text-4xl font-black italic mb-12 tracking-tighter text-[var(--accent)] transition-all">
+        ¥{(currentPrice ?? product.price).toLocaleString()}
+      </div>
+
+      <div className="space-y-6 mb-16">
+        <p className="text-[#888] leading-relaxed text-sm">
+          {product.description}
+        </p>
+        <ul className="space-y-3 font-mono text-[10px] uppercase tracking-widest text-[#444]">
+          {product.features.map((feature, i) => (
+            <li key={i} className="flex gap-4">
+              <span className="text-[var(--accent)]">[+]</span> {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="space-y-4">
+        {/* Size selector — hide if only one size */}
       {product.sizes.length > 1 && (
         <div>
           <p className="font-mono text-[10px] uppercase tracking-widest text-[#444] mb-3">
@@ -70,6 +90,7 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
         )}
         <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
       </button>
+      </div>
     </div>
   );
 };

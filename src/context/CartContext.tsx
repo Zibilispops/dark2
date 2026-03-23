@@ -26,7 +26,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const addToCart = (product: Product, size: string) => {
     const cartKey = `${product.id}-${size}`;
-    const price = getPriceBySize(size);
+    const price = getPriceBySize(product.price, size);
     
     setCart((prev) => {
       const existing = prev.find((item) => item.cartKey === cartKey);

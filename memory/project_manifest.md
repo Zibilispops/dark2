@@ -45,10 +45,11 @@
 
 ---
 **📍 Memory Note for Next Agent:**
-Dark Factory is a **Gifu-based studio**. All references to "Site & Design" or "Tokyo" are purged. The current identity is a **Premium Streetwear Reseller** center for **Bad Printer**. 
+Dark Factory is a **Gifu-based studio**. All references to "Site & Design" or "Tokyo" are purged. The current identity is a **Premium Streetwear Reseller** center for **Bad Printer**.
+_Recent Updates:_ Product page typography has been optimized. Fluid typography on product titles now uses `h2` with `text-balance break-normal` rather than `break-words` to prevent midline hyphenation on narrow mobile views. Column-breaking threshold was delayed from `md` to `lg` (1024px) to avoid unreadable layout squeezing on standard tablets. The Navbar spacing was properly bounded to prevent horizontal scrollbars on 375px screens.
 
 **Focus for Next Run:**
 *   Monitor Stripe test transactions and fulfillment logs in Supabase.
-*   Verify the fluid scaling of the pillars section on ultra-wide vs narrow tablet viewports (handled via `lg` jump).
+*   Monitor layout integrity on any new pages, retaining the strict `text-balance break-normal` policy for heavy bold typographic headings.
 *   All future content additions must use the `font-black text-white whitespace-nowrap` standard for brand name occurrences.
 *   Check `src/lib/pricing.ts` for all JPY tier updates.
