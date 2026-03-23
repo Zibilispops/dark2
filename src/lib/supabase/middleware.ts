@@ -15,7 +15,7 @@ export async function updateSession(request: NextRequest) {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) =>
+          cookiesToSet.forEach(({ name, value, options }) =>
             request.cookies.set(name, value)
           );
           supabaseResponse = NextResponse.next({
@@ -31,6 +31,7 @@ export async function updateSession(request: NextRequest) {
 
   // IMPORTANT: Do NOT add auth checks that redirect here.
   // Only refresh the session so it doesn't expire.
+  // See https://supabase.com/docs/guides/auth/server-side/nextjs
   await supabase.auth.getUser();
 
   return supabaseResponse;

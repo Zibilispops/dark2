@@ -33,12 +33,16 @@ export async function POST(req: Request) {
 
       const price = getPriceBySize(product.price, item.size);
 
+      const imageUrl = product.image.startsWith('http') 
+        ? product.image 
+        : `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}${product.image.startsWith('/') ? '' : '/'}${product.image}`;
+
       return {
         price_data: {
           currency: 'jpy',
           product_data: {
             name: `${product.name} (${item.size})`,
-            images: [product.image.startsWith('/') ? `${process.env.NEXT_PUBLIC_BASE_URL}${product.image}` : product.image],
+            images: [imageUrl],
             metadata: {
               id: product.id,
               size: item.size,
