@@ -37,7 +37,7 @@ export default async function ProductPage({
   return (
     <main className="min-h-screen bg-black text-white pt-12 pb-20 px-6 lg:px-12 flex flex-col lg:flex-row gap-8 lg:gap-16">
       {/* Product Image */}
-      <div className="flex-1 bg-[#0c0c0c] border border-white/5 relative group p-6 lg:p-12 overflow-hidden flex items-center justify-center self-start lg:sticky lg:top-24">
+      <div className="flex-1 bg-[#0c0c0c] border border-white/5 relative group p-6 lg:p-12 overflow-hidden flex flex-col gap-6 self-start lg:sticky lg:top-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02)_0%,transparent_100%)] pointer-events-none" />
         
         <ProductImage 
@@ -45,7 +45,7 @@ export default async function ProductPage({
           name={product.name}
         />
         
-        <div className="absolute top-10 left-10 p-4 border border-white/5 font-mono text-[10px] uppercase text-[#444] tracking-widest leading-relaxed pointer-events-none">
+        <div className="w-full p-4 border border-white/5 font-mono text-[10px] uppercase text-[#444] tracking-widest leading-relaxed pointer-events-none z-10 bg-[#0a0a0a]">
           Serial: {product.id}<br />
           Origin: Gifu Studio<br />
           Type: [DTG-PRINT]

@@ -16,13 +16,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-4 h-[50px] flex justify-between items-center border-b border-white/5">
-        <Link href="/" className="font-black text-xl sm:text-2xl tracking-tighter uppercase italic group flex-shrink-0 flex logo-container">
-          <span>Dark</span>
-          <span className="text-[var(--accent)] logo-factory group-hover:brightness-110 transition-all duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)]">Factory</span>
+      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-[clamp(16px,10px+1.5vw,32px)] h-[clamp(50px,32px+4.7vw,100px)] flex justify-between items-center border-b border-white/5 transition-all duration-300">
+        <Link
+          href="/"
+          className="font-black text-[clamp(20px,13px+1.9vw,40px)] tracking-tighter uppercase italic flex-shrink-0 whitespace-nowrap hover:brightness-110 transition-[filter] duration-300"
+          style={{ fontWeight: 900, fontStyle: 'italic' }}
+        >
+          <span style={{ color: 'var(--foreground)', fontWeight: 'inherit', fontSize: 'inherit' }}>DARK&nbsp;</span><span style={{ color: 'var(--accent)', fontWeight: 'inherit', fontSize: 'inherit' }}>FACTORY</span>
         </Link>
         
-        <div className="flex gap-2 sm:gap-[clamp(0.75rem,3vw,2rem)] text-[9px] sm:text-[10px] items-center font-mono font-bold uppercase tracking-wider sm:tracking-widest text-[#666] min-w-0 ml-auto sm:ml-0">
+        <div className="flex gap-[clamp(12px,8px+1.1vw,24px)] text-[clamp(10px,6.5px+0.9vw,20px)] items-center font-mono font-bold uppercase tracking-wider text-[#666] min-w-0 ml-auto sm:ml-0">
           <Link 
             href="/shop" 
             className={`hover:text-white transition-colors ${pathname === '/shop' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
@@ -45,7 +48,7 @@ export default function Navbar() {
                   pathname === '/account' ? 'text-[var(--accent)]' : ''
                 }`}
               >
-                <User size={12} strokeWidth={1.5} />
+                <User size="1.2em" strokeWidth={1.5} />
                 Account
               </Link>
             ) : (

@@ -47,6 +47,7 @@
 **📍 Memory Note for Next Agent:**
 Dark Factory is a **Gifu-based studio**. All references to "Site & Design" or "Tokyo" are purged. The current identity is a **Premium Streetwear Reseller** center for **Bad Printer**.
 _Recent Updates:_ Product page typography has been optimized. Fluid typography on product titles now uses `h2` with `text-balance break-normal` rather than `break-words` to prevent midline hyphenation on narrow mobile views. Column-breaking threshold was delayed from `md` to `lg` (1024px) to avoid unreadable layout squeezing on standard tablets. The Navbar spacing was properly bounded to prevent horizontal scrollbars on 375px screens.
+**Navbar Logo Fix (Mar 2026):** "DARK" and "FACTORY" were rendering at inconsistent visual weights during resize. Root cause: two `<span>` elements in a `flex` row with `gap` and per-span `transition-all` caused sub-pixel rendering drift. Fixed by: (1) removing flex/gap layout in favour of inline flow with `&nbsp;`, (2) explicit `fontWeight: inherit` / `fontSize: inherit` via `style` props on both spans, (3) hover `brightness` filter moved to the parent `<Link>` only. Both words now share identical rendering context at all viewport sizes.
 
 **Focus for Next Run:**
 *   Monitor Stripe test transactions and fulfillment logs in Supabase.
