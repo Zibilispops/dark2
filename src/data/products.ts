@@ -77,28 +77,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "id": "dtg-014",
-    "name": "Cafésarcasmo Edition",
-    "slug": "cafe-sarcasmo",
-    "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Cafésarcasmo' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
-    "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
-    ],
-    "image": "/products/cafe-sarcasmo_front.png",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ]
-  },
-  {
     "id": "dtg-015",
     "name": "Chillout Edition",
     "slug": "chillout",
