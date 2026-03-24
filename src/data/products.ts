@@ -79,7 +79,7 @@ export const products: Product[] = [
   {
     "id": "dtg-014",
     "name": "Cafésarcasmo Edition",
-    "slug": "cafésarcasmo",
+    "slug": "cafe-sarcasmo",
     "price": 4980,
     "description": "Limited edition DTG print featuring the 'Cafésarcasmo' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
@@ -89,7 +89,7 @@ export const products: Product[] = [
       "1x1 ribbed crew neck",
       "Double-stitched hem and cuffs"
     ],
-    "image": "/products/cafésarcasmo_front.png",
+    "image": "/products/cafe-sarcasmo_front.png",
     "sizes": [
       "S",
       "M",

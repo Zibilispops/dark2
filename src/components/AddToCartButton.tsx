@@ -23,9 +23,9 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
 
   return (
     <div className="flex flex-col">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 leading-[0.85] text-balance break-normal uppercase font-black italic tracking-tighter">{product.name}</h2>
+      <h2 className="text-2xl sm:text-4xl lg:text-5xl mb-4 lg:mb-6 leading-[0.85] text-balance break-normal uppercase font-black italic tracking-tighter">{product.name}</h2>
       
-      <div className="text-4xl font-black italic mb-12 tracking-tighter text-[var(--accent)] transition-all">
+      <div className="text-3xl sm:text-4xl font-black italic mb-8 lg:mb-12 tracking-tighter text-[var(--accent)] transition-all">
         ¥{(currentPrice ?? product.price).toLocaleString()}
       </div>
 

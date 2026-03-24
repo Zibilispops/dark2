@@ -37,7 +37,7 @@ export default async function ShopPage() {
       <div className="w-full h-px bg-white/5 mb-8" />
 
       {/* ── Product Grid ── */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-4 gap-y-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-6 gap-y-12">
         {products.map((product, i) => (
           <Link
             key={product.id}
@@ -71,9 +71,9 @@ export default async function ShopPage() {
 
             {/* Text */}
             <div className="px-1">
-              <h3 className="text-xs md:text-sm font-black italic tracking-tighter uppercase group-hover:text-[var(--accent)] transition-colors duration-300 mb-0.5 leading-tight line-clamp-2">
+              <p className="text-[10px] md:text-[11px] font-bold italic tracking-tighter uppercase group-hover:text-[var(--accent)] transition-colors duration-300 mb-0.5 leading-[1.2] min-h-[3.6em] line-clamp-3">
                 {product.name}
-              </h3>
+              </p>
               <p className="text-[#333] text-[7px] uppercase font-mono tracking-widest">
                 {product.sizes.includes('ONE SIZE') ? 'One Size' : `S · M · L · XL`}
               </p>

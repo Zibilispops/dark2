@@ -16,16 +16,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-[clamp(16px,10px+1.5vw,32px)] h-[clamp(50px,32px+4.7vw,100px)] flex justify-between items-center border-b border-white/5 transition-all duration-300">
+      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md px-4 md:px-8 h-12 lg:h-20 flex justify-between items-center border-b border-white/5 transition-all duration-300">
         <Link
           href="/"
-          className="font-black text-[clamp(20px,13px+1.9vw,40px)] tracking-tighter uppercase italic flex-shrink-0 whitespace-nowrap hover:brightness-110 transition-[filter] duration-300"
+          className="font-black text-xl lg:text-4xl tracking-tighter uppercase italic flex-shrink-0 whitespace-nowrap hover:brightness-110 transition-[filter] duration-300"
           style={{ fontWeight: 900, fontStyle: 'italic' }}
         >
           <span style={{ color: 'var(--foreground)', fontWeight: 'inherit', fontSize: 'inherit' }}>DARK&nbsp;</span><span style={{ color: 'var(--accent)', fontWeight: 'inherit', fontSize: 'inherit' }}>FACTORY</span>
         </Link>
         
-        <div className="flex gap-[clamp(12px,8px+1.1vw,24px)] text-[clamp(10px,6.5px+0.9vw,20px)] items-center font-mono font-bold uppercase tracking-wider text-[#666] min-w-0 ml-auto sm:ml-0">
+        <div className="flex gap-4 md:gap-8 text-[9px] md:text-xs items-center font-mono font-bold uppercase tracking-wider text-[#666]">
           <Link 
             href="/shop" 
             className={`hover:text-white transition-colors ${pathname === '/shop' ? 'text-[var(--accent)] underline underline-offset-8' : ''}`}
