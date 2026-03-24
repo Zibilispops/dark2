@@ -70,11 +70,11 @@ export default async function ShopPage() {
             </div>
 
             {/* Text */}
-            <div className="px-1">
-              <p className="text-[10px] md:text-[11px] font-bold italic tracking-tighter uppercase group-hover:text-[var(--accent)] transition-colors duration-300 mb-0.5 leading-[1.2] min-h-[3.6em] line-clamp-3">
+            <div className="px-1 mt-2">
+              <p className="text-[20px] md:text-[22px] font-bold italic tracking-tighter uppercase group-hover:text-[var(--accent)] transition-colors duration-300 mb-0.5 leading-[1.1] min-h-[2.2em] line-clamp-2 overflow-hidden">
                 {product.name}
               </p>
-              <p className="text-[#333] text-[7px] uppercase font-mono tracking-widest">
+              <p className="text-[#333] text-[9px] uppercase font-mono tracking-widest">
                 {product.sizes.includes('ONE SIZE') ? 'One Size' : `S · M · L · XL`}
               </p>
             </div>
