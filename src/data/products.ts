@@ -15,7 +15,7 @@ export const products: Product[] = [
     "name": "Boy Edition",
     "slug": "boy",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Boy' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Boy' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -34,10 +34,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-012",
-    "name": "Bp Ramen Edition",
+    "name": "BP Ramen Edition",
     "slug": "bp-ramen",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Bp Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'BP Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -59,7 +59,7 @@ export const products: Product[] = [
     "name": "Breaking Hearts Edition",
     "slug": "breaking-hearts",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Breaking Hearts' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Breaking Hearts' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -81,7 +81,7 @@ export const products: Product[] = [
     "name": "Cafésarcasmo Edition",
     "slug": "cafésarcasmo",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Cafésarcasmo' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Cafésarcasmo' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -103,7 +103,7 @@ export const products: Product[] = [
     "name": "Chillout Edition",
     "slug": "chillout",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Chillout' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Chillout' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -122,10 +122,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-016",
-    "name": "Coffeeoclock Edition",
+    "name": "Coffee O'Clock Edition",
     "slug": "coffeeoclock",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Coffeeoclock' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Coffee O'Clock' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -147,7 +147,7 @@ export const products: Product[] = [
     "name": "Culture Edition",
     "slug": "culture",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Culture' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Culture' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -169,7 +169,7 @@ export const products: Product[] = [
     "name": "Cyborg Girl Edition",
     "slug": "cyborg-girl",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Cyborg Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Cyborg Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -191,7 +191,7 @@ export const products: Product[] = [
     "name": "Digital Battle Edition",
     "slug": "digital-battle",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Digital Battle' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Digital Battle' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -213,7 +213,7 @@ export const products: Product[] = [
     "name": "Einstein1 Frame Edition",
     "slug": "einstein1-frame",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Einstein1 Frame' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Einstein1 Frame' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -235,7 +235,7 @@ export const products: Product[] = [
     "name": "Fast Food Racer Edition",
     "slug": "fast-food-racer",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Fast Food Racer' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Fast Food Racer' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -257,7 +257,7 @@ export const products: Product[] = [
     "name": "Fibonacci Edition",
     "slug": "fibonacci",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Fibonacci' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Fibonacci' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -279,7 +279,7 @@ export const products: Product[] = [
     "name": "Fight To Edition",
     "slug": "fight-to",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Fight To' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Fight To' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -301,7 +301,7 @@ export const products: Product[] = [
     "name": "Hit Girl Edition",
     "slug": "hit-girl",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Hit Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Hit Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -320,10 +320,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-026",
-    "name": "Ice Scream1 Edition",
+    "name": "Ice Cream 1 Edition",
     "slug": "ice-scream1",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Scream1' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 1' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -342,10 +342,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-027",
-    "name": "Ice Scream2 Edition",
+    "name": "Ice Cream 2 Edition",
     "slug": "ice-scream2",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Scream2' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 2' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -364,10 +364,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-028",
-    "name": "Ice Scream3 Edition",
+    "name": "Ice Cream 3 Edition",
     "slug": "ice-scream3",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Scream3' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 3' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -386,10 +386,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-029",
-    "name": "Icecream1 Edition",
+    "name": "Ice Cream 1 Edition",
     "slug": "icecream1",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Icecream1' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 1' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -408,10 +408,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-030",
-    "name": "Icecream2 Edition",
+    "name": "Ice Cream 2 Edition",
     "slug": "icecream2",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Icecream2' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 2' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -430,10 +430,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-031",
-    "name": "Icescreamsoft Edition",
+    "name": "Ice Cream Soft Edition",
     "slug": "icescreamsoft",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Icescreamsoft' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream Soft' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -452,10 +452,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-032",
-    "name": "Iceskull Edition",
+    "name": "Ice Skull Edition",
     "slug": "iceskull",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Iceskull' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Skull' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -477,7 +477,7 @@ export const products: Product[] = [
     "name": "Leisure Edition",
     "slug": "leisure",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Leisure' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Leisure' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -499,7 +499,7 @@ export const products: Product[] = [
     "name": "Lula Ramen Edition",
     "slug": "lula-ramen",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Lula Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Lula Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -521,7 +521,7 @@ export const products: Product[] = [
     "name": "Mundane Edition",
     "slug": "mundane",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Mundane' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Mundane' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -543,7 +543,7 @@ export const products: Product[] = [
     "name": "Pie Edition",
     "slug": "pie",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Pie' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Pie' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -565,7 +565,7 @@ export const products: Product[] = [
     "name": "Ramen3 Edition",
     "slug": "ramen3",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ramen3' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ramen3' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -584,10 +584,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-038",
-    "name": "Ramendrop Edition",
+    "name": "Ramen Drop Edition",
     "slug": "ramendrop",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ramendrop' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ramen Drop' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -606,10 +606,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-039",
-    "name": "Ramenmosnter Edition",
+    "name": "Ramen Monster Edition",
     "slug": "ramenmosnter",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ramenmosnter' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ramen Monster' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -628,10 +628,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-040",
-    "name": "Ramenrider Edition",
+    "name": "Ramen Rider Edition",
     "slug": "ramenrider",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ramenrider' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ramen Rider' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -653,7 +653,7 @@ export const products: Product[] = [
     "name": "Self Edition",
     "slug": "self",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Self' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Self' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -675,7 +675,7 @@ export const products: Product[] = [
     "name": "Silly Devil Edition",
     "slug": "silly-devil",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Silly Devil' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Silly Devil' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -694,10 +694,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-043",
-    "name": "Spacecoffe Edition",
+    "name": "Spacecoffee Edition",
     "slug": "spacecoffe",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Spacecoffe' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Spacecoffee' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -719,7 +719,7 @@ export const products: Product[] = [
     "name": "Super Cute Edition",
     "slug": "super-cute",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Super Cute' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Super Cute' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
@@ -738,10 +738,10 @@ export const products: Product[] = [
   },
   {
     "id": "dtg-045",
-    "name": "Ultraramen Edition",
+    "name": "Ultra Ramen Edition",
     "slug": "ultraramen",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ultraramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
+    "description": "Limited edition DTG print featuring the 'Ultra Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
     "features": [
       "Super Heavyweight 7.4 oz (250 g/m²)",
       "14/- Jersey, 100% Cotton",
