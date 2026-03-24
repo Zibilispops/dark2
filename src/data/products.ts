@@ -11,72 +11,6 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    "id": "dtg-004",
-    "name": "Cyborg Girl Series",
-    "slug": "cyborg-girl-series",
-    "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Cyborg Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
-    "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
-    ],
-    "image": "/products/cyborg_girl_front.png",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ]
-  },
-  {
-    "id": "dtg-005",
-    "name": "Digital Battle Series",
-    "slug": "digital-battle-series",
-    "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Digital Battle' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
-    "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
-    ],
-    "image": "/products/digital_battle_front.png",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ]
-  },
-  {
-    "id": "dtg-006",
-    "name": "BP Ramen Concept",
-    "slug": "bp-ramen-concept",
-    "price": 4980,
-    "description": "Limited edition DTG print featuring the 'BP Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
-    "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
-    ],
-    "image": "/products/bp_ramen_front.png",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ]
-  },
-  {
     "id": "dtg-011",
     "name": "Boy Edition",
     "slug": "boy",
@@ -266,28 +200,6 @@ export const products: Product[] = [
       "Double-stitched hem and cuffs"
     ],
     "image": "/products/digital_battle_front.png",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ]
-  },
-  {
-    "id": "dtg-020",
-    "name": "Digitalbattle Edition",
-    "slug": "digitalbattle",
-    "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Digitalbattle' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG confort print.",
-    "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
-    ],
-    "image": "/products/digitalbattle_front.png",
     "sizes": [
       "S",
       "M",
