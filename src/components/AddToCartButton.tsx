@@ -76,12 +76,12 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
       >
         <span className="relative z-10">
           {added ? (
-            '✓ Added'
+            '✓ Deployed'
           ) : !selectedSize ? (
             'Select a Size'
           ) : (
             <>
-              Add To Order <span className="mx-2 opacity-30">·</span> ¥{currentPrice?.toLocaleString()}
+              Deploy to Cart <span className="mx-2 opacity-30">·</span> ¥{currentPrice?.toLocaleString()}
             </>
           )}
         </span>

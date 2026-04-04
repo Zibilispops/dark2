@@ -108,8 +108,20 @@ export default function LoginPage() {
           </Link>
         </div>
 
+        {/* Operator benefits */}
+        <div className="mt-10 border border-white/5 p-4 bg-[#0c0c0c]">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-[var(--accent)] mb-3">
+            // Operator Benefits
+          </p>
+          <ul className="space-y-2 font-mono text-[9px] uppercase tracking-widest text-[#333]">
+            <li>[+] Order tracking &amp; history</li>
+            <li>[+] Early access to Collection 002</li>
+            <li>[+] Size memory across devices</li>
+          </ul>
+        </div>
+
         {/* Status bar */}
-        <div className="mt-16 pt-6 border-t border-white/5 flex justify-between font-mono text-[9px] uppercase tracking-widest text-[#222]">
+        <div className="mt-8 pt-6 border-t border-white/5 flex justify-between font-mono text-[9px] uppercase tracking-widest text-[#222]">
           <span>Protocol: Supabase Auth</span>
           <span>Encryption: AES-256</span>
         </div>
