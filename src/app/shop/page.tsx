@@ -5,7 +5,11 @@ import { ShopGrid } from '@/components/ShopGrid';
 export const revalidate = 60;
 
 export default async function ShopPage() {
-  const { data, error } = await supabase.from('products').select('*').order('id');
+  const { data, error } = await supabase
+    .from('products')
+    .select('*')
+    .not('slug', 'in', '(icecream1,icecream2)')
+    .order('id');
 
   if (error) {
     console.error('Error fetching products:', error);

@@ -3,9 +3,11 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { AddToCartButton } from '@/components/AddToCartButton';
 import { ProductImage } from '@/components/ProductImage';
+import { ProductNavigation } from '@/components/ProductNavigation';
 import { supabase } from '@/lib/supabase';
 import type { Product } from '@/data/products';
 import { productDescriptions } from '@/data/descriptions';
+import { productPrices } from '@/data/prices';
 
 export const revalidate = 60;
 
@@ -70,11 +72,23 @@ export default async function ProductPage({
 
   const product = data as Product;
 
-  // Override DB description with local copy if available
+  // Override DB description and price with local copies if available
   const description = productDescriptions[product.slug] ?? product.description;
-  const productWithDescription = { ...product, description };
+  const price = productPrices[product.slug] ?? product.price;
+  const productWithDescription = { ...product, description, price };
 
   const backImage = getBackImage(product.image);
+
+  // Fetch all product slugs to determine neighbors (ordered by ID as in the shop)
+  const { data: allProducts } = await supabase
+    .from('products')
+    .select('slug')
+    .order('id', { ascending: true });
+
+  const slugs = (allProducts || []).map((p) => p.slug);
+  const currentIndex = slugs.indexOf(slug);
+  const prevSlug = currentIndex > 0 ? slugs[currentIndex - 1] : slugs[slugs.length - 1];
+  const nextSlug = currentIndex < slugs.length - 1 ? slugs[currentIndex + 1] : slugs[0];
 
   return (
     <main className="min-h-screen bg-black text-white pt-24 md:pt-32 pb-20 px-4 md:px-12 flex flex-col lg:flex-row gap-8 lg:gap-16">
@@ -142,6 +156,9 @@ export default async function ProductPage({
           </div>
         </div>
       </div>
+
+      {/* ── Keyboard & Visual Navigation ── */}
+      <ProductNavigation prevSlug={prevSlug} nextSlug={nextSlug} />
     </main>
   );
 }

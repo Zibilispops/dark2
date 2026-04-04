@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { supabase } from '@/lib/supabase';
 import { z } from 'zod';
+import { productPrices } from '@/data/prices';
 
 const CheckoutSchema = z.object({
   items: z.array(z.object({
@@ -31,7 +32,8 @@ export async function POST(req: Request) {
       const product = products.find((p) => p.id === item.id);
       if (!product) throw new Error(`Product ${item.id} not found`);
 
-      const price = getPriceBySize(product.price, item.size);
+      const basePrice = productPrices[product.slug] ?? product.price;
+      const price = getPriceBySize(basePrice, item.size);
 
       const imageUrl = product.image.startsWith('http') 
         ? product.image 

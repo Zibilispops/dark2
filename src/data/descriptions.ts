@@ -18,8 +18,6 @@ export const productDescriptions: Record<string, string> = {
   'ice-scream1': "Sweet chaos. The first flavor in the series — too good to be serious, too technically sharp to be just cute. Kawaii with an edge.",
   'ice-scream2': "The second scoop. Pushes the palette further — still cold, still kawaii, edges getting sharper with every layer of ink.",
   'ice-scream3': "Third in the series and the wildest. A full sensory override: maximum color, maximum texture, zero apology.",
-  'icecream1': "A parallel flavor. Same frequency as the original series, remixed with a softer hand and a bolder finish — same factory, different protocol.",
-  'icecream2': "The second wave, reimagined. Same cold sweetness, different composition — a variation that earns its place in the collection.",
   'icescreamsoft': "Serve it slow. The most understated entry in the series — muted palette, maximum texture. Softness as a design choice, not a compromise.",
   'iceskull': "Melting defiance. Where kawaii ends and the void begins — a skull that doesn't take itself too seriously and is better for it.",
   'leisure': "Structured downtime. For the operator who treats rest as intentionally as the work — designed for moments that are earned, not stumbled into.",

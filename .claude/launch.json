@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "/opt/homebrew/Cellar/node@22/22.22.0/bin/node",
+      "runtimeArgs": ["/Users/flaviokoba/Documents/AGents/Dark/node_modules/.bin/next", "dev", "--webpack"],
+      "port": 3000
+    }
+  ]
+}
