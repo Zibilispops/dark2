@@ -51,8 +51,8 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
         {/* Size selector — hide if only one size */}
       {product.sizes.length > 1 && (
         <div className={showSizeError ? 'animate-shake' : ''}>
-          <p className={`font-mono text-[10px] uppercase tracking-widest mb-3 transition-colors ${
-            showSizeError ? 'text-red-500' : 'text-[#444]'
+          <p className={`font-mono uppercase tracking-widest mb-3 transition-all duration-300 ${
+            showSizeError ? 'text-red-500 text-[15px] font-black' : 'text-[#444] text-[10px] font-medium'
           }`}>
             {showSizeError ? 'Select Size Required' : 'Select Size'}
           </p>
