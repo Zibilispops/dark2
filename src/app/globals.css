@@ -188,3 +188,13 @@ h3 { font-size: var(--h3); }
   border-color: rgba(205,255,0,0.35);
   box-shadow: 0 0 40px rgba(205,255,0,0.06);
 }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.2s ease-in-out 0s 2;
+}

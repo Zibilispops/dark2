@@ -11,9 +11,14 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
     product.sizes.length === 1 ? product.sizes[0] : null
   );
   const [added, setAdded] = useState(false);
+  const [showSizeError, setShowSizeError] = useState(false);
 
   const handleAdd = () => {
-    if (!selectedSize) return;
+    if (!selectedSize) {
+      setShowSizeError(true);
+      setTimeout(() => setShowSizeError(false), 2000);
+      return;
+    }
     addToCart(product, selectedSize);
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
@@ -45,15 +50,20 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
       <div className="space-y-4">
         {/* Size selector — hide if only one size */}
       {product.sizes.length > 1 && (
-        <div>
-          <p className="font-mono text-[10px] uppercase tracking-widest text-[#444] mb-3">
-            Select Size
+        <div className={showSizeError ? 'animate-shake' : ''}>
+          <p className={`font-mono text-[10px] uppercase tracking-widest mb-3 transition-colors ${
+            showSizeError ? 'text-red-500' : 'text-[#444]'
+          }`}>
+            {showSizeError ? 'Select Size Required' : 'Select Size'}
           </p>
           <div className="flex flex-wrap gap-2">
             {product.sizes.map((size) => (
               <button
                 key={size}
-                onClick={() => setSelectedSize(size)}
+                onClick={() => {
+                  setSelectedSize(size);
+                  setShowSizeError(false);
+                }}
                 className={`px-4 py-2 text-[10px] font-mono uppercase tracking-widest border transition-all duration-200 ${
                   selectedSize === size
                     ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
@@ -69,23 +79,21 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
 
       <button
         onClick={handleAdd}
-        disabled={!selectedSize || added}
+        disabled={added}
         className={`btn-primary w-full py-6 text-base tracking-widest group relative overflow-hidden transition-all duration-300 ${
-          !selectedSize ? 'opacity-30 cursor-not-allowed' : ''
+          added ? 'opacity-50' : ''
         }`}
       >
         <span className="relative z-10">
           {added ? (
             '✓ Deployed'
-          ) : !selectedSize ? (
-            'Select a Size'
           ) : (
             <>
-              Deploy to Cart <span className="mx-2 opacity-30">·</span> ¥{currentPrice?.toLocaleString()}
+              Add to Cart {selectedSize && <><span className="mx-2 opacity-30">·</span> ¥{currentPrice?.toLocaleString()}</>}
             </>
           )}
         </span>
-        {selectedSize && !added && (
+        {!added && (
           <span className="ml-4 opacity-30 group-hover:opacity-100 transition-opacity relative z-10">→</span>
         )}
         <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
