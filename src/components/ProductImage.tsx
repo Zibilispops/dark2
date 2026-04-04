@@ -15,11 +15,15 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
   const dragStart = useRef<{ x: number; y: number; ox: number; oy: number } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Escape to close
+  // Escape to close + prevent body scroll
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', handler);
+      document.body.style.overflow = '';
+    };
   }, [onClose]);
 
   // Scroll to zoom
@@ -56,52 +60,55 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
-      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      className="fixed inset-0 z-[9999] flex flex-col bg-black"
+      style={{ touchAction: 'none' }}
     >
-      {/* Controls */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 flex items-center gap-3 z-10">
-        <button
-          onClick={() => zoom(1.4)}
-          className="font-mono text-[10px] uppercase tracking-widest text-[#555] hover:text-[var(--accent)] border border-white/10 hover:border-[var(--accent)] px-3 py-1.5 transition-all"
-        >
-          + Zoom
-        </button>
-        <span className="font-mono text-[9px] text-[#333] tracking-widest min-w-[4ch] text-center">
-          {Math.round(scale * 100)}%
-        </span>
-        <button
-          onClick={() => zoom(1 / 1.4)}
-          className="font-mono text-[10px] uppercase tracking-widest text-[#555] hover:text-white border border-white/10 hover:border-white/30 px-3 py-1.5 transition-all"
-        >
-          − Zoom
-        </button>
-        {scale > 1 && (
+      {/* Top bar */}
+      <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 shrink-0 z-10">
+        <div className="flex items-center gap-2">
           <button
-            onClick={() => { setScale(1); setOffset({ x: 0, y: 0 }); }}
-            className="font-mono text-[10px] uppercase tracking-widest text-[#333] hover:text-white border border-white/10 px-3 py-1.5 transition-all"
+            onClick={() => zoom(1.4)}
+            className="font-mono text-[10px] uppercase tracking-widest text-[#555] active:text-[var(--accent)] border border-white/10 px-3 py-2 transition-all"
           >
-            Reset
+            + Zoom
           </button>
-        )}
+          <span className="font-mono text-[9px] text-[#333] tracking-widest min-w-[4ch] text-center">
+            {Math.round(scale * 100)}%
+          </span>
+          <button
+            onClick={() => zoom(1 / 1.4)}
+            className="font-mono text-[10px] uppercase tracking-widest text-[#555] active:text-white border border-white/10 px-3 py-2 transition-all"
+          >
+            − Zoom
+          </button>
+          {scale > 1 && (
+            <button
+              onClick={() => { setScale(1); setOffset({ x: 0, y: 0 }); }}
+              className="font-mono text-[10px] uppercase tracking-widest text-[#333] border border-white/10 px-3 py-2"
+            >
+              Reset
+            </button>
+          )}
+        </div>
+        {/* Large close tap target for mobile */}
+        <button
+          onClick={onClose}
+          className="font-mono text-[11px] uppercase tracking-widest text-white border border-white/20 px-4 py-2 active:bg-white/10 transition-all min-w-[56px] text-center"
+        >
+          ✕ Close
+        </button>
       </div>
 
-      <button
-        onClick={onClose}
-        className="absolute top-6 right-6 font-mono text-[10px] uppercase tracking-widest text-[#444] hover:text-white transition-colors z-10"
-      >
-        [ESC] ×
-      </button>
-
-      {/* Image */}
+      {/* Image area */}
       <div
         ref={containerRef}
-        className="w-full h-full flex items-center justify-center overflow-hidden"
+        className="flex-1 flex items-center justify-center overflow-hidden"
         onWheel={onWheel}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
         onMouseUp={onMouseUp}
         onMouseLeave={onMouseUp}
+        onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
         style={{ cursor: scale > 1 ? (dragging ? 'grabbing' : 'grab') : 'zoom-in' }}
       >
         <img
@@ -109,8 +116,8 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
           alt={alt}
           draggable={false}
           style={{
-            maxWidth: '85vw',
-            maxHeight: '85vh',
+            maxWidth: '92vw',
+            maxHeight: '80vh',
             objectFit: 'contain',
             transform: `scale(${scale}) translate(${offset.x / scale}px, ${offset.y / scale}px)`,
             transition: dragging ? 'none' : 'transform 0.15s ease',
@@ -120,16 +127,12 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
         />
       </div>
 
-      {scale > 1 && (
-        <p className="absolute bottom-6 left-1/2 -translate-x-1/2 font-mono text-[9px] uppercase tracking-widest text-[#333]">
-          Scroll or drag to navigate
+      {/* Bottom hint */}
+      <div className="py-3 text-center shrink-0 border-t border-white/5">
+        <p className="font-mono text-[9px] uppercase tracking-widest text-[#292929]">
+          {scale > 1 ? 'Drag to pan · Tap outside to close' : 'Tap image or + Zoom to magnify'}
         </p>
-      )}
-      {scale === 1 && (
-        <p className="absolute bottom-6 left-1/2 -translate-x-1/2 font-mono text-[9px] uppercase tracking-widest text-[#333]">
-          Click or scroll to zoom · Click outside to close
-        </p>
-      )}
+      </div>
     </div>
   );
 }
