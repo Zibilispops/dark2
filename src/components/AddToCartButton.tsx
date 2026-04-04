@@ -30,8 +30,10 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
     <div className="flex flex-col">
       <h2 className="text-2xl sm:text-4xl lg:text-5xl mb-4 lg:mb-6 leading-[0.85] text-balance break-normal uppercase font-black italic tracking-tighter">{product.name}</h2>
       
-      <div className="text-3xl sm:text-4xl font-black italic mb-8 lg:mb-12 tracking-tighter text-[var(--accent)] transition-all">
-        ¥{(currentPrice ?? product.price).toLocaleString()}
+      <div className={`text-3xl sm:text-4xl font-black italic mb-8 lg:mb-12 tracking-tighter transition-all duration-300 ${
+        added ? 'text-red-600' : 'text-[var(--accent)]'
+      }`}>
+        {added ? 'ADDED TO CART ' : ''}¥{(currentPrice ?? product.price).toLocaleString()}
       </div>
 
       <div className="space-y-6 mb-16">
@@ -80,13 +82,15 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
       <button
         onClick={handleAdd}
         disabled={added}
-        className={`btn-primary w-full py-6 text-base tracking-widest group relative overflow-hidden transition-all duration-300 ${
-          added ? 'opacity-50' : ''
+        className={`w-full py-6 text-base tracking-widest group relative overflow-hidden transition-all duration-300 ${
+          added 
+            ? 'bg-black border-2 border-red-600 text-red-600 font-black italic shadow-[0_0_20px_rgba(239,68,68,0.2)]' 
+            : 'btn-primary'
         }`}
       >
         <span className="relative z-10">
           {added ? (
-            '✓ Deployed'
+            <>Added to cart ¥{currentPrice?.toLocaleString()}</>
           ) : (
             <>
               Add to Cart {selectedSize && <><span className="mx-2 opacity-30">·</span> ¥{currentPrice?.toLocaleString()}</>}
