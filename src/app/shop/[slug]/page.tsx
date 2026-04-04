@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { AddToCartButton } from '@/components/AddToCartButton';
 import { ProductImage } from '@/components/ProductImage';
 import { supabase } from '@/lib/supabase';
@@ -7,6 +8,26 @@ import type { Product } from '@/data/products';
 import { productDescriptions } from '@/data/descriptions';
 
 export const revalidate = 60;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const { data } = await supabase.from('products').select('name, id').eq('slug', slug).single();
+  const description = productDescriptions[slug] ?? 'Limited edition DTG print on Bad Printer 7.4oz Super Heavyweight cotton. Designed in Gifu, Japan.';
+  return {
+    title: data ? `${data.name} — Dark Factory` : 'Dark Factory',
+    description,
+    alternates: { canonical: `https://www.sdjapan.jp/shop/${slug}` },
+    openGraph: {
+      title: data ? `${data.name} — Dark Factory` : 'Dark Factory',
+      description,
+      images: [{ url: `/products/${slug.replace(/-/g, '_')}_front.png` }],
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const { data } = await supabase.from('products').select('slug');

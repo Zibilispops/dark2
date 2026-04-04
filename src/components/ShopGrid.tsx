@@ -13,6 +13,50 @@ const ABSTRACT_SLUGS = new Set(['fibonacci', 'mundane', 'self', 'culture', 'leis
 const FOOD_SLUGS = new Set(['coffeeoclock', 'fast-food-racer', 'pie', 'spacecoffe', 'super-cute']);
 const FEATURED_SLUGS = new Set(['cyborg-girl', 'ramenrider', 'spacecoffe', 'iceskull', 'fibonacci']);
 
+// Fixed stock counts per product — creates specific scarcity urgency
+const STOCK_COUNTS: Record<string, number> = {
+  'cyborg-girl': 6,
+  'ramenrider': 9,
+  'spacecoffe': 7,
+  'iceskull': 11,
+  'fibonacci': 8,
+  'bp-ramen': 14,
+  'digital-battle': 13,
+  'hit-girl': 10,
+  'breaking-hearts': 12,
+  'coffeeoclock': 15,
+  'boy': 17,
+  'lula-ramen': 14,
+  'ramen3': 16,
+  'ramendrop': 11,
+  'ramenmosnter': 13,
+  'ultraramen': 9,
+  'ice-scream1': 18,
+  'ice-scream2': 15,
+  'ice-scream3': 12,
+  'icecream1': 14,
+  'icecream2': 16,
+  'icescreamsoft': 10,
+  'fast-food-racer': 13,
+  'fight-to': 11,
+  'pie': 14,
+  'mundane': 12,
+  'self': 9,
+  'culture': 13,
+  'leisure': 15,
+  'chillout': 14,
+  'einstein1-frame': 8,
+  'silly-devil': 11,
+  'super-cute': 16,
+};
+
+function getStockLabel(slug: string): { label: string; urgent: boolean } {
+  const count = STOCK_COUNTS[slug] ?? 12;
+  if (count <= 8) return { label: `${count} remaining`, urgent: true };
+  if (count <= 12) return { label: `${count} remaining`, urgent: false };
+  return { label: 'Limited', urgent: false };
+}
+
 function getCategory(slug: string): Filter | null {
   if (RAMEN_SLUGS.has(slug)) return 'RAMEN';
   if (ICE_CREAM_SLUGS.has(slug)) return 'ICE CREAM';
@@ -24,15 +68,95 @@ function getCategory(slug: string): Filter | null {
 
 const FILTERS: Filter[] = ['ALL', 'RAMEN', 'ICE CREAM', 'CYBERPUNK', 'ABSTRACT', 'FOOD & DRINK'];
 
+function ProductCard({ product, i }: { product: Product; i: number }) {
+  const isFeatured = FEATURED_SLUGS.has(product.slug);
+  const stock = getStockLabel(product.slug);
+
+  return (
+    <Link
+      href={`/shop/${product.slug}`}
+      className="product-card group block fade-in-up"
+      style={{ animationDelay: `${i * 30}ms` }}
+    >
+      <div className="product-card-border aspect-[3/4] overflow-hidden bg-[#0f0f0f] relative border border-white/5 rounded-sm mb-3">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(205,255,0,0.03)_0%,transparent_70%)]" />
+
+        <img
+          src={product.image}
+          alt={product.name}
+          className="product-card-img w-full h-full object-cover"
+        />
+
+        {/* Top badges */}
+        <div className="absolute top-2 left-2 right-2 flex justify-between items-start z-10">
+          {isFeatured ? (
+            <span className="bg-[var(--accent)] text-black font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5">
+              Featured
+            </span>
+          ) : <span />}
+          <span className="bg-black/60 border border-white/10 font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5 text-[#555]">
+            Bad Printer 7.4oz
+          </span>
+        </div>
+
+        {/* Bottom overlay row */}
+        <div className="absolute bottom-0 left-0 right-0 px-3 py-2 flex justify-between items-end bg-gradient-to-t from-black/80 to-transparent">
+          <span className="font-mono text-[7px] uppercase tracking-widest text-[#444] border border-white/5 px-1.5 py-0.5">
+            {product.id}
+          </span>
+          <span className="text-base md:text-lg font-black italic tracking-tighter text-white">
+            ¥{product.price.toLocaleString()}
+          </span>
+        </div>
+
+        {/* Scarcity indicator */}
+        <div className="absolute bottom-10 left-3">
+          <span className={`font-mono text-[7px] uppercase tracking-widest ${stock.urgent ? 'text-red-400' : 'text-red-400/60'}`}>
+            {stock.label}
+          </span>
+        </div>
+
+        {/* Hover accent line */}
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-[var(--accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+      </div>
+
+      <div className="px-1 mt-2">
+        <p className="text-[20px] md:text-[22px] font-bold italic tracking-tighter uppercase group-hover:text-[var(--accent)] transition-colors duration-300 mb-0.5 leading-[1.1] min-h-[2.2em] line-clamp-2 overflow-hidden">
+          {product.name}
+        </p>
+        <p className="text-[#333] text-[9px] uppercase font-mono tracking-widest">
+          {product.sizes.includes('ONE SIZE') ? 'One Size' : `S · M · L · XL`}
+        </p>
+      </div>
+    </Link>
+  );
+}
+
 export function ShopGrid({ products }: { products: Product[] }) {
   const [active, setActive] = useState<Filter>('ALL');
 
+  const featured = products.filter((p) => FEATURED_SLUGS.has(p.slug));
   const filtered = active === 'ALL'
     ? products
     : products.filter((p) => getCategory(p.slug) === active);
 
   return (
     <>
+      {/* ── Staff Picks (shown on ALL only) ── */}
+      {active === 'ALL' && featured.length > 0 && (
+        <div className="mb-12">
+          <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-6">
+            // Staff Picks
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10">
+            {featured.map((product, i) => (
+              <ProductCard key={product.id} product={product} i={i} />
+            ))}
+          </div>
+          <div className="w-full h-px bg-white/5 mt-12 mb-8" />
+        </div>
+      )}
+
       {/* ── Filter tabs ── */}
       <div className="flex flex-wrap gap-2 mb-8">
         {FILTERS.map((f) => (
@@ -62,71 +186,9 @@ export function ShopGrid({ products }: { products: Product[] }) {
 
       {/* ── Product Grid ── */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-6 gap-y-12">
-        {filtered.map((product, i) => {
-          const isFeatured = FEATURED_SLUGS.has(product.slug);
-          return (
-            <Link
-              key={product.id}
-              href={`/shop/${product.slug}`}
-              className="product-card group block fade-in-up"
-              style={{ animationDelay: `${i * 30}ms` }}
-            >
-              {/* Image container */}
-              <div className="product-card-border aspect-[3/4] overflow-hidden bg-[#0f0f0f] relative border border-white/5 rounded-sm mb-3">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(205,255,0,0.03)_0%,transparent_70%)]" />
-
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="product-card-img w-full h-full object-cover"
-                />
-
-                {/* Top badges */}
-                <div className="absolute top-2 left-2 right-2 flex justify-between items-start z-10">
-                  {isFeatured && (
-                    <span className="bg-[var(--accent)] text-black font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5">
-                      Featured
-                    </span>
-                  )}
-                  {!isFeatured && <span />}
-                  <span className="bg-black/60 border border-white/10 font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5 text-[#555]">
-                    Bad Printer 7.4oz
-                  </span>
-                </div>
-
-                {/* Bottom overlay row */}
-                <div className="absolute bottom-0 left-0 right-0 px-3 py-2 flex justify-between items-end bg-gradient-to-t from-black/80 to-transparent">
-                  <span className="font-mono text-[7px] uppercase tracking-widest text-[#444] border border-white/5 px-1.5 py-0.5">
-                    {product.id}
-                  </span>
-                  <span className="text-base md:text-lg font-black italic tracking-tighter text-white">
-                    ¥{product.price.toLocaleString()}
-                  </span>
-                </div>
-
-                {/* Scarcity indicator */}
-                <div className="absolute bottom-10 left-3">
-                  <span className="font-mono text-[7px] uppercase tracking-widest text-red-400/70">
-                    Limited
-                  </span>
-                </div>
-
-                {/* Hover accent line */}
-                <div className="absolute top-0 left-0 right-0 h-[1px] bg-[var(--accent)] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              </div>
-
-              {/* Text */}
-              <div className="px-1 mt-2">
-                <p className="text-[20px] md:text-[22px] font-bold italic tracking-tighter uppercase group-hover:text-[var(--accent)] transition-colors duration-300 mb-0.5 leading-[1.1] min-h-[2.2em] line-clamp-2 overflow-hidden">
-                  {product.name}
-                </p>
-                <p className="text-[#333] text-[9px] uppercase font-mono tracking-widest">
-                  {product.sizes.includes('ONE SIZE') ? 'One Size' : `S · M · L · XL`}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
+        {filtered.map((product, i) => (
+          <ProductCard key={product.id} product={product} i={i} />
+        ))}
       </div>
     </>
   );

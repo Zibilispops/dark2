@@ -57,6 +57,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Bad Printer Quality Section ── */}
+      <section className="border-t border-white/10 pt-20 mb-20">
+        <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-6">
+          // The Blank
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-black italic tracking-tighter uppercase mb-6">
+              Bad Printer<br />7.4oz
+            </h2>
+            <p className="text-[#888] leading-relaxed mb-6">
+              Not all blanks are equal. The <span className="text-white font-black">Bad Printer</span> Super Heavyweight is 250 g/m² — nearly double the weight of standard streetwear tees. That mass translates directly into structure, drape, and longevity.
+            </p>
+            <p className="text-[#888] leading-relaxed">
+              DTG printing on heavyweight cotton produces different results than light blanks: ink sits in the fiber, not on top of it. Colors retain depth after washing. The print becomes part of the garment.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { stat: '7.4oz', label: 'Super Heavyweight', detail: '250 g/m² — premium tier' },
+              { stat: '100%', label: 'Cotton', detail: '14/- Jersey · Seamless tubular' },
+              { stat: 'DTG', label: 'Comfort Print', detail: 'Soft-touch ink, zero hand feel' },
+              { stat: '1×1', label: 'Ribbed Crew Neck', detail: 'Double-stitched hem and cuffs' },
+            ].map(({ stat, label, detail }) => (
+              <div key={stat} className="border border-white/5 p-4 bg-[#0c0c0c]">
+                <p className="text-[var(--accent)] font-black italic text-2xl tracking-tighter mb-1">{stat}</p>
+                <p className="font-mono text-[9px] uppercase tracking-widest text-white mb-1">{label}</p>
+                <p className="font-mono text-[8px] uppercase tracking-widest text-[#333]">{detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy Section */}
       <section className="border-t border-white/10 pt-20 flex flex-col items-center text-center">
         <div className="max-w-2xl space-y-8">

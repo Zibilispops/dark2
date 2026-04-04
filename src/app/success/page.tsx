@@ -18,9 +18,19 @@ export default function SuccessPage() {
           // Order Confirmed
         </p>
 
-        <h1 className="mb-8">
+        <h1 className="mb-4">
           Order<br />Received
         </h1>
+
+        {/* Operator status */}
+        <div className="mb-8 border border-[var(--accent)]/20 bg-[var(--accent)]/5 p-4">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)]">
+            You&apos;re now an Operator
+          </p>
+          <p className="font-mono text-[9px] uppercase tracking-widest text-[#444] mt-1">
+            Watch your inbox for Collection 002
+          </p>
+        </div>
 
         <p className="text-[#555] text-sm font-mono leading-relaxed mb-12">
           Your registry entry has been logged.<br />
@@ -40,6 +50,10 @@ export default function SuccessPage() {
           <div className="flex justify-between">
             <span>Origin</span>
             <span>Gifu Studio</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Blank</span>
+            <span>Bad Printer 7.4oz</span>
           </div>
         </div>
 

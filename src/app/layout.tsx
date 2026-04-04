@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import { AuthProvider } from "@/context/AuthContext";
 import { CustomCursor } from "@/components/CustomCursor";
@@ -18,7 +19,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Dark Factory — Digital Vanguard DTG",
-  description: "High-fidelity garments for the digital vanguard. Gifu-based DTG printing.",
+  description: "High-fidelity garments for the digital vanguard. Limited edition DTG-printed heavyweight cotton tees from Gifu, Japan.",
+  metadataBase: new URL("https://www.sdjapan.jp"),
+  alternates: {
+    canonical: "https://www.sdjapan.jp",
+  },
+  openGraph: {
+    siteName: "Dark Factory",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +46,10 @@ export default function RootLayout({
         <AuthProvider>
           <CartProvider>
             <Navbar />
-            {children}
+            <div className="flex-1 flex flex-col">
+              {children}
+            </div>
+            <Footer />
           </CartProvider>
         </AuthProvider>
       </body>
