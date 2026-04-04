@@ -14,6 +14,9 @@ export function ProductNavigation({ prevSlug, nextSlug }: ProductNavigationProps
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    let touchStartX = 0;
+    let touchStartY = 0;
+
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'ArrowRight') {
         router.push(`/shop/${nextSlug}`);
@@ -22,8 +25,36 @@ export function ProductNavigation({ prevSlug, nextSlug }: ProductNavigationProps
       }
     }
 
+    function handleTouchStart(e: TouchEvent) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }
+
+    function handleTouchEnd(e: TouchEvent) {
+      const touchEndX = e.changedTouches[0].clientX;
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+
+      // Swipe threshold: 60px horizontal, more than vertical movement
+      if (Math.abs(deltaX) > 60 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX < 0) {
+          router.push(`/shop/${nextSlug}`);
+        } else {
+          router.push(`/shop/${prevSlug}`);
+        }
+      }
+    }
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchstart', handleTouchStart);
+    window.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
   }, [router, nextSlug, prevSlug]);
 
   return (
