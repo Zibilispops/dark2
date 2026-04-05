@@ -174,7 +174,7 @@ function HeroProduct() {
       {/* Gradient mask — fades left edge into bg */}
       <div className="absolute inset-0 bg-gradient-to-r lg:bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '35%' }} />
       {/* Mobile Top/Bottom mask */}
-      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#080808] to-transparent z-10 lg:hidden pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#080808] to-transparent z-10 lg:hidden pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808] z-10 pointer-events-none" style={{ bottom: 0, height: '20%' }} />
 
       <img
@@ -251,7 +251,7 @@ export default function Home() {
       </div>
 
       {/* ── Hero ── */}
-      <section className="relative flex-1 flex flex-col justify-center px-8 md:px-16 pt-10 pb-32 min-h-screen overflow-hidden">
+      <section className="relative flex-1 flex flex-col justify-center px-8 md:px-16 pt-10 pb-32 min-h-screen overflow-hidden space-y-8 lg:space-y-0">
 
         <div className="hidden lg:block">
           <HeroProduct />
@@ -275,7 +275,7 @@ export default function Home() {
         </p>
 
         {/* CTAs */}
-        <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10 mb-12 lg:mb-0">
+        <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10">
           <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group">
             <span className="group-hover:invert transition-all">Shop Collection →</span>
           </Link>
@@ -285,7 +285,7 @@ export default function Home() {
         </div>
 
         {/* Mobile-only Product placement */}
-        <div className="lg:hidden w-full h-[40vh] relative z-0 mb-16 opacity-0 hero-product-mobile">
+        <div className="lg:hidden w-full h-[40vh] relative z-0 hero-product-mobile opacity-0 translate-y-8">
            <HeroProduct />
         </div>
 
