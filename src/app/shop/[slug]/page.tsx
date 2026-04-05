@@ -103,7 +103,7 @@ export default async function ProductPage({
           name={product.name}
         />
 
-        <div className="w-full p-4 border border-white/5 font-mono text-[10px] uppercase text-[#444] tracking-widest leading-relaxed pointer-events-none z-10 bg-[#0a0a0a]">
+        <div className="product-meta-container w-full p-4 border border-white/5 font-mono text-[10px] uppercase text-[#444] tracking-widest leading-relaxed pointer-events-none z-10 bg-[#0a0a0a]">
           Serial: {product.id}<br />
           Origin: Gifu Studio<br />
           Type: [DTG-PRINT] · Bad Printer 7.4oz

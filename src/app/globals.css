@@ -202,7 +202,8 @@ h3 { font-size: var(--h3); }
 /* Hide UI elements during lightbox zoom to fix Safari stacking issues */
 body.lightbox-active .add-to-cart-container,
 body.lightbox-active nav,
-body.lightbox-active .product-navigation-container {
+body.lightbox-active .product-navigation-container,
+body.lightbox-active .product-meta-container {
   display: none !important;
   pointer-events: none !important;
 }
