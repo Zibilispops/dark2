@@ -1,19 +1,31 @@
+---
+name: github-merge-authority
+description: Executes PR merge operations strictly after successful security-gate approvals.
+---
 # Skill: github-merge-authority
-## Trigger: Post security-gate APPROVE
-## Input: PR number, APPROVE decision, risk level, notes
 
-### Process:
-1. Write structured review comment on PR.
-2. Call `github-mcp` merge tool.
-3. Log merge to audit trail.
-4. Confirm GitHub Actions triggered.
+## Goal
+Automate the safe merging of pull requests only after completing all mandatory security validations and obtaining an APPROVE status.
 
-### Output:
+## Instructions
+1. Receive `PR number`, `APPROVE decision`, `risk level`, and `notes`.
+2. Write a structured review comment on the PR detailing the approval and exact risk level.
+3. Call the `github-mcp` merge tool to merge the branch.
+4. Log this merge event to the audit trail.
+5. Return JSON indicating `merged`, `sha`, and `actions_triggered`.
+
+## Guardrails
+- Only YOU (Opus) call this skill. Never delegate.
+- Always write a PR comment before triggering the merge call.
+- Log every merge with the risk level explicitly attached.
+
+## Few-Shot Example
+**Input:** PR #42, APPROVE, LOW risk
+**Output:**
 ```json
-{ "merged": true, "sha": "", "actions_triggered": true }
+{
+  "merged": true,
+  "sha": "a1b2c3d4",
+  "actions_triggered": true
+}
 ```
-
-### Rules:
-- Only **YOU (Opus)** call this. Never delegate.
-- Always write PR comment before merge call.
-- Log every merge with risk level attached.

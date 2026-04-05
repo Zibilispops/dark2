@@ -1,25 +1,24 @@
+---
+name: review-package-compiler
+description: Aggregates all logs, diff reports, and blocked items into a final review package for Orchestrator inspection.
+---
 # Skill: review-package-compiler
-## Trigger: Run completion (all tasks COMPLETE or BLOCKED)
-## Input: All audit logs, self-heal logs, diff reports, preview URL
 
-### Process:
-1. Aggregate all security audit results.
-2. Compile risk summary (CRITICAL first).
-3. Summarize self-heal loops (what failed, what was fixed).
-4. List all BLOCKED items with full context.
-5. Generate diff report (every file touched, by which agent).
+## Goal
+Produce a single, comprehensive artifact at run completion detailing system changes, risk assessments, and unresolved blockers.
 
-### Output:
-```json
-{
-  "run_id": "",
-  "status": "complete | partial | blocked",
-  "preview_url": "",
-  "audit_log": [],
-  "risk_summary": [],
-  "self_heal_log": [],
-  "blocked_items": [],
-  "diff_report": [],
-  "human_decision": null
-}
-```
+## Instructions
+1. Aggregate all security audit results across tasks.
+2. Compile a risk summary sorting CRITICAL items first.
+3. Summarize all self-heal loops (failures and fixes).
+4. List all BLOCKED items providing full context.
+5. Generate a comprehensive diff report of touched files.
+6. Output the structured JSON schema.
+
+## Guardrails
+- The review package MUST be strictly compliant with the defined JSON schema.
+- Do not omit BLOCKED items; transparency to the human orchestrator is mandatory.
+
+## Few-Shot Example
+**Input:** State: completion, 1 blocked item due to external API timeout.
+**Output:** JSON object matching the review-package-schema containing `status: "partial"`, properly compiled `blocked_items` array, etc.

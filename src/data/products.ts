@@ -15,13 +15,13 @@ export const products: Product[] = [
     "name": "Boy Edition",
     "slug": "boy",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Boy' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Boy' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/boy_front.png",
     "sizes": [
@@ -37,13 +37,13 @@ export const products: Product[] = [
     "name": "BP Ramen Edition",
     "slug": "bp-ramen",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'BP Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'BP Ramen' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/bp_ramen_front.png",
     "sizes": [
@@ -59,13 +59,13 @@ export const products: Product[] = [
     "name": "Breaking Hearts Edition",
     "slug": "breaking-hearts",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Breaking Hearts' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Breaking Hearts' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/breaking_hearts_front.png",
     "sizes": [
@@ -81,13 +81,13 @@ export const products: Product[] = [
     "name": "Chillout Edition",
     "slug": "chillout",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Chillout' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Chillout' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/chillout_front.png",
     "sizes": [
@@ -103,13 +103,13 @@ export const products: Product[] = [
     "name": "Coffee O'Clock Edition",
     "slug": "coffeeoclock",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Coffee O'Clock' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Coffee O'Clock' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/coffeeoclock_front.png",
     "sizes": [
@@ -125,13 +125,13 @@ export const products: Product[] = [
     "name": "Culture Edition",
     "slug": "culture",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Culture' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Culture' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/culture_front.png",
     "sizes": [
@@ -147,13 +147,13 @@ export const products: Product[] = [
     "name": "Cyborg Girl Edition",
     "slug": "cyborg-girl",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Cyborg Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Cyborg Girl' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/cyborg_girl_front.png",
     "sizes": [
@@ -169,13 +169,13 @@ export const products: Product[] = [
     "name": "Digital Battle Edition",
     "slug": "digital-battle",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Digital Battle' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Digital Battle' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/digital_battle_front.png",
     "sizes": [
@@ -191,13 +191,13 @@ export const products: Product[] = [
     "name": "Einstein1 Frame Edition",
     "slug": "einstein1-frame",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Einstein1 Frame' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Einstein1 Frame' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/einstein1_frame_front.png",
     "sizes": [
@@ -213,13 +213,13 @@ export const products: Product[] = [
     "name": "Fast Food Racer Edition",
     "slug": "fast-food-racer",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Fast Food Racer' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Fast Food Racer' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/fast_food_racer_front.png",
     "sizes": [
@@ -235,13 +235,13 @@ export const products: Product[] = [
     "name": "Fibonacci Edition",
     "slug": "fibonacci",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Fibonacci' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Fibonacci' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/fibonacci_front.png",
     "sizes": [
@@ -257,13 +257,13 @@ export const products: Product[] = [
     "name": "Fight To Edition",
     "slug": "fight-to",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Fight To' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Fight To' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/fight_to_front.png",
     "sizes": [
@@ -279,13 +279,13 @@ export const products: Product[] = [
     "name": "Hit Girl Edition",
     "slug": "hit-girl",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Hit Girl' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Hit Girl' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/hit_girl_front.png",
     "sizes": [
@@ -301,13 +301,13 @@ export const products: Product[] = [
     "name": "Ice Cream 1 Edition",
     "slug": "ice-scream1",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Cream 1' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 1' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/ice_scream1_front.png",
     "sizes": [
@@ -323,13 +323,13 @@ export const products: Product[] = [
     "name": "Ice Cream 2 Edition",
     "slug": "ice-scream2",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Cream 2' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 2' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/ice_scream2_front.png",
     "sizes": [
@@ -345,13 +345,13 @@ export const products: Product[] = [
     "name": "Ice Cream 3 Edition",
     "slug": "ice-scream3",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Cream 3' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 3' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/ice_scream3_front.png",
     "sizes": [
@@ -367,13 +367,13 @@ export const products: Product[] = [
     "name": "Ice Cream 1 Edition",
     "slug": "icecream1",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Cream 1' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 1' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/icecream1_front.png",
     "sizes": [
@@ -389,13 +389,13 @@ export const products: Product[] = [
     "name": "Ice Cream 2 Edition",
     "slug": "icecream2",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Cream 2' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream 2' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/icecream2_front.png",
     "sizes": [
@@ -411,13 +411,13 @@ export const products: Product[] = [
     "name": "Ice Cream Soft Edition",
     "slug": "icescreamsoft",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Cream Soft' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Cream Soft' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/icescreamsoft_front.png",
     "sizes": [
@@ -433,13 +433,13 @@ export const products: Product[] = [
     "name": "Ice Skull Edition",
     "slug": "iceskull",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ice Skull' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ice Skull' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/iceskull_front.png",
     "sizes": [
@@ -455,13 +455,13 @@ export const products: Product[] = [
     "name": "Leisure Edition",
     "slug": "leisure",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Leisure' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Leisure' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/leisure_front.png",
     "sizes": [
@@ -477,13 +477,13 @@ export const products: Product[] = [
     "name": "Lula Ramen Edition",
     "slug": "lula-ramen",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Lula Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Lula Ramen' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/lula_ramen_front.png",
     "sizes": [
@@ -499,13 +499,13 @@ export const products: Product[] = [
     "name": "Mundane Edition",
     "slug": "mundane",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Mundane' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Mundane' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/mundane_front.png",
     "sizes": [
@@ -521,13 +521,13 @@ export const products: Product[] = [
     "name": "Pie Edition",
     "slug": "pie",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Pie' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Pie' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/pie_front.png",
     "sizes": [
@@ -543,13 +543,13 @@ export const products: Product[] = [
     "name": "Ramen3 Edition",
     "slug": "ramen3",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ramen3' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ramen3' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/ramen3_front.png",
     "sizes": [
@@ -565,13 +565,13 @@ export const products: Product[] = [
     "name": "Ramen Drop Edition",
     "slug": "ramendrop",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ramen Drop' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ramen Drop' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/ramendrop_front.png",
     "sizes": [
@@ -587,13 +587,13 @@ export const products: Product[] = [
     "name": "Ramen Monster Edition",
     "slug": "ramenmosnter",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ramen Monster' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ramen Monster' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/ramenmosnter_front.png",
     "sizes": [
@@ -609,13 +609,13 @@ export const products: Product[] = [
     "name": "Ramen Rider Edition",
     "slug": "ramenrider",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ramen Rider' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ramen Rider' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/ramenrider_front.png",
     "sizes": [
@@ -631,13 +631,13 @@ export const products: Product[] = [
     "name": "Self Edition",
     "slug": "self",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Self' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Self' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/self_front.png",
     "sizes": [
@@ -653,13 +653,13 @@ export const products: Product[] = [
     "name": "Silly Devil Edition",
     "slug": "silly-devil",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Silly Devil' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Silly Devil' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/silly_devil_front.png",
     "sizes": [
@@ -675,13 +675,13 @@ export const products: Product[] = [
     "name": "Spacecoffee Edition",
     "slug": "spacecoffe",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Spacecoffee' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Spacecoffee' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/spacecoffe_front.png",
     "sizes": [
@@ -697,13 +697,13 @@ export const products: Product[] = [
     "name": "Super Cute Edition",
     "slug": "super-cute",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Super Cute' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Super Cute' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/super_cute_front.png",
     "sizes": [
@@ -719,13 +719,13 @@ export const products: Product[] = [
     "name": "Ultra Ramen Edition",
     "slug": "ultraramen",
     "price": 4980,
-    "description": "Limited edition DTG print featuring the 'Ultra Ramen' artwork. Premium 7.4oz Super Heavyweight white cotton tee with DTG comfort print.",
+    "description": "Limited edition DTG print featuring the 'Ultra Ramen' artwork. Premium 6.6oz Heavyweight white cotton tee with DTG comfort print.",
     "features": [
-      "Super Heavyweight 7.4 oz (250 g/m²)",
-      "14/- Jersey, 100% Cotton",
-      "Seamless tubular construction",
-      "1x1 ribbed crew neck",
-      "Double-stitched hem and cuffs"
+      "Heavyweight 6.6 oz (225 GSM)",
+      "15/- Tenshiku Single Jersey · Open-end yarn",
+      "100% Cotton (Solid) · 80/20 Cotton-Poly (Mokugray)",
+      "Double-stitched neckline · Side-seam (Waki-shiyo)",
+      "Zero transparency · Dry, crisp American texture"
     ],
     "image": "/products/ultraramen_front.png",
     "sizes": [

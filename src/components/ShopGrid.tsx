@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import type { Product } from '@/data/products';
 import { getMaxPrice } from '@/lib/pricing';
 import { productPrices } from '@/data/prices';
@@ -70,16 +71,23 @@ function getCategory(slug: string): Filter | null {
 
 const FILTERS: Filter[] = ['ALL', 'RAMEN', 'ICE CREAM', 'CYBERPUNK', 'ABSTRACT', 'FOOD & DRINK'];
 
-function ProductCard({ product, i }: { product: Product; i: number }) {
+function ProductCard({ product, i, columns = 4 }: { product: Product; i: number; columns?: number }) {
   const isFeatured = FEATURED_SLUGS.has(product.slug);
   const stock = getStockLabel(product.slug);
 
+  const delay = (i % columns) * 0.15;
+
   return (
-    <Link
-      href={`/shop/${product.slug}`}
-      className="product-card group block fade-in-up"
-      style={{ animationDelay: `${i * 30}ms` }}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
+      <Link
+        href={`/shop/${product.slug}`}
+        className="product-card group block p-4 bg-white/5 hover:bg-white transition-all duration-700"
+      >
       <div className="product-card-border aspect-[3/4] overflow-hidden bg-[#0f0f0f] relative border border-white/5 rounded-sm mb-3">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(205,255,0,0.03)_0%,transparent_70%)]" />
 
@@ -97,7 +105,7 @@ function ProductCard({ product, i }: { product: Product; i: number }) {
             </span>
           ) : <span />}
           <span className="bg-black/60 border border-white/10 font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5 text-[#555]">
-            Bad Printer 7.4oz
+            Bad Printer 6.6oz
           </span>
         </div>
 
@@ -123,14 +131,15 @@ function ProductCard({ product, i }: { product: Product; i: number }) {
       </div>
 
       <div className="px-1 mt-2">
-        <p className="text-[20px] md:text-[22px] font-bold italic tracking-tighter uppercase group-hover:text-[var(--accent)] transition-colors duration-300 mb-0.5 leading-[1.1] min-h-[2.2em] line-clamp-2 overflow-hidden">
+        <p className="text-[20px] md:text-[22px] font-bold italic tracking-tighter uppercase text-white group-hover:text-black transition-colors duration-700 mb-0.5 leading-[1.1] min-h-[2.2em] line-clamp-2 overflow-hidden">
           {product.name}
         </p>
-        <p className="text-[#333] text-[9px] uppercase font-mono tracking-widest">
+        <p className="text-[#333] group-hover:text-[#555] text-[9px] uppercase font-mono tracking-widest transition-colors duration-700">
           {product.sizes.includes('ONE SIZE') ? 'One Size' : `S · M · L · XL`}
         </p>
       </div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 }
 
@@ -147,12 +156,18 @@ export function ShopGrid({ products }: { products: Product[] }) {
       {/* ── Staff Picks (shown on ALL only) ── */}
       {active === 'ALL' && featured.length > 0 && (
         <div className="mb-12">
-          <p className="text-[var(--accent)] font-mono text-[16px] uppercase tracking-[0.35em] mb-8">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            className="text-[var(--accent)] font-mono text-[16px] uppercase tracking-[0.35em] mb-8"
+          >
             // STAFF PICKS
-          </p>
+          </motion.p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {featured.map((product, i) => (
-              <ProductCard key={product.id} product={product} i={i} />
+              <ProductCard key={product.id} product={product} i={i} columns={3} />
             ))}
           </div>
           <div className="w-full h-px bg-white/5 mt-12 mb-8" />
@@ -160,7 +175,13 @@ export function ShopGrid({ products }: { products: Product[] }) {
       )}
 
       {/* ── Filter tabs ── */}
-      <div className="flex flex-wrap gap-2 mb-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="flex flex-wrap gap-2 mb-8"
+      >
         {FILTERS.map((f) => (
           <button
             key={f}
@@ -179,17 +200,23 @@ export function ShopGrid({ products }: { products: Product[] }) {
             )}
           </button>
         ))}
-      </div>
+      </motion.div>
 
       {/* ── Product count ── */}
-      <p className="text-[#222] font-mono text-[9px] uppercase tracking-widest mb-6">
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="text-[#222] font-mono text-[9px] uppercase tracking-widest mb-6"
+      >
         {filtered.length} item{filtered.length !== 1 ? 's' : ''} {active !== 'ALL' ? `in ${active}` : 'available'}
-      </p>
+      </motion.p>
 
       {/* ── Product Grid ── */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-6 gap-y-12">
         {filtered.map((product, i) => (
-          <ProductCard key={product.id} product={product} i={i} />
+          <ProductCard key={product.id} product={product} i={i} columns={4} />
         ))}
       </div>
     </>

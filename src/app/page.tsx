@@ -1,7 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { motion } from 'framer-motion';
 
 const marqueeItems = [
   'DIGITAL VANGUARD APPAREL',
@@ -53,17 +56,41 @@ function EmailCapture() {
   };
 
   return (
-    <section className="w-full border-t border-white/5 bg-[#0a0a0a] px-8 md:px-16 py-16">
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, ease: 'easeOut' }}
+      viewport={{ once: true, margin: '-40px' }}
+      className="w-full border-t border-white/5 bg-[#0a0a0a] px-8 md:px-16 py-16"
+    >
       <div className="max-w-2xl">
-        <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-4">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-4"
+        >
           // FACTORY DISPATCH
-        </p>
-        <h2 className="text-2xl md:text-3xl font-black italic tracking-tighter uppercase mb-3">
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-3xl font-black italic tracking-tighter uppercase mb-3"
+        >
           Receive Drop Alerts
-        </h2>
-        <p className="text-[#444] text-xs font-mono uppercase tracking-widest mb-8">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="text-[#444] text-xs font-mono uppercase tracking-widest mb-8"
+        >
           Collection 002 loading. Be first to deploy.
-        </p>
+        </motion.p>
 
         {status === 'success' ? (
           <div className="flex items-center gap-4 font-mono text-[11px] uppercase tracking-widest text-[var(--accent)]">
@@ -71,7 +98,14 @@ function EmailCapture() {
             You&apos;re now an Operator — watch your inbox for Collection 002.
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+          <motion.form
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-3"
+          >
             <input
               type="email"
               value={email}
@@ -87,7 +121,7 @@ function EmailCapture() {
             >
               {status === 'loading' ? '...' : 'Join Dispatch →'}
             </button>
-          </form>
+          </motion.form>
         )}
 
         {status === 'error' && (
@@ -100,7 +134,7 @@ function EmailCapture() {
           No noise. Drop alerts only. Unsubscribe anytime.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
@@ -159,12 +193,50 @@ function HeroProduct() {
 }
 
 export default function Home() {
+  const containerRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    // T2: Eyebrow - Vertical drop at 0.6s
+    gsap.fromTo('.hero-eyebrow',
+      { y: -30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.6 }
+    );
+
+    // T3: Kinetic Hero - Whip-pan from left and right at 1.0s
+    gsap.fromTo('.hero-whip-1',
+      { x: '-120vw', opacity: 0 },
+      { x: '0vw', opacity: 1, duration: 1, ease: 'power4.out', delay: 1.0 }
+    );
+    gsap.fromTo('.hero-whip-2',
+      { x: '120vw', opacity: 0 },
+      { x: '0vw', opacity: 1, duration: 1, ease: 'power4.out', delay: 1.15 }
+    );
+
+    // T4: Background Details (glow) scale up at 1.4s
+    gsap.fromTo('.hero-glow',
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1.5, ease: 'power2.out', delay: 1.4 }
+    );
+
+    // T5: Subtitle/CTAs - Vertical lift at 1.8s
+    gsap.fromTo(['.hero-sub', '.hero-cta'],
+      { y: 40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 1.8, stagger: 0.2 }
+    );
+
+    // T6: Bottom status bar lift at 2.4s
+    gsap.fromTo('.hero-status',
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 2.4 }
+    );
+  }, { scope: containerRef });
+
   return (
-    <main className="min-h-screen bg-[#080808] overflow-hidden relative flex flex-col">
+    <main ref={containerRef} className="min-h-screen bg-[#080808] overflow-hidden relative flex flex-col">
 
       {/* ── Radial glow ── */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-[60vw] h-[60vh] rounded-full bg-[radial-gradient(circle,rgba(205,255,0,0.06)_0%,transparent_70%)] blur-3xl" />
+        <div className="hero-glow absolute top-1/3 left-1/4 w-[60vw] h-[60vh] rounded-full bg-[radial-gradient(circle,rgba(205,255,0,0.06)_0%,transparent_70%)] blur-3xl" />
       </div>
 
       {/* ── Hero ── */}
@@ -173,33 +245,34 @@ export default function Home() {
         <HeroProduct />
 
         {/* Tag line */}
-        <p className="fade-in-up text-[var(--accent)] font-mono text-[10px] mb-8 tracking-[0.35em] uppercase z-10">
+        <p className="hero-eyebrow text-[var(--accent)] font-mono text-[10px] mb-8 tracking-[0.35em] uppercase z-10 opacity-0">
           // [001] DTG Studio · Gifu JP · Est. 2024
         </p>
 
         {/* Big headline */}
-        <h1 className="fade-in-up delay-100 relative z-10 text-[var(--h0)] leading-[0.82] tracking-tighter font-black italic mb-6 text-gradient">
-          Wear The<br />Future
+        <h1 className="relative z-10 text-[var(--h0)] leading-[0.82] tracking-tighter font-black italic mb-6 mix-blend-difference overflow-hidden flex flex-col">
+          <div className="hero-whip-1 text-gradient" style={{ opacity: 0 }}>Wear The</div>
+          <div className="hero-whip-2 text-gradient" style={{ opacity: 0 }}>Future</div>
         </h1>
 
         {/* Sub */}
-        <p className="fade-in-up delay-200 text-[#555] text-base md:text-lg max-w-md mb-12 leading-relaxed z-10 font-light">
+        <p className="hero-sub opacity-0 text-[#555] text-base md:text-lg max-w-md mb-12 leading-relaxed z-10 font-light mix-blend-screen">
           High-fidelity garments for the digital vanguard.<br />
           Designed in Gifu, printed on demand, shipped globally.
         </p>
 
         {/* CTAs */}
-        <div className="fade-in-up delay-300 flex flex-wrap gap-4 z-10">
-          <Link href="/shop" className="btn-primary px-10 py-4 text-xs">
-            Shop Collection →
+        <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10">
+          <Link href="/shop" className="btn-primary px-10 py-4 text-xs group">
+            <span className="group-hover:invert transition-all">Shop Collection →</span>
           </Link>
-          <Link href="/about" className="px-10 py-4 text-xs font-mono uppercase tracking-widest border border-white/10 text-[#555] hover:border-white/30 hover:text-white transition-all">
+          <Link href="/about" className="px-10 py-4 text-xs font-mono uppercase tracking-widest border border-white/10 text-[#555] hover:border-white hover:text-black hover:bg-white transition-all duration-500">
             Studio →
           </Link>
         </div>
 
         {/* Bottom status bar */}
-        <div className="fade-in-up delay-500 absolute bottom-10 left-8 md:left-16 right-8 md:right-16 flex justify-between items-end z-10">
+        <div className="hero-status opacity-0 absolute bottom-10 left-8 md:left-16 right-8 md:right-16 flex justify-between items-end z-10">
           <div className="text-white/15 text-[9px] font-mono leading-relaxed uppercase tracking-widest">
             LAT: 35.4233° N<br />LONG: 136.7606° E<br />
             <LiveClock />
@@ -211,7 +284,12 @@ export default function Home() {
       </section>
 
       {/* ── Marquee ticker ── */}
-      <div className="w-full border-t border-b border-white/5 py-4 overflow-hidden bg-[#0a0a0a]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 2.8, ease: 'easeOut' }}
+        className="w-full border-t border-b border-white/5 py-4 overflow-hidden bg-[#0a0a0a]"
+      >
         <div className="marquee-track">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span key={i} className="flex items-center gap-6 px-6 text-[10px] font-mono uppercase tracking-[0.25em] text-[#333] whitespace-nowrap">
@@ -220,7 +298,7 @@ export default function Home() {
             </span>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* ── Email Capture ── */}
       <EmailCapture />

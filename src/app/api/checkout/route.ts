@@ -3,6 +3,21 @@ import { stripe } from '@/lib/stripe';
 import { supabase } from '@/lib/supabase';
 import { z } from 'zod';
 import { productPrices } from '@/data/prices';
+import { Ratelimit } from '@upstash/ratelimit';
+import { Redis } from '@upstash/redis';
+
+let ratelimit: Ratelimit | null = null;
+if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+  const redis = new Redis({
+    url: process.env.UPSTASH_REDIS_REST_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN,
+  });
+  ratelimit = new Ratelimit({
+    redis: redis,
+    limiter: Ratelimit.slidingWindow(5, '10 s'),
+    analytics: true,
+  });
+}
 
 const CheckoutSchema = z.object({
   items: z.array(z.object({
@@ -14,6 +29,14 @@ const CheckoutSchema = z.object({
 
 export async function POST(req: Request) {
   try {
+    if (ratelimit) {
+      const ip = req.headers.get('x-forwarded-for') ?? '127.0.0.1';
+      const { success } = await ratelimit.limit(`checkout_${ip}`);
+      if (!success) {
+        return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 });
+      }
+    }
+
     const body = await req.json();
     const validated = CheckoutSchema.parse(body);
 
@@ -70,6 +93,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ url: session.url });
   } catch (err: any) {
     console.error('[STRIPE_CHECKOUT_ERROR]', err);
-    return NextResponse.json({ error: err.message }, { status: 400 });
+    // Sanitize error message to prevent leaking internal Stripe/DB details to the client
+    return NextResponse.json({ error: 'Unable to initialize checkout. Please try again.' }, { status: 400 });
   }
 }

@@ -1,16 +1,31 @@
+---
+name: stripe-validator
+description: Inspects payment integrations and webhook handlers to ensure absolute compliance with PCI regulations and Stripe security standards.
+---
 # Skill: stripe-validator
-## Dedicated Specialist: Sub-A2
-## Domain: Payments, Stripe, Fraud, Idempotency
 
-### Inputs:
-- handler_code
+## Goal
+Prevent fraudulent activity and security breaches in payment flows by rigorously validating Stripe handlers.
 
-### Output Specs:
+## Instructions
+1. Analyze the provided `handler_code`.
+2. Ensure `stripe.webhooks.constructEvent` is invoked for webhook routes.
+3. Verify idempotency keys exist on Payment Intents.
+4. Output JSON detailing `compliant`, `issues[]`, `hardened_code`, and `fix_spec`.
+
+## Guardrails
+- Webhook Signature: `stripe.webhooks.constructEvent` call is strictly required. No overrides.
+- No raw card data: Inputs must use Stripe Elements only.
+- Idempotency keys must be applied to network requests mutating payments.
+
+## Few-Shot Example
+**Input:** Webhook code missing constructEvent signature check.
+**Output:**
 ```json
-{ "compliant": true, "issues": [], "hardened_code": "", "fix_spec": "" }
+{
+  "compliant": false,
+  "issues": ["Missing constructEvent signature verification"],
+  "hardened_code": null,
+  "fix_spec": "Wrap handler in constructEvent with stripe webhook secret."
+}
 ```
-
-### Non-negotiable:
-- **Webhook Signature:** stripe.webhooks.constructEvent call required.
-- **No raw card data:** Stripe Elements only.
-- **Idempotency keys** must be used for payment intents.

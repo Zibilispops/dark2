@@ -37,11 +37,13 @@ export default function AdminPage() {
     }
   };
 
-  const formatCurrency = (cents: number, currency: string) =>
-    new Intl.NumberFormat('en-US', {
+  const formatCurrency = (amount: number, currency: string) => {
+    const isZeroDecimal = currency.toLowerCase() === 'jpy';
+    return new Intl.NumberFormat(isZeroDecimal ? 'ja-JP' : 'en-US', {
       style: 'currency',
       currency: currency.toUpperCase(),
-    }).format(cents / 100);
+    }).format(isZeroDecimal ? amount : amount / 100);
+  };
 
   const formatDate = (iso: string) =>
     new Date(iso).toLocaleString('en-US', {

@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 import { Product } from '@/data/products';
 import { getPriceBySize, getMaxPrice } from '@/lib/pricing';
+import { WhipPan } from '@/components/WhipPan';
+import { FadeUp } from '@/components/FadeUp';
+import { motion } from 'framer-motion';
 
 export const AddToCartButton = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
@@ -32,26 +35,34 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
 
         {/* ── Name + Price: DESKTOP only (on mobile shown above image in page.tsx) ── */}
         <div className="hidden lg:flex flex-col">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl mb-4 lg:mb-6 leading-[0.85] text-balance break-normal uppercase font-black italic tracking-tighter">
-            {product.name}
-          </h2>
-          <div className={`text-3xl sm:text-4xl font-black italic mb-8 lg:mb-12 tracking-tighter transition-all duration-300 ${
-            added ? 'text-red-600' : 'text-[var(--accent)]'
-          }`}>
-            {added ? 'ADDED TO CART ' : ''}¥{(currentPrice ?? getMaxPrice(product.price, product.sizes)).toLocaleString()}
-          </div>
+          <WhipPan direction="right">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl mb-4 lg:mb-6 leading-[0.85] text-balance break-normal uppercase font-black italic tracking-tighter">
+              {product.name}
+            </h2>
+          </WhipPan>
+          <FadeUp mode="animate" delay={0.2} y={20}>
+            <div className={`text-3xl sm:text-4xl font-black italic mb-8 lg:mb-12 tracking-tighter transition-all duration-300 ${
+              added ? 'text-red-600' : 'text-[var(--accent)]'
+            }`}>
+              {added ? 'ADDED TO CART ' : ''}¥{(currentPrice ?? getMaxPrice(product.price, product.sizes)).toLocaleString()}
+            </div>
+          </FadeUp>
         </div>
 
         {/* Description + Features (both mobile & desktop) */}
         <div className="space-y-6 mb-8 lg:mb-16">
-          <p className="text-[#888] leading-relaxed text-sm">
-            {product.description}
-          </p>
+          <FadeUp mode="animate" delay={0.35}>
+            <p className="text-[#888] leading-relaxed text-sm">
+              {product.description}
+            </p>
+          </FadeUp>
           <ul className="space-y-3 font-mono text-[10px] uppercase tracking-widest text-[#444]">
             {product.features.map((feature, i) => (
-              <li key={i} className="flex gap-4">
-                <span className="text-[var(--accent)]">[+]</span> {feature}
-              </li>
+              <FadeUp key={i} mode="animate" delay={0.5 + (i * 0.1)} y={10}>
+                <li className="flex gap-4">
+                  <span className="text-[var(--accent)]">[+]</span> {feature}
+                </li>
+              </FadeUp>
             ))}
           </ul>
         </div>

@@ -12,7 +12,7 @@ export const productDescriptions: Record<string, string> = {
   'digital-battle': "Every screen is a battlefield. Designed for the operator who knows the difference between signal and static, and chooses their fights carefully.",
   'einstein1-frame': "Intelligence is the original hack. A tribute to the mind that rewrote the rules — reimagined through the visual language of the digital vanguard.",
   'fast-food-racer': "Born from late-night runs through Gifu's backstreets. One hand on the handlebars, one eye on the next corner, and somehow still hungry.",
-  'fibonacci': "Nature's algorithm, rendered in ink. The sequence that governs galaxies, shells, and the arc of a brushstroke — pressed into 250 g/m² cotton.",
+  'fibonacci': "Nature's algorithm, rendered in ink. The sequence that governs galaxies, shells, and the arc of a brushstroke — pressed into 250 GSM cotton.",
   'fight-to': "Keep moving. A stripped-down statement piece for the operator who finishes what they start — no commentary, no excess, just forward motion.",
   'hit-girl': "Small. Precise. Relentless. A portrait of controlled force that stays quiet until the moment it doesn't — then makes every point count.",
   'ice-scream1': "Sweet chaos. The first flavor in the series — too good to be serious, too technically sharp to be just cute. Kawaii with an edge.",

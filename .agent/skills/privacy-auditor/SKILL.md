@@ -1,16 +1,29 @@
+---
+name: privacy-auditor
+description: Scans code and workflows for compliance with PII frameworks such as APPI and GDPR.
+---
 # Skill: privacy-auditor
-## Dedicated Specialist: Sub-A3
-## Domain: Privacy & Compliance (APPI, GDPR, PII)
 
-### Inputs:
-- workflow_description
-- data_collected[]
+## Goal
+Prevent unauthorized PII collection and ensure explicit consent mechanisms are implemented across user forms and logs.
 
-### Output Specs:
+## Instructions
+1. Analyze the `workflow_description` and `data_collected[]`.
+2. Verify that explicit consent UI exists before PII data is transmitted.
+3. Check for any leakage of PII into logging systems or analytics.
+4. Output JSON with `compliant` status, `violations[]`, and `fix_spec`.
+
+## Guardrails
+- APPI/GDPR consent UI is absolutely required before any PII collection.
+- Eradicate any instance of PII from logs, APM, or automation pipelines.
+
+## Few-Shot Example
+**Input:** data_collected: `["email", "phone"]`, workflow: "Save profile in background without opt-in"
+**Output:**
 ```json
-{ "compliant": true, "violations": [], "fix_spec": "" }
+{
+  "compliant": false,
+  "violations": ["Missing APPI consent UI before collection"],
+  "fix_spec": "Add a required checkbox for consent before saving the profile."
+}
 ```
-
-### Rule:
-- **APPI consent UI required** before any PII collection.
-- No PII in logs or automation pipelines.

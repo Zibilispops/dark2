@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 interface ProductNavigationProps {
   prevSlug: string;
@@ -59,20 +60,26 @@ export function ProductNavigation({ prevSlug, nextSlug }: ProductNavigationProps
 
   return (
     <div className="product-navigation-container fixed top-1/2 left-0 right-0 -translate-y-1/2 pointer-events-none flex justify-between px-6 md:px-12 opacity-0 hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300">
-      <button 
+      <motion.button 
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
         onClick={() => router.push(`/shop/${prevSlug}`)}
         className="pointer-events-auto bg-black/40 border border-white/10 p-4 text-[#333] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all flex items-center justify-center font-mono text-xs uppercase tracking-widest gap-2"
         aria-label="Previous product"
       >
         <span className="text-lg">←</span>
-      </button>
-      <button 
+      </motion.button>
+      <motion.button 
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
         onClick={() => router.push(`/shop/${nextSlug}`)}
         className="pointer-events-auto bg-black/40 border border-white/10 p-4 text-[#333] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all flex items-center justify-center font-mono text-xs uppercase tracking-widest gap-2"
         aria-label="Next product"
       >
         <span className="text-lg">→</span>
-      </button>
+      </motion.button>
     </div>
   );
 }
