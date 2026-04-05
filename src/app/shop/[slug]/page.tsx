@@ -91,7 +91,7 @@ export default async function ProductPage({
   const nextSlug = currentIndex < slugs.length - 1 ? slugs[currentIndex + 1] : slugs[0];
 
   return (
-    <main className="min-h-screen bg-black text-white pt-24 md:pt-32 pb-20 px-4 md:px-12 flex flex-col lg:flex-row gap-8 lg:gap-16">
+    <main className="min-h-screen bg-black text-white pt-24 md:pt-32 pb-28 lg:pb-20 px-4 md:px-12 flex flex-col lg:flex-row gap-8 lg:gap-16">
 
       {/* Product Image */}
       <div className="flex-1 bg-[#0c0c0c] border border-white/5 relative group p-4 md:p-12 overflow-hidden flex flex-col gap-6 self-start lg:sticky lg:top-32">
