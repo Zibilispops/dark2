@@ -51,7 +51,7 @@ export default function LoginPage() {
         {/* Error */}
         {error && (
           <FadeUp mode="animate" delay={0}>
-            <div className="mb-6 p-4 border border-red-500/30 bg-red-500/5 text-red-400 text-[13px] font-mono uppercase tracking-widest">
+            <div className="mb-6 p-4 border border-red-500/30 bg-red-500/5 text-red-400 text-[14px] font-mono uppercase tracking-widest">
               ⚠ {error}
             </div>
           </FadeUp>
@@ -69,7 +69,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[15px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+                className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
                 placeholder="operator@darkfactory.jp"
               />
             </div>
@@ -83,7 +83,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[15px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+                className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
                 placeholder="••••••••"
               />
             </div>

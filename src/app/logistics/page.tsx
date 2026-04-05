@@ -98,7 +98,7 @@ export default function LogisticsPage() {
                               {row.time}
                             </span>
                           </div>
-                          <span className="font-mono text-[12px] uppercase tracking-widest text-white mt-1 sm:mt-0 italic font-black">
+                          <span className="font-mono text-[13px] uppercase tracking-widest text-white mt-1 sm:mt-0 italic font-black">
                             {row.rate}
                           </span>
                         </div>

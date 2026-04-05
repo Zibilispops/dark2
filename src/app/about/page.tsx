@@ -10,7 +10,7 @@ export default function AboutPage() {
           <h1 className="mb-4 text-gradient">The Studio</h1>
         </WhipPan>
         <FadeUp delay={0.3} mode="animate">
-          <p className="text-[#666] max-w-lg mb-8 uppercase text-[13px] tracking-widest font-mono">
+          <p className="text-[#666] max-w-lg mb-8 uppercase text-[14px] tracking-widest font-mono">
             // [001] Gifu Studio · Official <span className="font-black text-white whitespace-nowrap">Bad Printer</span> Reseller
           </p>
         </FadeUp>

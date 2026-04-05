@@ -85,7 +85,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                     className="h-[60vh] flex flex-col items-center justify-center space-y-6"
                   >
                     <ShoppingBag size={64} className="text-[#1a1a1a]" strokeWidth={1} />
-                    <p className="text-[#444] font-mono text-[13px] uppercase tracking-[0.2em]">Your cart is empty</p>
+                    <p className="text-[#444] font-mono text-[14px] uppercase tracking-[0.2em]">Your cart is empty</p>
                   </motion.div>
                 ) : (
                   <div className="space-y-12">
@@ -139,7 +139,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                 className="border-t border-white/10 py-8 px-8 bg-[#0d0d0d]"
               >
                 <div className="flex justify-between text-base font-black mb-1">
-                  <p className="uppercase text-[13px] font-mono text-[#666] tracking-widest">Subtotal</p>
+                  <p className="uppercase text-[14px] font-mono text-[#666] tracking-widest">Subtotal</p>
                   <p>¥{totalPrice.toLocaleString()}</p>
                 </div>
                 <p className="mt-0.5 text-[11px] font-mono text-[#444] uppercase tracking-widest mb-8">

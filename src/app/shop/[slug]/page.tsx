@@ -167,7 +167,7 @@ export default async function ProductPage({
                       </span>
                     )}
                   </div>
-                  <p className="text-[#666] text-[13px] leading-relaxed">
+                  <p className="text-[#666] text-[14px] leading-relaxed">
                     {review.text}
                   </p>
                 </div>

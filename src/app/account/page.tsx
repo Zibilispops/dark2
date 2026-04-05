@@ -68,7 +68,7 @@ export default async function AccountPage() {
             <div className="space-y-3">
               <Link
                 href="/shop"
-                className="block w-full text-center py-3 border border-white/10 text-[13px] font-mono uppercase tracking-widest text-[#666] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
+                className="block w-full text-center py-3 border border-white/10 text-[14px] font-mono uppercase tracking-widest text-[#666] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
               >
                 Browse Collection
               </Link>
@@ -91,10 +91,10 @@ export default async function AccountPage() {
 
         {(!orders || orders.length === 0) ? (
           <div className="p-16 bg-[#0c0c0c] border border-white/5 text-center">
-            <p className="text-[#333] font-mono text-[13px] uppercase tracking-widest mb-4">
+            <p className="text-[#333] font-mono text-[14px] uppercase tracking-widest mb-4">
               No orders yet
             </p>
-            <Link href="/shop" className="btn-primary inline-block px-8 py-3 text-[13px]">
+            <Link href="/shop" className="btn-primary inline-block px-8 py-3 text-[14px]">
               Start Shopping →
             </Link>
           </div>
@@ -120,7 +120,7 @@ export default async function AccountPage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-8">
-                  <span className="text-[15px] font-black">
+                  <span className="text-[16px] font-black">
                     ¥{order.total_cents.toLocaleString()} {order.currency?.toUpperCase()}
                   </span>
                   <span className="font-mono text-[11px] text-[#333]">

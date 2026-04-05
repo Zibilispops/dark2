@@ -100,7 +100,7 @@ function ProductCard({ product, i, columns = 4 }: { product: Product; i: number;
         {/* Top badges */}
         <div className="absolute top-2 left-2 right-2 flex justify-between items-start z-10">
           {isFeatured ? (
-            <span className="bg-[var(--accent)] text-black font-mono text-[13px] uppercase tracking-widest px-2 py-1">
+            <span className="bg-[var(--accent)] text-black font-mono text-[14px] uppercase tracking-widest px-2 py-1">
               Staff Pick
             </span>
           ) : <span />}

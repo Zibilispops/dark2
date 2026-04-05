@@ -107,7 +107,7 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
         </div>
         <button
           onClick={onClose}
-          className="font-mono text-[12px] uppercase tracking-widest text-white border border-white/20 px-4 py-2 hover:bg-white/10 transition-all min-w-[56px] text-center"
+          className="font-mono text-[13px] uppercase tracking-widest text-white border border-white/20 px-4 py-2 hover:bg-white/10 transition-all min-w-[56px] text-center"
         >
           ✕ Close
         </button>

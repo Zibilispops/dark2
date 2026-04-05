@@ -39,7 +39,7 @@ export function AccountEmailForm({ currentEmail }: { currentEmail?: string }) {
       <div className="flex justify-between items-center border-b border-white/5 pb-3">
         <span className="font-mono text-[11px] uppercase tracking-widest text-[#555]">Email</span>
         <div className="flex items-center gap-4">
-          <span className="text-[15px] font-mono text-[var(--accent)]">{currentEmail}</span>
+          <span className="text-[16px] font-mono text-[var(--accent)]">{currentEmail}</span>
           <button 
             onClick={() => setIsEditing(true)}
             className="text-[10px] font-mono border border-white/10 px-2 py-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all uppercase"
@@ -76,7 +76,7 @@ export function AccountEmailForm({ currentEmail }: { currentEmail?: string }) {
             type="email"
             value={newEmail}
             onChange={(e) => setNewEmail(e.target.value)}
-            className="w-full bg-[#0f0f0f] border border-white/10 px-3 py-3 text-white text-[13px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors"
+            className="w-full bg-[#0f0f0f] border border-white/10 px-3 py-3 text-white text-[14px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors"
             required
             placeholder="New Operator Email"
           />

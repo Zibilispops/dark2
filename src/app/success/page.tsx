@@ -32,7 +32,7 @@ export default function SuccessPage() {
           </p>
         </div>
 
-        <p className="text-[#555] text-[15px] font-mono leading-relaxed mb-12">
+        <p className="text-[#555] text-[16px] font-mono leading-relaxed mb-12">
           Your registry entry has been logged.<br />
           Production begins within 48 hours.<br />
           Gifu Studio will dispatch when ready.
@@ -59,7 +59,7 @@ export default function SuccessPage() {
 
         <Link
           href="/shop"
-          className="btn-primary inline-block px-12 py-4 text-[13px] tracking-widest uppercase font-mono"
+          className="btn-primary inline-block px-12 py-4 text-[14px] tracking-widest uppercase font-mono"
         >
           Continue Exploring →
         </Link>

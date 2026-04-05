@@ -87,13 +87,13 @@ function EmailCapture() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="text-[#444] text-[13px] font-mono uppercase tracking-widest mb-8"
+          className="text-[#444] text-[14px] font-mono uppercase tracking-widest mb-8"
         >
           Collection 002 loading. Be first to deploy.
         </motion.p>
 
         {status === 'success' ? (
-          <div className="flex items-center gap-4 font-mono text-[12px] uppercase tracking-widest text-[var(--accent)]">
+          <div className="flex items-center gap-4 font-mono text-[13px] uppercase tracking-widest text-[var(--accent)]">
             <span className="text-[var(--accent)]">[+]</span>
             You&apos;re now an Operator — watch your inbox for Collection 002.
           </div>
@@ -112,12 +112,12 @@ function EmailCapture() {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="operator@domain.com"
-              className="flex-1 bg-[#111] border border-white/10 px-4 py-3 text-white text-[13px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="flex-1 bg-[#111] border border-white/10 px-4 py-3 text-white text-[14px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="btn-primary px-8 py-3 text-[13px] tracking-widest disabled:opacity-30 whitespace-nowrap"
+              className="btn-primary px-8 py-3 text-[14px] tracking-widest disabled:opacity-30 whitespace-nowrap"
             >
               {status === 'loading' ? '...' : 'Join Dispatch →'}
             </button>
@@ -263,10 +263,10 @@ export default function Home() {
 
         {/* CTAs */}
         <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10">
-          <Link href="/shop" className="btn-primary px-10 py-4 text-[13px] group">
+          <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group">
             <span className="group-hover:invert transition-all">Shop Collection →</span>
           </Link>
-          <Link href="/about" className="px-10 py-4 text-[13px] font-mono uppercase tracking-widest border border-white/10 text-[#555] hover:border-white hover:text-black hover:bg-white transition-all duration-500">
+          <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-[#555] hover:border-white hover:text-black hover:bg-white transition-all duration-500">
             Studio →
           </Link>
         </div>

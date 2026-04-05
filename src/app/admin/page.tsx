@@ -66,15 +66,15 @@ export default function AdminPage() {
               value={token}
               onChange={(e) => setToken(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && fetchOrders(token)}
-              className="w-full bg-[#0d0d0d] border border-white/10 text-white px-4 py-3 font-mono text-[15px] focus:outline-none focus:border-[var(--accent)] transition-colors"
+              className="w-full bg-[#0d0d0d] border border-white/10 text-white px-4 py-3 font-mono text-[16px] focus:outline-none focus:border-[var(--accent)] transition-colors"
             />
             {error && (
-              <p className="text-red-400 font-mono text-[13px]">[ERROR] {error}</p>
+              <p className="text-red-400 font-mono text-[14px]">[ERROR] {error}</p>
             )}
             <button
               onClick={() => fetchOrders(token)}
               disabled={loading || !token}
-              className="btn-primary w-full py-4 font-mono tracking-widest uppercase text-[15px] disabled:opacity-30"
+              className="btn-primary w-full py-4 font-mono tracking-widest uppercase text-[16px] disabled:opacity-30"
             >
               {loading ? 'Accessing...' : 'Enter Factory →'}
             </button>
@@ -152,13 +152,13 @@ export default function AdminPage() {
                 key={order.id}
                 className="grid grid-cols-5 px-6 py-4 border-b border-white/5 hover:bg-white/2 transition-colors"
               >
-                <span className="font-mono text-[12px] text-[#666] truncate pr-4">
+                <span className="font-mono text-[13px] text-[#666] truncate pr-4">
                   {order.id}
                 </span>
-                <span className="font-mono text-[12px] text-[#888] truncate pr-4">
+                <span className="font-mono text-[13px] text-[#888] truncate pr-4">
                   {order.user_id ?? '—'}
                 </span>
-                <span className="font-mono text-[12px] font-bold text-white">
+                <span className="font-mono text-[13px] font-bold text-white">
                   {formatCurrency(order.total_cents, order.currency)}
                 </span>
                 <span>

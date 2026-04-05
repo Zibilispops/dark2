@@ -54,14 +54,14 @@ export default function RegisterPage() {
             <h1 className="text-5xl font-black italic tracking-tighter uppercase leading-[0.85] mb-6">
               Check Your Email
             </h1>
-            <p className="text-[#666] text-[15px] leading-relaxed">
+            <p className="text-[#666] text-[16px] leading-relaxed">
               We&apos;ve sent a confirmation link to <span className="text-[var(--accent)]">{email}</span>.
               Click the link to activate your account.
             </p>
           </div>
           <Link
             href="/login"
-            className="btn-primary inline-block px-10 py-4 text-[13px]"
+            className="btn-primary inline-block px-10 py-4 text-[14px]"
           >
             Go to Login →
           </Link>
@@ -85,7 +85,7 @@ export default function RegisterPage() {
 
         {/* Error */}
         {error && (
-          <div className="mb-6 p-4 border border-red-500/30 bg-red-500/5 text-red-400 text-[13px] font-mono uppercase tracking-widest">
+          <div className="mb-6 p-4 border border-red-500/30 bg-red-500/5 text-red-400 text-[14px] font-mono uppercase tracking-widest">
             ⚠ {error}
           </div>
         )}
@@ -101,7 +101,7 @@ export default function RegisterPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[15px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
               placeholder="operator@darkfactory.jp"
             />
           </div>
@@ -116,7 +116,7 @@ export default function RegisterPage() {
               onChange={(e) => setPassword(e.target.value)}
               required
               minLength={8}
-              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[15px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
               placeholder="Min. 8 characters"
             />
           </div>
@@ -131,7 +131,7 @@ export default function RegisterPage() {
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
               minLength={8}
-              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[15px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
               placeholder="••••••••"
             />
           </div>
