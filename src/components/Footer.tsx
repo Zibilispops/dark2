@@ -2,8 +2,11 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useLang } from '@/context/LanguageContext';
 
 export function Footer() {
+  const { t } = useLang();
+
   return (
     <motion.footer 
       initial={{ opacity: 0, y: 100 }}
@@ -24,9 +27,9 @@ export function Footer() {
               DARK <span className="text-[var(--accent)]">FACTORY</span>
             </p>
             <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 leading-relaxed">
-              // DTG Studio · Gifu, Japan<br />
-              // Authorized Bad Printer Reseller<br />
-              // Collection 001
+              {t('footer.tagline')}<br />
+              {t('footer.auth')}<br />
+              {t('footer.collection')}
             </p>
           </motion.div>
 
@@ -37,14 +40,14 @@ export function Footer() {
             transition={{ duration: 0.8, delay: 4.0, ease: "easeOut" }}
           >
             <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-4">
-              // Navigate
+              {t('footer.nav.title')}
             </p>
             <ul className="space-y-2 font-mono text-[11px] uppercase tracking-widest">
               {[
-                { href: '/shop', label: 'Shop Collection' },
-                { href: '/about', label: 'Studio' },
-                { href: '/logistics', label: 'Shipping & Returns' },
-                { href: '/login', label: 'Operator Login' },
+                { href: '/shop',      label: t('footer.nav.shop') },
+                { href: '/about',     label: t('footer.nav.studio') },
+                { href: '/logistics', label: t('footer.nav.shipping') },
+                { href: '/login',     label: t('footer.nav.login') },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-white/60 hover:text-[var(--accent)] transition-colors">
@@ -62,7 +65,7 @@ export function Footer() {
             transition={{ duration: 0.8, delay: 4.2, ease: "easeOut" }}
           >
             <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-4">
-              // Contact
+              {t('footer.contact.title')}
             </p>
             <div className="space-y-2 font-mono text-[11px] uppercase tracking-widest text-white/60">
               <p>
@@ -70,8 +73,8 @@ export function Footer() {
                   orders@dark-factory.co
                 </a>
               </p>
-              <p>Orders &amp; Returns</p>
-              <p className="pt-2 text-white/20">Response: 1–2 business days</p>
+              <p>{t('footer.contact.type')}</p>
+              <p className="pt-2 text-white/20">{t('footer.contact.response')}</p>
             </div>
           </motion.div>
         </div>
@@ -83,8 +86,8 @@ export function Footer() {
           transition={{ duration: 1, delay: 5, ease: "easeOut" }}
           className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-[10px] uppercase tracking-widest text-white/20"
         >
-          <p>© 2024 Dark Factory · Gifu Studio · All rights reserved</p>
-          <p>Printed on demand · Bad Printer 6.6oz · Ships worldwide</p>
+          <p>{t('footer.copy')}</p>
+          <p>{t('footer.print')}</p>
         </motion.div>
 
       </div>

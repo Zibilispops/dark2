@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { CustomCursor } from "@/components/CustomCursor";
 
 const geistSans = Geist({
@@ -44,15 +45,17 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col pt-[50px] lg:pt-[80px] bg-black text-white">
         <div className="layout-content-wrapper flex flex-col min-h-full flex-1">
           <CustomCursor />
-          <AuthProvider>
-            <CartProvider>
-              <Navbar />
-              <div className="flex-1 flex flex-col">
-                {children}
-              </div>
-              <Footer />
-            </CartProvider>
-          </AuthProvider>
+          <LanguageProvider>
+            <AuthProvider>
+              <CartProvider>
+                <Navbar />
+                <div className="flex-1 flex flex-col">
+                  {children}
+                </div>
+                <Footer />
+              </CartProvider>
+            </AuthProvider>
+          </LanguageProvider>
         </div>
       </body>
     </html>

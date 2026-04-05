@@ -5,16 +5,8 @@ import { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLang } from '@/context/LanguageContext';
 
-const marqueeItems = [
-  'DIGITAL VANGUARD APPAREL',
-  'DTG PRINT ON DEMAND',
-  'GIFU STUDIO',
-  'COLLECTION 001',
-  'LIMITED AVAILABILITY',
-  'SHIPS WORLDWIDE',
-  'DESIGNED IN JAPAN',
-];
 
 function LiveClock() {
   const [time, setTime] = useState('');
@@ -31,7 +23,7 @@ function LiveClock() {
   return <span suppressHydrationWarning>{time}</span>;
 }
 
-function EmailCapture() {
+function EmailCapture({ t }: { t: (k: Parameters<ReturnType<typeof useLang>['t']>[0]) => string }) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -71,7 +63,7 @@ function EmailCapture() {
           viewport={{ once: true }}
           className="text-[var(--accent)] font-mono text-[10px] uppercase tracking-[0.35em] mb-4"
         >
-          // FACTORY DISPATCH
+          {t('dispatch.eyebrow')}
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 25 }}
@@ -80,7 +72,7 @@ function EmailCapture() {
           viewport={{ once: true }}
           className="text-2xl md:text-3xl font-black italic tracking-tighter uppercase mb-3"
         >
-          Receive Drop Alerts
+          {t('dispatch.title')}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -89,13 +81,13 @@ function EmailCapture() {
           viewport={{ once: true }}
           className="text-white/60 text-[14px] font-mono uppercase tracking-widest mb-8"
         >
-          Collection 002 loading. Be first to deploy.
+          {t('dispatch.sub')}
         </motion.p>
 
         {status === 'success' ? (
           <div className="flex items-center gap-4 font-mono text-[13px] uppercase tracking-widest text-[var(--accent)]">
             <span className="text-[var(--accent)]">[+]</span>
-            You&apos;re now an Operator — watch your inbox for Collection 002.
+            {t('dispatch.cta')}
           </div>
         ) : (
           <motion.form
@@ -111,7 +103,7 @@ function EmailCapture() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              placeholder="operator@domain.com"
+              placeholder={t('dispatch.placeholder')}
               className="flex-1 bg-[#111] border border-white/10 px-4 py-3 text-white text-[14px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-white/40"
             />
             <button
@@ -119,7 +111,7 @@ function EmailCapture() {
               disabled={status === 'loading'}
               className="btn-primary px-8 py-3 text-[14px] tracking-widest disabled:opacity-30 whitespace-nowrap"
             >
-              {status === 'loading' ? '...' : 'Join Dispatch →'}
+              {status === 'loading' ? '...' : t('dispatch.cta')}
             </button>
           </motion.form>
         )}
@@ -131,7 +123,7 @@ function EmailCapture() {
         )}
 
         <p className="mt-6 text-white/20 font-mono text-[10px] uppercase tracking-widest">
-          No noise. Drop alerts only. Unsubscribe anytime.
+          {t('dispatch.note')}
         </p>
       </div>
     </motion.section>
@@ -203,6 +195,12 @@ function HeroProduct() {
 
 export default function Home() {
   const containerRef = useRef<HTMLElement>(null);
+  const { t } = useLang();
+
+  const marqueeKeys = [
+    'marquee.1', 'marquee.2', 'marquee.3', 'marquee.4',
+    'marquee.5', 'marquee.6', 'marquee.7',
+  ] as const;
 
   useGSAP(() => {
     // T2: Eyebrow - Vertical drop at 0.6s
@@ -268,28 +266,29 @@ export default function Home() {
 
         {/* Tag line */}
         <p className="hero-eyebrow text-[var(--accent)] font-mono text-[11px] mb-8 tracking-[0.35em] uppercase z-10 opacity-0">
-          // [001] DTG Studio · Gifu JP · Est. 2024
+          {t('hero.eyebrow')}
         </p>
 
         {/* Big headline */}
         <h1 className="relative z-10 text-[var(--h0)] leading-[0.82] tracking-tighter font-black italic mb-6 mix-blend-difference overflow-hidden flex flex-col">
-          <div className="hero-whip-1 text-gradient" style={{ opacity: 0 }}>Wear The</div>
-          <div className="hero-whip-2 text-gradient" style={{ opacity: 0 }}>Future</div>
+          <div className="hero-whip-1 text-gradient" style={{ opacity: 0 }}>{t('hero.line1')}</div>
+          <div className="hero-whip-2 text-gradient" style={{ opacity: 0 }}>{t('hero.line2')}</div>
         </h1>
 
         {/* Sub */}
         <p className="hero-sub opacity-0 text-white/80 text-base md:text-lg max-w-md mb-12 leading-relaxed z-10 font-light mix-blend-screen">
-          High-fidelity garments for the digital vanguard.<br />
-          Designed in Gifu, printed on demand, shipped globally.
+          {t('hero.sub').split('\n').map((line, i) => (
+            <span key={i}>{line}{i === 0 && <br />}</span>
+          ))}
         </p>
 
         {/* CTAs */}
         <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10">
           <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group flex justify-center items-center text-center">
-            <span className="group-hover:invert transition-all">Shop Collection →</span>
+            <span className="group-hover:invert transition-all">{t('hero.cta.shop')}</span>
           </Link>
           <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-white/80 hover:border-white hover:text-black hover:bg-white transition-all duration-500 flex justify-center items-center text-center">
-            Studio →
+            {t('hero.cta.studio')}
           </Link>
         </div>
 
@@ -307,7 +306,7 @@ export default function Home() {
             <LiveClock />
           </div>
           <div className="text-white/15 text-[10px] font-mono leading-relaxed text-right uppercase tracking-widest">
-            Status: Factory Online<br />Capacity: 88%<br />Queue: 12 orders
+            {t('hero.status.on')}<br />{t('hero.status.capacity')}<br />{t('hero.status.queue')}
           </div>
         </div>
       </section>
@@ -320,17 +319,17 @@ export default function Home() {
         className="w-full border-t border-b border-white/5 py-4 overflow-hidden bg-[#0a0a0a]"
       >
         <div className="marquee-track">
-          {[...marqueeItems, ...marqueeItems].map((item, i) => (
+          {[...marqueeKeys, ...marqueeKeys].map((key, i) => (
             <span key={i} className="flex items-center gap-6 px-6 text-[11px] font-mono uppercase tracking-[0.25em] text-white/40 whitespace-nowrap">
               <span className="text-[var(--accent)] opacity-50">◆</span>
-              {item}
+              {t(key)}
             </span>
           ))}
         </div>
       </motion.div>
 
       {/* ── Email Capture ── */}
-      <EmailCapture />
+      <EmailCapture t={t} />
 
     </main>
   );

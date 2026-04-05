@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
+import { useLang } from '@/context/LanguageContext';
 import { Cart } from './Cart';
 import { User } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -13,7 +14,12 @@ export default function Navbar() {
   const pathname = usePathname();
   const { totalItems } = useCart();
   const { user, loading } = useAuth();
+  const { lang, toggleLang, t } = useLang();
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  // Flag to display: show the OTHER language's flag (the one you can switch TO)
+  const flagIcon = lang === 'ja' ? '🇺🇸' : '🇯🇵';
+  const flagTitle = lang === 'ja' ? 'Switch to English' : '日本語に切り替え';
 
   return (
     <>
@@ -40,8 +46,8 @@ export default function Navbar() {
         
         <div className="flex gap-4 md:gap-8 text-[10px] md:text-[14px] items-center font-mono font-bold uppercase tracking-wider text-white/90">
           {[
-            { href: '/shop', label: 'Shop' },
-            { href: '/about', label: 'Studio' },
+            { href: '/shop', label: t('nav.shop') },
+            { href: '/about', label: t('nav.studio') },
           ].map((link, i) => (
             <motion.div
               key={link.href}
@@ -73,7 +79,7 @@ export default function Navbar() {
                   }`}
                 >
                   <User size="1.2em" strokeWidth={1.5} />
-                  Account
+                  {t('nav.account')}
                 </Link>
               ) : (
                 <Link
@@ -82,12 +88,13 @@ export default function Navbar() {
                     pathname === '/login' ? 'text-[var(--accent)] underline underline-offset-8' : ''
                   }`}
                 >
-                  Login
+                  {t('nav.login')}
                 </Link>
               )}
             </motion.div>
           )}
 
+          {/* Cart */}
           <motion.button 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -95,7 +102,22 @@ export default function Navbar() {
             onClick={() => setIsCartOpen(true)}
             className="text-[var(--accent)] font-bold decoration-dotted underline underline-offset-4 flex items-center gap-1 hover:brightness-110 transition-all font-mono"
           >
-            Cart [{totalItems}]
+            {t('nav.cart')} [{totalItems}]
+          </motion.button>
+
+          {/* Language Toggle — flag shows the language you can SWITCH TO */}
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
+            onClick={toggleLang}
+            title={flagTitle}
+            whileTap={{ scale: 0.85 }}
+            whileHover={{ scale: 1.15 }}
+            className="text-xl leading-none cursor-pointer select-none"
+            aria-label={flagTitle}
+          >
+            {flagIcon}
           </motion.button>
         </div>
       </motion.nav>
