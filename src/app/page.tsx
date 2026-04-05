@@ -165,11 +165,11 @@ function HeroProduct() {
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="absolute right-0 top-0 h-full w-[80vw] max-w-[1600px] hidden lg:flex items-end overflow-hidden group z-0"
+      className="absolute right-0 top-0 h-full hidden lg:flex lg:w-[50vw] xl:w-[65vw] 2xl:w-[80vw] max-w-[1800px] items-end overflow-hidden group z-0"
       style={{ pointerEvents: 'auto' }}
     >
       {/* Gradient mask — fades left edge into bg */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '10%' }} />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '20%' }} />
       <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808] z-10 pointer-events-none" style={{ bottom: 0, height: '20%' }} />
 
       <img
