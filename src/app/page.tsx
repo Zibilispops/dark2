@@ -165,11 +165,16 @@ function HeroProduct() {
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="absolute right-0 top-0 h-full hidden lg:flex items-end overflow-hidden group z-0"
-      style={{ width: 'clamp(40vw, 50vw, 75vw)', pointerEvents: 'auto' }}
+      className="relative lg:absolute right-0 top-0 h-[40vh] lg:h-full w-full lg:flex items-end overflow-hidden group z-0"
+      style={{ 
+        width: typeof window !== 'undefined' && window.innerWidth < 1024 ? '100%' : 'clamp(40vw, 50vw, 75vw)', 
+        pointerEvents: 'auto' 
+      }}
     >
       {/* Gradient mask — fades left edge into bg */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '35%' }} />
+      <div className="absolute inset-0 bg-gradient-to-r lg:bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '35%' }} />
+      {/* Mobile Top/Bottom mask */}
+      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#080808] to-transparent z-10 lg:hidden pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808] z-10 pointer-events-none" style={{ bottom: 0, height: '20%' }} />
 
       <img
@@ -224,6 +229,12 @@ export default function Home() {
       { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 1.8, stagger: 0.2 }
     );
 
+    // T5.5: Mobile Product lift - at 2.1s
+    gsap.fromTo('.hero-product-mobile',
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 2.1 }
+    );
+
     // T6: Bottom status bar lift at 2.4s
     gsap.fromTo('.hero-status',
       { y: 30, opacity: 0 },
@@ -242,7 +253,9 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="relative flex-1 flex flex-col justify-center px-8 md:px-16 pt-10 pb-32 min-h-screen overflow-hidden">
 
-        <HeroProduct />
+        <div className="hidden lg:block">
+          <HeroProduct />
+        </div>
 
         {/* Tag line */}
         <p className="hero-eyebrow text-[var(--accent)] font-mono text-[11px] mb-8 tracking-[0.35em] uppercase z-10 opacity-0">
@@ -262,13 +275,18 @@ export default function Home() {
         </p>
 
         {/* CTAs */}
-        <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10">
+        <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10 mb-12 lg:mb-0">
           <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group">
             <span className="group-hover:invert transition-all">Shop Collection →</span>
           </Link>
           <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-white/80 hover:border-white hover:text-black hover:bg-white transition-all duration-500">
             Studio →
           </Link>
+        </div>
+
+        {/* Mobile-only Product placement */}
+        <div className="lg:hidden w-full h-[40vh] relative z-0 mb-16 opacity-0 hero-product-mobile">
+           <HeroProduct />
         </div>
 
         {/* Bottom status bar */}
