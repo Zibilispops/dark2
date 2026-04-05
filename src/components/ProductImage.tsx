@@ -90,14 +90,22 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
             </button>
           )}
         </div>
-        {/* Large close tap target for mobile */}
         <button
           onClick={onClose}
-          className="font-mono text-[11px] uppercase tracking-widest text-white border border-white/20 px-4 py-2 active:bg-white/10 transition-all min-w-[56px] text-center"
+          className="font-mono text-[11px] uppercase tracking-widest text-white border border-white/20 px-4 py-2 hover:bg-white/10 transition-all min-w-[56px] text-center"
         >
           ✕ Close
         </button>
       </div>
+
+      {/* Floating close button for all devices - Enhanced visibility */}
+      <button
+        onClick={onClose}
+        className="fixed top-6 right-6 z-[100] w-12 h-12 bg-black/80 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-all group active:scale-95 shadow-2xl"
+        aria-label="Close zoom"
+      >
+        <span className="font-mono text-xl group-hover:rotate-90 transition-transform duration-300">✕</span>
+      </button>
 
       {/* Image area */}
       <div
