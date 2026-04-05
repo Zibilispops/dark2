@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const marqueeItems = [
   'DIGITAL VANGUARD APPAREL',
@@ -147,16 +147,10 @@ const FEATURED_PRODUCTS = [
 
 function HeroProduct() {
   const [idx, setIdx] = useState(0);
-  const [fading, setFading] = useState(false);
-
   useEffect(() => {
     const id = setInterval(() => {
-      setFading(true);
-      setTimeout(() => {
-        setIdx((i) => (i + 1) % FEATURED_PRODUCTS.length);
-        setFading(false);
-      }, 400);
-    }, 4000);
+      setIdx((i) => (i + 1) % FEATURED_PRODUCTS.length);
+    }, 4500);
     return () => clearInterval(id);
   }, []);
 
@@ -165,33 +159,43 @@ function HeroProduct() {
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="relative lg:absolute right-0 top-0 h-[40vh] lg:h-full w-full lg:flex items-end overflow-hidden group z-0"
-      style={{ 
-        width: typeof window !== 'undefined' && window.innerWidth < 1024 ? '100%' : 'clamp(40vw, 50vw, 75vw)', 
-        pointerEvents: 'auto' 
-      }}
+      className="relative lg:absolute right-0 top-0 h-[40vh] lg:h-[100vh] w-full lg:w-[clamp(40vw,50vw,75vw)] lg:flex items-end overflow-hidden group z-0 block"
+      style={{ pointerEvents: 'auto' }}
     >
       {/* Gradient mask — fades left edge into bg */}
       <div className="absolute inset-0 bg-gradient-to-r lg:bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '35%' }} />
-      {/* Mobile Top/Bottom mask */}
-      <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#080808] to-transparent z-10 lg:hidden pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808] z-10 pointer-events-none" style={{ bottom: 0, height: '20%' }} />
 
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full h-full object-cover object-top transition-opacity duration-400 scale-125 group-hover:scale-[130%] transition-transform duration-1000 ease-out"
-        style={{ opacity: fading ? 0 : 0.8 }}
-      />
+      {FEATURED_PRODUCTS.map((prod, i) => (
+        <img
+          key={prod.slug}
+          src={prod.image}
+          alt={prod.name}
+          className={`absolute inset-0 w-full h-full object-cover object-top scale-125 group-hover:scale-[130%] transition-transform duration-1000 ease-out origin-top pointer-events-none ${
+            idx === i ? 'opacity-80' : 'opacity-0'
+          }`}
+          style={{ transitionProperty: 'opacity, transform', transitionDuration: '800ms' }}
+        />
+      ))}
 
       {/* Serial tag */}
       <div className="absolute bottom-10 right-8 z-20 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-1">
           // NOW FEATURED
         </p>
-        <p className="font-mono text-[11px] uppercase tracking-widest text-white">
-          {product.name} →
-        </p>
+        <div className="font-mono text-[11px] uppercase tracking-widest text-white flex gap-1">
+          <AnimatePresence mode="wait">
+            <motion.span 
+              key={product.name}
+              initial={{ opacity: 0, x: -5 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 5 }}
+              transition={{ duration: 0.3 }}
+            >
+              {product.name}
+            </motion.span>
+          </AnimatePresence>
+          <span>→</span>
+        </div>
       </div>
     </Link>
   );
@@ -251,11 +255,16 @@ export default function Home() {
       </div>
 
       {/* ── Hero ── */}
-      <section className="relative flex-1 flex flex-col justify-start lg:justify-center px-8 md:px-16 pt-28 lg:pt-10 pb-32 min-h-screen overflow-hidden space-y-8 lg:space-y-0">
+      <section className="relative flex-1 px-8 md:px-16 pt-28 lg:pt-0 pb-32 min-h-screen overflow-hidden">
 
-        <div className="hidden lg:block">
+        {/* Desktop Product Wrapper - OUT OF FLOW to prevent Safari flex stretching bugs */}
+        <div className="hidden lg:block absolute inset-0 z-0 pointer-events-none">
           <HeroProduct />
         </div>
+
+        {/* Text / Content Flex Container */}
+        {/* Mobile: normal flow with top padding. Desktop: absolute centered using transform trick - reliable in ALL browsers including Safari */}
+        <div className="relative z-10 flex flex-col space-y-8 lg:space-y-0 w-full lg:w-[50vw] lg:absolute lg:top-1/2 lg:-translate-y-1/2">
 
         {/* Tag line */}
         <p className="hero-eyebrow text-[var(--accent)] font-mono text-[11px] mb-8 tracking-[0.35em] uppercase z-10 opacity-0">
@@ -284,8 +293,10 @@ export default function Home() {
           </Link>
         </div>
 
+        </div>
+
         {/* Mobile-only Product placement */}
-        <div className="lg:hidden w-full h-[40vh] relative z-0 hero-product-mobile opacity-0 translate-y-8 pb-12 mt-16">
+        <div className="lg:hidden w-full h-[40vh] relative z-0 hero-product-mobile pb-12 mt-4">
            <HeroProduct />
         </div>
 
