@@ -1,58 +1,63 @@
+'use client';
+
 import Link from 'next/link';
 import { FadeUp } from '@/components/FadeUp';
+import { useLang } from '@/context/LanguageContext';
 
 export default function LogisticsPage() {
+  const { t } = useLang();
+
   const shippingSectors = [
     {
-      title: 'Mainland Japan (Honshu, Shikoku, Kyushu)',
+      title: t('logistics.sector.mainland'),
       rows: [
-        { service: 'Standard (Mailbox)', time: '3–5 Business Days', rate: 'FREE' },
-        { service: 'Express (Hand-delivered)', time: '1–2 Business Days', rate: '¥600' },
+        { service: t('logistics.service.standard'), time: '3–5 Business Days', rate: 'FREE' },
+        { service: t('logistics.service.express'),  time: '1–2 Business Days', rate: '¥600' },
       ]
     },
     {
-      title: 'Hokkaido & Okinawa',
+      title: t('logistics.sector.hokkaido'),
       rows: [
-        { service: 'Standard (Mailbox)', time: '5–10 Business Days', rate: '¥500' },
-        { service: 'Express (Hand-delivered)', time: '2–3 Business Days', rate: '¥1,500' },
+        { service: t('logistics.service.standard'), time: '5–10 Business Days', rate: '¥500' },
+        { service: t('logistics.service.express'),  time: '2–3 Business Days', rate: '¥1,500' },
       ]
     },
     {
-      title: 'Remote Islands (Rito)',
+      title: t('logistics.sector.remote'),
       rows: [
-        { service: 'Standard (Mailbox)', time: '7–14 Business Days', rate: '¥800' },
-        { service: 'Express (Hand-delivered)', time: '3–5 Business Days', rate: '¥2,200*' },
+        { service: t('logistics.service.standard'), time: '7–14 Business Days', rate: '¥800' },
+        { service: t('logistics.service.express'),  time: '3–5 Business Days', rate: '¥2,200*' },
       ]
     },
   ];
 
   const trackingInfo = [
-    { type: 'Standard (Yu-Packet)', details: 'Track transit via Yamato; final delivery status updates through Japan Post tracking (12–24h sync delay).' },
-    { type: 'Express (TA-Q-BIN)', details: 'Real-time tracking available exclusively through the Yamato Transport system.' },
+    { type: t('logistics.tracking.standard.type'), details: t('logistics.tracking.standard.details') },
+    { type: t('logistics.tracking.express.type'),  details: t('logistics.tracking.express.details') },
   ];
 
   const deliveryMethods = [
-    { method: 'Standard (Yu-Packet)', details: 'Delivered directly to mailbox. Signature not required. Must accept a package 3cm thick.' },
-    { method: 'Express (TA-Q-BIN)', details: 'Hand-delivered. Requires signature or secure drop-off. Includes premium insurance up to ¥300,000.' },
+    { method: t('logistics.delivery.standard.method'), details: t('logistics.delivery.standard.details') },
+    { method: t('logistics.delivery.express.method'),  details: t('logistics.delivery.express.details') },
   ];
 
   const importantNotices = [
-    { label: 'The "Delivered" Finality', text: 'Tracking ends at "Delivered to Mailbox." Theft after delivery is not insured. We recommend Express for unsecured mailboxes.' },
-    { label: 'The 3cm Rejection', text: 'Items too bulky for full mailboxes may be returned to our studio. Re-shipping will be at the customer\'s expense.' },
+    { label: t('logistics.notice.1.label'), text: t('logistics.notice.1.text') },
+    { label: t('logistics.notice.2.label'), text: t('logistics.notice.2.text') },
   ];
 
   const productionNotes = [
-    '[+] Each tee is printed on demand in Gifu Studio after your order is placed.',
-    '[+] Production time: 1–3 business days before shipping.',
-    '[+] Total delivery = production time + shipping time above.',
-    '[+] DTG printing on Bad Printer 6.6oz (225 GSM) Heavyweight blanks.',
+    t('logistics.production.1'),
+    t('logistics.production.2'),
+    t('logistics.production.3'),
+    t('logistics.production.4'),
   ];
 
   const returnNotes = [
-    '[+] Returns: accepted within 14 days for unworn, unwashed items in original packaging.',
-    '[+] Size Exchanges: contact within 14 days. Return shipping cost is on the customer.',
-    '[+] Defective Items: full replacement at no cost. Send data/photo within 7 days of receipt.',
-    '[+] Custom/On-Demand: items cannot be returned unless defective.',
+    t('logistics.returns.1'),
+    t('logistics.returns.2'),
+    t('logistics.returns.3'),
+    t('logistics.returns.4'),
   ];
 
   return (
@@ -62,12 +67,12 @@ export default function LogisticsPage() {
         {/* Header */}
         <FadeUp mode="animate" delay={0.1}>
           <p className="text-[var(--accent)] font-mono text-[10px] uppercase tracking-[0.35em] mb-4">
-            // [LOGISTICS] Shipping & Delivery Policy
+            {t('logistics.eyebrow')}
           </p>
         </FadeUp>
         <FadeUp mode="animate" delay={0.2} y={30}>
           <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-[0.85] mb-16">
-            Logistics
+            {t('logistics.h1')}
           </h1>
         </FadeUp>
 
@@ -77,12 +82,12 @@ export default function LogisticsPage() {
           <section>
             <FadeUp delay={0}>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-8">
-                01 / Shipping Rates & Delivery Times
+                {t('logistics.s01')}
               </p>
             </FadeUp>
             <div className="space-y-8">
               {shippingSectors.map((sector, sIdx) => (
-                <FadeUp key={sector.title} delay={0.1 + (sIdx * 0.1)}>
+                <FadeUp key={sIdx} delay={0.1 + (sIdx * 0.1)}>
                   <div className="border border-white/5 p-6 bg-[#0c0c0c]">
                     <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--accent)] mb-4 border-b border-white/5 pb-2">
                       {sector.title}
@@ -110,16 +115,16 @@ export default function LogisticsPage() {
             </div>
             <FadeUp delay={0.4}>
               <p className="mt-4 font-mono text-[9px] uppercase tracking-[0.2em] text-white/40 leading-relaxed">
-                *Note: Remote Island Express rates are estimates. We will contact you if your specific zip code requires an additional "Relay Fee" (Chūkei-ryō).
+                {t('logistics.sector.note')}
               </p>
             </FadeUp>
           </section>
 
-          {/* 02 / Tracking Your Order */}
+          {/* 02 / Tracking */}
           <section>
             <FadeUp delay={0}>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-8">
-                02 / Tracking Your Order
+                {t('logistics.s02')}
               </p>
             </FadeUp>
             <FadeUp delay={0.1}>
@@ -131,7 +136,7 @@ export default function LogisticsPage() {
                   </div>
                 ))}
                 <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/40 pt-2 border-t border-white/5">
-                  Every order includes a 12-digit Yamato Tracking Number via email.
+                  {t('logistics.tracking.note')}
                 </p>
               </div>
             </FadeUp>
@@ -141,7 +146,7 @@ export default function LogisticsPage() {
           <section>
             <FadeUp delay={0}>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-8">
-                03 / Delivery Methods
+                {t('logistics.s03')}
               </p>
             </FadeUp>
             <FadeUp delay={0.1}>
@@ -160,7 +165,7 @@ export default function LogisticsPage() {
           <section>
             <FadeUp delay={0}>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-8">
-                04 / Important Notices
+                {t('logistics.s04')}
               </p>
             </FadeUp>
             <FadeUp delay={0.1}>
@@ -179,7 +184,7 @@ export default function LogisticsPage() {
           <section>
             <FadeUp delay={0}>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-6">
-                05 / Production
+                {t('logistics.s05')}
               </p>
             </FadeUp>
             <FadeUp delay={0.1}>
@@ -195,7 +200,7 @@ export default function LogisticsPage() {
           <section>
             <FadeUp delay={0}>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-6">
-                06 / Returns & Exchanges
+                {t('logistics.s06')}
               </p>
             </FadeUp>
             <FadeUp delay={0.1}>
@@ -211,17 +216,17 @@ export default function LogisticsPage() {
           <section>
             <FadeUp delay={0}>
               <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-6">
-                07 / Contact
+                {t('logistics.s07')}
               </p>
             </FadeUp>
             <FadeUp delay={0.05}>
               <div className="border border-white/5 p-6 bg-[#0c0c0c]">
                 <p className="font-mono text-[11px] uppercase tracking-widest text-white/80 leading-relaxed">
-                  For support & inquiries:<br />
+                  {t('logistics.contact.p')}<br />
                   <span className="text-white mt-2 block">orders@dark-factory.co</span>
                 </p>
                 <p className="mt-4 font-mono text-[10px] uppercase tracking-widest text-white/40">
-                  Response time: 1–2 business days (JST)
+                  {t('logistics.contact.time')}
                 </p>
               </div>
             </FadeUp>
@@ -232,8 +237,8 @@ export default function LogisticsPage() {
         {/* Footer nav */}
         <FadeUp delay={0.1}>
           <div className="mt-16 pt-8 border-t border-white/5 flex gap-8 font-mono text-[10px] uppercase tracking-widest text-white/40">
-            <Link href="/shop" className="hover:text-[var(--accent)] transition-colors">← Shop Collection</Link>
-            <Link href="/about" className="hover:text-[var(--accent)] transition-colors">Studio →</Link>
+            <Link href="/shop" className="hover:text-[var(--accent)] transition-colors">{t('logistics.nav.shop')}</Link>
+            <Link href="/about" className="hover:text-[var(--accent)] transition-colors">{t('logistics.nav.studio')}</Link>
           </div>
         </FadeUp>
 
