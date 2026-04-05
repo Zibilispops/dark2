@@ -81,7 +81,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
             <WhipPan direction="left">
-              <h2 className="text-3xl md:text-4xl font-black italic tracking-tighter uppercase mb-6">
+              <h2 className="text-3xl md:text-4xl font-black italic tracking-tighter uppercase mb-6 text-[var(--accent)]">
                 Bad Printer<br />6.6oz
               </h2>
             </WhipPan>

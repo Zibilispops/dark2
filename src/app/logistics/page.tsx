@@ -84,7 +84,7 @@ export default function LogisticsPage() {
               {shippingSectors.map((sector, sIdx) => (
                 <FadeUp key={sector.title} delay={0.1 + (sIdx * 0.1)}>
                   <div className="border border-white/5 p-6 bg-[#0c0c0c]">
-                    <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/90 mb-4 border-b border-white/5 pb-2">
+                    <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--accent)] mb-4 border-b border-white/5 pb-2">
                       {sector.title}
                     </h3>
                     <div className="space-y-4">

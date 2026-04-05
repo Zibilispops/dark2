@@ -251,7 +251,7 @@ export default function Home() {
       </div>
 
       {/* ── Hero ── */}
-      <section className="relative flex-1 flex flex-col justify-center px-8 md:px-16 pt-10 pb-32 min-h-screen overflow-hidden space-y-8 lg:space-y-0">
+      <section className="relative flex-1 flex flex-col justify-start lg:justify-center px-8 md:px-16 pt-28 lg:pt-10 pb-32 min-h-screen overflow-hidden space-y-8 lg:space-y-0">
 
         <div className="hidden lg:block">
           <HeroProduct />
@@ -276,16 +276,16 @@ export default function Home() {
 
         {/* CTAs */}
         <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10">
-          <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group">
+          <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group flex justify-center items-center text-center">
             <span className="group-hover:invert transition-all">Shop Collection →</span>
           </Link>
-          <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-white/80 hover:border-white hover:text-black hover:bg-white transition-all duration-500">
+          <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-white/80 hover:border-white hover:text-black hover:bg-white transition-all duration-500 flex justify-center items-center text-center">
             Studio →
           </Link>
         </div>
 
         {/* Mobile-only Product placement */}
-        <div className="lg:hidden w-full h-[40vh] relative z-0 hero-product-mobile opacity-0 translate-y-8">
+        <div className="lg:hidden w-full h-[40vh] relative z-0 hero-product-mobile opacity-0 translate-y-8 pb-12 mt-16">
            <HeroProduct />
         </div>
 
