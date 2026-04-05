@@ -93,14 +93,11 @@ export default async function ProductPage({
   return (
     <main className="min-h-screen bg-black text-white pt-24 md:pt-32 pb-28 lg:pb-20 px-4 md:px-12 flex flex-col lg:flex-row gap-8 lg:gap-16">
 
-      {/* ── MOBILE-ONLY: Name + Price above image ── */}
+      {/* ── MOBILE-ONLY: Name above image ── */}
       <div className="lg:hidden flex flex-col gap-2 -mb-2">
         <h1 className="text-3xl font-black italic uppercase tracking-tighter leading-[0.85]">
           {product.name}
         </h1>
-        <p className="text-2xl font-black italic tracking-tighter text-[var(--accent)]">
-          ¥{price.toLocaleString()}
-        </p>
       </div>
 
       {/* Product Image */}
