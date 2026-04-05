@@ -165,8 +165,8 @@ function HeroProduct() {
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="absolute right-0 top-0 h-full hidden lg:flex lg:w-[35vw] xl:w-[50vw] 2xl:w-[70vw] max-w-[1600px] items-end overflow-hidden group z-0"
-      style={{ pointerEvents: 'auto' }}
+      className="absolute right-0 top-0 h-full hidden lg:flex items-end overflow-hidden group z-0"
+      style={{ width: 'clamp(40vw, 50vw, 75vw)', pointerEvents: 'auto' }}
     >
       {/* Gradient mask — fades left edge into bg */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '35%' }} />
