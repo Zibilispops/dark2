@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function LogisticsPage() {
   return (
     <main className="min-h-screen bg-[#080808] text-white pt-24 pb-24 px-6 md:px-16">
@@ -86,8 +88,8 @@ export default function LogisticsPage() {
 
         {/* Footer nav */}
         <div className="mt-16 pt-8 border-t border-white/5 flex gap-8 font-mono text-[9px] uppercase tracking-widest text-[#333]">
-          <a href="/shop" className="hover:text-[var(--accent)] transition-colors">← Shop Collection</a>
-          <a href="/about" className="hover:text-[var(--accent)] transition-colors">Studio →</a>
+          <Link href="/shop" className="hover:text-[var(--accent)] transition-colors">← Shop Collection</Link>
+          <Link href="/about" className="hover:text-[var(--accent)] transition-colors">Studio →</Link>
         </div>
 
       </div>
