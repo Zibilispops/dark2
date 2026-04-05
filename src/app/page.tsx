@@ -165,17 +165,17 @@ function HeroProduct() {
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="absolute right-0 top-0 h-full hidden lg:flex lg:w-[50vw] xl:w-[65vw] 2xl:w-[80vw] max-w-[1800px] items-end overflow-hidden group z-0"
+      className="absolute right-0 top-0 h-full hidden lg:flex lg:w-[35vw] xl:w-[50vw] 2xl:w-[70vw] max-w-[1600px] items-end overflow-hidden group z-0"
       style={{ pointerEvents: 'auto' }}
     >
       {/* Gradient mask — fades left edge into bg */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '20%' }} />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '35%' }} />
       <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808] z-10 pointer-events-none" style={{ bottom: 0, height: '20%' }} />
 
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-full object-cover object-top transition-opacity duration-400 scale-115 group-hover:scale-125 transition-transform duration-1000 ease-out"
+        className="w-full h-full object-cover object-top transition-opacity duration-400 scale-125 group-hover:scale-[130%] transition-transform duration-1000 ease-out"
         style={{ opacity: fading ? 0 : 0.8 }}
       />
 
