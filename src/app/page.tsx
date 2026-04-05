@@ -69,7 +69,7 @@ function EmailCapture() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-4"
+          className="text-[var(--accent)] font-mono text-[10px] uppercase tracking-[0.35em] mb-4"
         >
           // FACTORY DISPATCH
         </motion.p>
@@ -87,13 +87,13 @@ function EmailCapture() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="text-[#444] text-xs font-mono uppercase tracking-widest mb-8"
+          className="text-[#444] text-[13px] font-mono uppercase tracking-widest mb-8"
         >
           Collection 002 loading. Be first to deploy.
         </motion.p>
 
         {status === 'success' ? (
-          <div className="flex items-center gap-4 font-mono text-[11px] uppercase tracking-widest text-[var(--accent)]">
+          <div className="flex items-center gap-4 font-mono text-[12px] uppercase tracking-widest text-[var(--accent)]">
             <span className="text-[var(--accent)]">[+]</span>
             You&apos;re now an Operator — watch your inbox for Collection 002.
           </div>
@@ -112,12 +112,12 @@ function EmailCapture() {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="operator@domain.com"
-              className="flex-1 bg-[#111] border border-white/10 px-4 py-3 text-white text-xs font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="flex-1 bg-[#111] border border-white/10 px-4 py-3 text-white text-[13px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="btn-primary px-8 py-3 text-xs tracking-widest disabled:opacity-30 whitespace-nowrap"
+              className="btn-primary px-8 py-3 text-[13px] tracking-widest disabled:opacity-30 whitespace-nowrap"
             >
               {status === 'loading' ? '...' : 'Join Dispatch →'}
             </button>
@@ -125,12 +125,12 @@ function EmailCapture() {
         )}
 
         {status === 'error' && (
-          <p className="mt-3 text-red-400 font-mono text-[9px] uppercase tracking-widest">
+          <p className="mt-3 text-red-400 font-mono text-[10px] uppercase tracking-widest">
             ⚠ Transmission failed. Try again.
           </p>
         )}
 
-        <p className="mt-6 text-[#222] font-mono text-[9px] uppercase tracking-widest">
+        <p className="mt-6 text-[#222] font-mono text-[10px] uppercase tracking-widest">
           No noise. Drop alerts only. Unsubscribe anytime.
         </p>
       </div>
@@ -181,10 +181,10 @@ function HeroProduct() {
 
       {/* Serial tag */}
       <div className="absolute bottom-10 right-8 z-20 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <p className="font-mono text-[9px] uppercase tracking-widest text-[var(--accent)] mb-1">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-1">
           // NOW FEATURED
         </p>
-        <p className="font-mono text-[10px] uppercase tracking-widest text-white">
+        <p className="font-mono text-[11px] uppercase tracking-widest text-white">
           {product.name} →
         </p>
       </div>
@@ -245,7 +245,7 @@ export default function Home() {
         <HeroProduct />
 
         {/* Tag line */}
-        <p className="hero-eyebrow text-[var(--accent)] font-mono text-[10px] mb-8 tracking-[0.35em] uppercase z-10 opacity-0">
+        <p className="hero-eyebrow text-[var(--accent)] font-mono text-[11px] mb-8 tracking-[0.35em] uppercase z-10 opacity-0">
           // [001] DTG Studio · Gifu JP · Est. 2024
         </p>
 
@@ -263,21 +263,21 @@ export default function Home() {
 
         {/* CTAs */}
         <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10">
-          <Link href="/shop" className="btn-primary px-10 py-4 text-xs group">
+          <Link href="/shop" className="btn-primary px-10 py-4 text-[13px] group">
             <span className="group-hover:invert transition-all">Shop Collection →</span>
           </Link>
-          <Link href="/about" className="px-10 py-4 text-xs font-mono uppercase tracking-widest border border-white/10 text-[#555] hover:border-white hover:text-black hover:bg-white transition-all duration-500">
+          <Link href="/about" className="px-10 py-4 text-[13px] font-mono uppercase tracking-widest border border-white/10 text-[#555] hover:border-white hover:text-black hover:bg-white transition-all duration-500">
             Studio →
           </Link>
         </div>
 
         {/* Bottom status bar */}
         <div className="hero-status opacity-0 absolute bottom-10 left-8 md:left-16 right-8 md:right-16 flex justify-between items-end z-10">
-          <div className="text-white/15 text-[9px] font-mono leading-relaxed uppercase tracking-widest">
+          <div className="text-white/15 text-[10px] font-mono leading-relaxed uppercase tracking-widest">
             LAT: 35.4233° N<br />LONG: 136.7606° E<br />
             <LiveClock />
           </div>
-          <div className="text-white/15 text-[9px] font-mono leading-relaxed text-right uppercase tracking-widest">
+          <div className="text-white/15 text-[10px] font-mono leading-relaxed text-right uppercase tracking-widest">
             Status: Factory Online<br />Capacity: 88%<br />Queue: 12 orders
           </div>
         </div>
@@ -292,7 +292,7 @@ export default function Home() {
       >
         <div className="marquee-track">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={i} className="flex items-center gap-6 px-6 text-[10px] font-mono uppercase tracking-[0.25em] text-[#333] whitespace-nowrap">
+            <span key={i} className="flex items-center gap-6 px-6 text-[11px] font-mono uppercase tracking-[0.25em] text-[#333] whitespace-nowrap">
               <span className="text-[var(--accent)] opacity-50">◆</span>
               {item}
             </span>

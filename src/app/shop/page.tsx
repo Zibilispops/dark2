@@ -26,7 +26,7 @@ export default async function ShopPage() {
       <header className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <FadeUp mode="animate" delay={0.2}>
-            <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-3">
+            <p className="text-[var(--accent)] font-mono text-[10px] uppercase tracking-[0.35em] mb-3">
               // [001] Digital Vanguard Apparel
             </p>
           </FadeUp>
@@ -37,7 +37,7 @@ export default async function ShopPage() {
           </WhipPan>
         </div>
         <FadeUp mode="animate" delay={0.6}>
-          <p className="text-[#333] font-mono text-[10px] uppercase tracking-widest md:text-right">
+          <p className="text-[#333] font-mono text-[11px] uppercase tracking-widest md:text-right">
             {products.length} Items Available<br />
             Bad Printer 6.6oz · Ships Worldwide
           </p>

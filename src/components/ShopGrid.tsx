@@ -104,14 +104,14 @@ function ProductCard({ product, i, columns = 4 }: { product: Product; i: number;
               Staff Pick
             </span>
           ) : <span />}
-          <span className="bg-black/60 border border-white/10 font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5 text-[#555]">
+          <span className="bg-black/60 border border-white/10 font-mono text-[8px] uppercase tracking-widest px-1.5 py-0.5 text-[#555]">
             Bad Printer 6.6oz
           </span>
         </div>
 
         {/* Bottom overlay row */}
         <div className="absolute bottom-0 left-0 right-0 px-3 py-2 flex justify-between items-end bg-gradient-to-t from-black/80 to-transparent">
-          <span className="font-mono text-[7px] uppercase tracking-widest text-[#444] border border-white/5 px-1.5 py-0.5">
+          <span className="font-mono text-[8px] uppercase tracking-widest text-[#444] border border-white/5 px-1.5 py-0.5">
             {product.id}
           </span>
           <span className="text-base md:text-lg font-black italic tracking-tighter text-white">
@@ -121,7 +121,7 @@ function ProductCard({ product, i, columns = 4 }: { product: Product; i: number;
 
         {/* Scarcity indicator */}
         <div className="absolute bottom-10 left-3">
-          <span className={`font-mono text-[7px] uppercase tracking-widest ${stock.urgent ? 'text-red-400' : 'text-red-400/60'}`}>
+          <span className={`font-mono text-[8px] uppercase tracking-widest ${stock.urgent ? 'text-red-400' : 'text-red-400/60'}`}>
             {stock.label}
           </span>
         </div>
@@ -134,7 +134,7 @@ function ProductCard({ product, i, columns = 4 }: { product: Product; i: number;
         <p className="text-[20px] md:text-[22px] font-bold italic tracking-tighter uppercase text-white group-hover:text-black transition-colors duration-700 mb-0.5 leading-[1.1] min-h-[2.2em] line-clamp-2 overflow-hidden">
           {product.name}
         </p>
-        <p className="text-[#333] group-hover:text-[#555] text-[9px] uppercase font-mono tracking-widest transition-colors duration-700">
+        <p className="text-[#333] group-hover:text-[#555] text-[10px] uppercase font-mono tracking-widest transition-colors duration-700">
           {product.sizes.includes('ONE SIZE') ? 'One Size' : `S · M · L · XL`}
         </p>
       </div>
@@ -186,7 +186,7 @@ export function ShopGrid({ products }: { products: Product[] }) {
           <button
             key={f}
             onClick={() => setActive(f)}
-            className={`px-4 py-2 text-[9px] font-mono uppercase tracking-widest border transition-all duration-200 ${
+            className={`px-4 py-2 text-[10px] font-mono uppercase tracking-widest border transition-all duration-200 ${
               active === f
                 ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
                 : 'border-white/10 text-[#444] hover:border-white/30 hover:text-[#888]'
@@ -208,7 +208,7 @@ export function ShopGrid({ products }: { products: Product[] }) {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
         viewport={{ once: true }}
-        className="text-[#222] font-mono text-[9px] uppercase tracking-widest mb-6"
+        className="text-[#222] font-mono text-[10px] uppercase tracking-widest mb-6"
       >
         {filtered.length} item{filtered.length !== 1 ? 's' : ''} {active !== 'ALL' ? `in ${active}` : 'available'}
       </motion.p>

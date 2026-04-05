@@ -23,7 +23,7 @@ export function Footer() {
             <p className="font-black italic text-lg tracking-tighter uppercase mb-3 text-white">
               DARK <span className="text-[var(--accent)]">FACTORY</span>
             </p>
-            <p className="font-mono text-[9px] uppercase tracking-widest text-[#333] leading-relaxed">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-[#333] leading-relaxed">
               // DTG Studio · Gifu, Japan<br />
               // Authorized Bad Printer Reseller<br />
               // Collection 001
@@ -36,10 +36,10 @@ export function Footer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 4.0, ease: "easeOut" }}
           >
-            <p className="font-mono text-[9px] uppercase tracking-widest text-[var(--accent)] mb-4">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-4">
               // Navigate
             </p>
-            <ul className="space-y-2 font-mono text-[10px] uppercase tracking-widest">
+            <ul className="space-y-2 font-mono text-[11px] uppercase tracking-widest">
               {[
                 { href: '/shop', label: 'Shop Collection' },
                 { href: '/about', label: 'Studio' },
@@ -61,10 +61,10 @@ export function Footer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 4.2, ease: "easeOut" }}
           >
-            <p className="font-mono text-[9px] uppercase tracking-widest text-[var(--accent)] mb-4">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-4">
               // Contact
             </p>
-            <div className="space-y-2 font-mono text-[10px] uppercase tracking-widest text-[#444]">
+            <div className="space-y-2 font-mono text-[11px] uppercase tracking-widest text-[#444]">
               <p>
                 <a href="mailto:orders@dark-factory.co" className="hover:text-[var(--accent)] transition-colors">
                   orders@dark-factory.co
@@ -81,7 +81,7 @@ export function Footer() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 5, ease: "easeOut" }}
-          className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-[9px] uppercase tracking-widest text-[#222]"
+          className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-[10px] uppercase tracking-widest text-[#222]"
         >
           <p>© 2024 Dark Factory · Gifu Studio · All rights reserved</p>
           <p>Printed on demand · Bad Printer 6.6oz · Ships worldwide</p>

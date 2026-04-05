@@ -112,7 +112,7 @@ export default async function ProductPage({
           />
 
           {/* Metadata — hidden on mobile */}
-          <div className="product-meta-container hidden lg:block w-full p-4 border border-white/5 font-mono text-[10px] uppercase text-[#444] tracking-widest leading-relaxed pointer-events-none z-10 bg-[#0a0a0a]">
+          <div className="product-meta-container hidden lg:block w-full p-4 border border-white/5 font-mono text-[11px] uppercase text-[#444] tracking-widest leading-relaxed pointer-events-none z-10 bg-[#0a0a0a]">
             Serial: {product.id}<br />
             Origin: Gifu Studio<br />
             Type: [DTG-PRINT] · Heavyweight 6.6oz
@@ -123,7 +123,7 @@ export default async function ProductPage({
       {/* Product Details */}
       <div className="w-full lg:w-1/3 flex flex-col justify-start">
         <FadeUp mode="animate" delay={0.2}>
-          <Link href="/shop" className="text-[#444] text-[10px] font-mono tracking-widest uppercase mb-12 hover:bg-white hover:text-black transition-colors inline-block px-2 py-1 -ml-2">
+          <Link href="/shop" className="text-[#444] text-[11px] font-mono tracking-widest uppercase mb-12 hover:bg-white hover:text-black transition-colors inline-block px-2 py-1 -ml-2">
             ← Back to Collection
           </Link>
         </FadeUp>
@@ -133,7 +133,7 @@ export default async function ProductPage({
         </FadeUp>
 
         <FadeUp mode="animate" delay={0.55}>
-          <div className="mt-8 flex justify-between p-4 border border-white/5 font-mono text-[10px] uppercase text-[#333]">
+          <div className="mt-8 flex justify-between p-4 border border-white/5 font-mono text-[11px] uppercase text-[#333]">
             <Link href="/logistics" className="hover:bg-white hover:text-black px-2 py-1 -mx-2 transition-colors">
               Shipping Info →
             </Link>
@@ -144,7 +144,7 @@ export default async function ProductPage({
         {/* ── Operator Reports ── */}
         <div className="mt-12">
           <FadeUp delay={0}>
-            <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-6">
+            <p className="text-[var(--accent)] font-mono text-[10px] uppercase tracking-[0.35em] mb-6">
               // Operator Reports
             </p>
           </FadeUp>
@@ -154,20 +154,20 @@ export default async function ProductPage({
                 <div className="border border-white/5 p-4 bg-[#0c0c0c]">
                   <div className="flex justify-between items-start mb-3">
                     <div>
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-[var(--accent)]">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)]">
                         {review.handle}
                       </span>
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-[#333] ml-3">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-[#333] ml-3">
                         {review.location}
                       </span>
                     </div>
                     {review.verified && (
-                      <span className="font-mono text-[7px] uppercase tracking-widest text-[#333] border border-white/5 px-1.5 py-0.5">
+                      <span className="font-mono text-[8px] uppercase tracking-widest text-[#333] border border-white/5 px-1.5 py-0.5">
                         Verified
                       </span>
                     )}
                   </div>
-                  <p className="text-[#666] text-xs leading-relaxed">
+                  <p className="text-[#666] text-[13px] leading-relaxed">
                     {review.text}
                   </p>
                 </div>

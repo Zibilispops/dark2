@@ -10,7 +10,7 @@ export default function AboutPage() {
           <h1 className="mb-4 text-gradient">The Studio</h1>
         </WhipPan>
         <FadeUp delay={0.3} mode="animate">
-          <p className="text-[#666] max-w-lg mb-8 uppercase text-xs tracking-widest font-mono">
+          <p className="text-[#666] max-w-lg mb-8 uppercase text-[13px] tracking-widest font-mono">
             // [001] Gifu Studio · Official <span className="font-black text-white whitespace-nowrap">Bad Printer</span> Reseller
           </p>
         </FadeUp>
@@ -74,7 +74,7 @@ export default function AboutPage() {
       {/* ── Bad Printer Quality Section ── */}
       <section className="border-t border-white/10 pt-20 mb-20">
         <FadeUp delay={0}>
-          <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-6">
+          <p className="text-[var(--accent)] font-mono text-[10px] uppercase tracking-[0.35em] mb-6">
             // The Blank
           </p>
         </FadeUp>
@@ -106,8 +106,8 @@ export default function AboutPage() {
               <FadeUp key={stat} delay={i * 0.1}>
                 <div className="border border-white/5 p-4 bg-[#0c0c0c] h-full">
                   <p className="text-[var(--accent)] font-black italic text-2xl tracking-tighter mb-1">{stat}</p>
-                  <p className="font-mono text-[9px] uppercase tracking-widest text-white mb-1">{label}</p>
-                  <p className="font-mono text-[8px] uppercase tracking-widest text-[#333]">{detail}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-white mb-1">{label}</p>
+                  <p className="font-mono text-[9px] uppercase tracking-widest text-[#333]">{detail}</p>
                 </div>
               </FadeUp>
             ))}

@@ -83,23 +83,23 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
         <div className="flex items-center gap-2">
           <button
             onClick={() => zoom(1.4)}
-            className="font-mono text-[10px] uppercase tracking-widest text-[#555] active:text-[var(--accent)] border border-white/10 px-3 py-2 transition-all"
+            className="font-mono text-[11px] uppercase tracking-widest text-[#555] active:text-[var(--accent)] border border-white/10 px-3 py-2 transition-all"
           >
             + Zoom
           </button>
-          <span className="font-mono text-[9px] text-[#333] tracking-widest min-w-[4ch] text-center">
+          <span className="font-mono text-[10px] text-[#333] tracking-widest min-w-[4ch] text-center">
             {Math.round(scale * 100)}%
           </span>
           <button
             onClick={() => zoom(1 / 1.4)}
-            className="font-mono text-[10px] uppercase tracking-widest text-[#555] active:text-white border border-white/10 px-3 py-2 transition-all"
+            className="font-mono text-[11px] uppercase tracking-widest text-[#555] active:text-white border border-white/10 px-3 py-2 transition-all"
           >
             − Zoom
           </button>
           {scale > 1 && (
             <button
               onClick={() => { setScale(1); setOffset({ x: 0, y: 0 }); }}
-              className="font-mono text-[10px] uppercase tracking-widest text-[#333] border border-white/10 px-3 py-2"
+              className="font-mono text-[11px] uppercase tracking-widest text-[#333] border border-white/10 px-3 py-2"
             >
               Reset
             </button>
@@ -107,7 +107,7 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
         </div>
         <button
           onClick={onClose}
-          className="font-mono text-[11px] uppercase tracking-widest text-white border border-white/20 px-4 py-2 hover:bg-white/10 transition-all min-w-[56px] text-center"
+          className="font-mono text-[12px] uppercase tracking-widest text-white border border-white/20 px-4 py-2 hover:bg-white/10 transition-all min-w-[56px] text-center"
         >
           ✕ Close
         </button>
@@ -152,7 +152,7 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
 
       {/* Bottom hint */}
       <div className="py-3 text-center shrink-0 border-t border-white/5">
-        <p className="font-mono text-[9px] uppercase tracking-widest text-[#292929]">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-[#292929]">
           {scale > 1 ? 'Drag to pan · Tap outside to close' : 'Tap image or + Zoom to magnify'}
         </p>
       </div>
@@ -180,7 +180,7 @@ export function ProductImage({ frontImage, backImage, name }: ProductImageProps)
             className="w-full h-auto object-contain transition-all duration-500 ease-in-out"
           />
           <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-            <span className="font-mono text-[8px] uppercase tracking-widest text-white/40 bg-black/60 px-2 py-1">
+            <span className="font-mono text-[9px] uppercase tracking-widest text-white/40 bg-black/60 px-2 py-1">
               Click to zoom
             </span>
           </div>
@@ -190,7 +190,7 @@ export function ProductImage({ frontImage, backImage, name }: ProductImageProps)
           <div className="flex gap-2">
             <button
               onClick={() => setShowBack(false)}
-              className={`px-4 py-1.5 font-mono text-[9px] uppercase tracking-widest border transition-all ${
+              className={`px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest border transition-all ${
                 !showBack
                   ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
                   : 'border-white/10 text-[#444] hover:border-white/30 hover:text-white'
@@ -200,7 +200,7 @@ export function ProductImage({ frontImage, backImage, name }: ProductImageProps)
             </button>
             <button
               onClick={() => setShowBack(true)}
-              className={`px-4 py-1.5 font-mono text-[9px] uppercase tracking-widest border transition-all ${
+              className={`px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest border transition-all ${
                 showBack
                   ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
                   : 'border-white/10 text-[#444] hover:border-white/30 hover:text-white'

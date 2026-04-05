@@ -52,11 +52,11 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
         {/* Description + Features (both mobile & desktop) */}
         <div className="space-y-6 mb-8 lg:mb-16">
           <FadeUp mode="animate" delay={0.35}>
-            <p className="text-[#888] leading-relaxed text-sm">
+            <p className="text-[#888] leading-relaxed text-[15px]">
               {product.description}
             </p>
           </FadeUp>
-          <ul className="space-y-3 font-mono text-[10px] uppercase tracking-widest text-[#444]">
+          <ul className="space-y-3 font-mono text-[11px] uppercase tracking-widest text-[#444]">
             {product.features.map((feature, i) => (
               <FadeUp key={i} mode="animate" delay={0.5 + (i * 0.1)} y={10}>
                 <li className="flex gap-4">
@@ -72,7 +72,7 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
           {product.sizes.length > 1 && (
             <div className={showSizeError ? 'animate-shake' : ''}>
               <p className={`font-mono uppercase tracking-widest mb-3 transition-all duration-300 ${
-                showSizeError ? 'text-red-500 text-[15px] font-black' : 'text-[#444] text-[10px] font-medium'
+                showSizeError ? 'text-red-500 text-[15px] font-black' : 'text-[#444] text-[11px] font-medium'
               }`}>
                 {showSizeError ? 'Select Size Required' : 'Select Size'}
               </p>
@@ -84,7 +84,7 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
                       setSelectedSize(size);
                       setShowSizeError(false);
                     }}
-                    className={`px-4 py-2 text-[10px] font-mono uppercase tracking-widest border transition-all duration-200 ${
+                    className={`px-4 py-2 text-[11px] font-mono uppercase tracking-widest border transition-all duration-200 ${
                       selectedSize === size
                         ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
                         : 'border-white/10 text-[#555] hover:border-white/30 hover:text-white'
@@ -131,7 +131,7 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
         {product.sizes.length > 1 && (
           <div className={`px-4 pt-3 pb-1 ${showSizeError ? 'animate-shake' : ''}`}>
             <p className={`font-mono uppercase tracking-widest mb-2 transition-all duration-200 text-center ${
-              showSizeError ? 'text-red-500 text-[13px] font-black' : 'text-[#555] text-[9px]'
+              showSizeError ? 'text-red-500 text-[13px] font-black' : 'text-[#555] text-[10px]'
             }`}>
               {showSizeError ? '⚠ Select a Size' : 'Select Size'}
             </p>
@@ -143,7 +143,7 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
                     setSelectedSize(size);
                     setShowSizeError(false);
                   }}
-                  className={`px-4 py-2 text-[10px] font-mono uppercase tracking-widest border transition-all duration-200 min-w-[3rem] ${
+                  className={`px-4 py-2 text-[11px] font-mono uppercase tracking-widest border transition-all duration-200 min-w-[3rem] ${
                     selectedSize === size
                       ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
                       : 'border-white/10 text-[#555] active:border-white/30 active:text-white'
@@ -161,7 +161,7 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
           <button
             onClick={handleAdd}
             disabled={added}
-            className={`w-full py-5 text-sm font-black uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-3 ${
+            className={`w-full py-5 text-[15px] font-black uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-3 ${
               added
                 ? 'bg-black border-2 border-red-600 text-red-600 shadow-[0_0_20px_rgba(239,68,68,0.3)]'
                 : 'bg-[var(--accent)] text-black hover:brightness-110 active:scale-[0.98]'

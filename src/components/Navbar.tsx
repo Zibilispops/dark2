@@ -38,7 +38,7 @@ export default function Navbar() {
           </Link>
         </motion.div>
         
-        <div className="flex gap-4 md:gap-8 text-[9px] md:text-xs items-center font-mono font-bold uppercase tracking-wider text-[#666]">
+        <div className="flex gap-4 md:gap-8 text-[10px] md:text-[13px] items-center font-mono font-bold uppercase tracking-wider text-[#666]">
           {[
             { href: '/shop', label: 'Shop' },
             { href: '/about', label: 'Studio' },
