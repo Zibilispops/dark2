@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 import { Product } from '@/data/products';
-import { getPriceBySize } from '@/lib/pricing';
+import { getPriceBySize, getMaxPrice } from '@/lib/pricing';
 
 export const AddToCartButton = ({ product }: { product: Product }) => {
   const { addToCart } = useCart();
@@ -38,7 +38,7 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
           <div className={`text-3xl sm:text-4xl font-black italic mb-8 lg:mb-12 tracking-tighter transition-all duration-300 ${
             added ? 'text-red-600' : 'text-[var(--accent)]'
           }`}>
-            {added ? 'ADDED TO CART ' : ''}¥{(currentPrice ?? product.price).toLocaleString()}
+            {added ? 'ADDED TO CART ' : ''}¥{(currentPrice ?? getMaxPrice(product.price, product.sizes)).toLocaleString()}
           </div>
         </div>
 
@@ -159,7 +159,7 @@ export const AddToCartButton = ({ product }: { product: Product }) => {
             {added ? (
               <>✓ Added to Cart · ¥{currentPrice?.toLocaleString()}</>
             ) : (
-              <>ADD TO CART {selectedSize && <>· ¥{currentPrice?.toLocaleString()}</>} →</>
+              <>ADD TO CART {selectedSize ? <>· ¥{currentPrice?.toLocaleString()}</> : <>· ¥{getMaxPrice(product.price, product.sizes).toLocaleString()}</>} →</>
             )}
           </button>
         </div>

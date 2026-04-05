@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import type { Product } from '@/data/products';
+import { getMaxPrice } from '@/lib/pricing';
 
 type Filter = 'ALL' | 'RAMEN' | 'ICE CREAM' | 'CYBERPUNK' | 'ABSTRACT' | 'FOOD & DRINK';
 
@@ -105,7 +106,7 @@ function ProductCard({ product, i }: { product: Product; i: number }) {
             {product.id}
           </span>
           <span className="text-base md:text-lg font-black italic tracking-tighter text-white">
-            ¥{product.price.toLocaleString()}
+            ¥{getMaxPrice(product.price, product.sizes).toLocaleString()}
           </span>
         </div>
 
