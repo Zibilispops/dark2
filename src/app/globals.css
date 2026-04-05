@@ -199,11 +199,10 @@ h3 { font-size: var(--h3); }
   animation: shake 0.2s ease-in-out 0s 2;
 }
 
-/* Hide UI elements during lightbox zoom to fix Safari stacking issues */
-body.lightbox-active .add-to-cart-container,
-body.lightbox-active nav,
-body.lightbox-active .product-navigation-container,
-body.lightbox-active .product-meta-container {
+/* Force-hide ALL page content during zoom for absolute Safari isolation */
+body.lightbox-active .layout-content-wrapper {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
   pointer-events: none !important;
 }
