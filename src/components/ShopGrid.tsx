@@ -90,8 +90,8 @@ function ProductCard({ product, i }: { product: Product; i: number }) {
         {/* Top badges */}
         <div className="absolute top-2 left-2 right-2 flex justify-between items-start z-10">
           {isFeatured ? (
-            <span className="bg-[var(--accent)] text-black font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5">
-              Featured
+            <span className="bg-[var(--accent)] text-black font-mono text-[13px] uppercase tracking-widest px-2 py-1">
+              Staff Pick
             </span>
           ) : <span />}
           <span className="bg-black/60 border border-white/10 font-mono text-[7px] uppercase tracking-widest px-1.5 py-0.5 text-[#555]">
@@ -145,10 +145,10 @@ export function ShopGrid({ products }: { products: Product[] }) {
       {/* ── Staff Picks (shown on ALL only) ── */}
       {active === 'ALL' && featured.length > 0 && (
         <div className="mb-12">
-          <p className="text-[var(--accent)] font-mono text-[9px] uppercase tracking-[0.35em] mb-6">
-            // Staff Picks
+          <p className="text-[var(--accent)] font-mono text-[16px] uppercase tracking-[0.35em] mb-8">
+            // STAFF PICKS
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {featured.map((product, i) => (
               <ProductCard key={product.id} product={product} i={i} />
             ))}
