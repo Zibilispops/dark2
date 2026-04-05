@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 
 interface ProductImageProps {
   frontImage: string;
@@ -20,9 +21,11 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
     const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', handler);
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('lightbox-active');
     return () => {
       window.removeEventListener('keydown', handler);
       document.body.style.overflow = '';
+      document.body.classList.remove('lightbox-active');
     };
   }, [onClose]);
 
@@ -58,9 +61,17 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
     setScale((s) => Math.min(5, Math.max(1, s * factor)));
   };
 
-  return (
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
+
+  if (!mounted) return null;
+
+  return createPortal(
     <div
-      className="fixed inset-0 z-[9999] flex flex-col bg-black"
+      className="fixed inset-0 z-[10001] flex flex-col bg-black"
       style={{ touchAction: 'none' }}
     >
       {/* Top bar */}
@@ -141,7 +152,8 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
           {scale > 1 ? 'Drag to pan · Tap outside to close' : 'Tap image or + Zoom to magnify'}
         </p>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
