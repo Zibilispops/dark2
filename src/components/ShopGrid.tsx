@@ -11,7 +11,7 @@ const ICE_CREAM_SLUGS = new Set(['ice-scream1', 'ice-scream2', 'ice-scream3', 'i
 const CYBERPUNK_SLUGS = new Set(['cyborg-girl', 'digital-battle', 'hit-girl', 'boy', 'breaking-hearts', 'silly-devil', 'iceskull', 'fight-to']);
 const ABSTRACT_SLUGS = new Set(['fibonacci', 'mundane', 'self', 'culture', 'leisure', 'chillout', 'einstein1-frame']);
 const FOOD_SLUGS = new Set(['coffeeoclock', 'fast-food-racer', 'pie', 'spacecoffe', 'super-cute']);
-const FEATURED_SLUGS = new Set(['cyborg-girl', 'ramenrider', 'spacecoffe', 'iceskull', 'fibonacci']);
+const FEATURED_SLUGS = new Set(['cyborg-girl', 'ramenrider', 'spacecoffe', 'iceskull', 'fibonacci', 'breaking-hearts']);
 
 // Fixed stock counts per product — creates specific scarcity urgency
 const STOCK_COUNTS: Record<string, number> = {
