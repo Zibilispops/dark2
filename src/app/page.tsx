@@ -165,30 +165,28 @@ function HeroProduct() {
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="relative flex items-center justify-center lg:justify-end w-full h-full group"
+      className="absolute right-0 top-0 h-full w-[45vw] max-w-[520px] hidden lg:flex items-end overflow-hidden group"
       style={{ pointerEvents: 'auto' }}
     >
-      <div className="relative w-full aspect-[4/5] max-w-[640px] overflow-hidden">
-        {/* Gradient mask — fades left edge into bg */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/80 via-transparent to-transparent z-10 pointer-events-none" style={{ width: '15%' }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-transparent to-transparent z-10 pointer-events-none" style={{ bottom: 0, height: '15%' }} />
+      {/* Gradient mask — fades left edge into bg */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '35%' }} />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808] z-10 pointer-events-none" style={{ bottom: 0, height: '20%' }} />
 
-        <img
-          src={product.image}
-          alt={product.name}
-          className="w-full h-full object-cover object-top transition-opacity duration-400 group-hover:scale-105 transition-transform duration-1000 ease-out"
-          style={{ opacity: fading ? 0 : 0.85 }}
-        />
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-full h-full object-cover object-top transition-opacity duration-400"
+        style={{ opacity: fading ? 0 : 0.7 }}
+      />
 
-        {/* Serial tag */}
-        <div className="absolute bottom-6 right-6 z-20 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-1">
-            // NOW FEATURED
-          </p>
-          <p className="font-mono text-[11px] uppercase tracking-widest text-white">
-            {product.name} →
-          </p>
-        </div>
+      {/* Serial tag */}
+      <div className="absolute bottom-10 right-8 z-20 text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-1">
+          // NOW FEATURED
+        </p>
+        <p className="font-mono text-[11px] uppercase tracking-widest text-white">
+          {product.name} →
+        </p>
       </div>
     </Link>
   );
@@ -242,43 +240,35 @@ export default function Home() {
       </div>
 
       {/* ── Hero ── */}
-      <section className="relative flex-1 flex items-center py-20 lg:py-0 min-h-[calc(100vh-80px)] overflow-hidden">
-        <div className="container mx-auto px-8 md:px-16 grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-24 relative z-10">
+      <section className="relative flex-1 flex flex-col justify-center px-8 md:px-16 pt-10 pb-32 min-h-screen overflow-hidden">
 
-          {/* Left: Content */}
-          <div className="flex flex-col">
-            {/* Tag line */}
-            <p className="hero-eyebrow text-[var(--accent)] font-mono text-[11px] mb-8 tracking-[0.35em] uppercase opacity-0">
-              // [001] DTG Studio · Gifu JP · Est. 2024
-            </p>
+        <HeroProduct />
 
-            {/* Big headline */}
-            <h1 className="text-[var(--h0)] leading-[0.82] tracking-tighter font-black italic mb-6 mix-blend-difference overflow-hidden flex flex-col">
-              <div className="hero-whip-1 text-gradient" style={{ opacity: 0 }}>Wear The</div>
-              <div className="hero-whip-2 text-gradient" style={{ opacity: 0 }}>Future</div>
-            </h1>
+        {/* Tag line */}
+        <p className="hero-eyebrow text-[var(--accent)] font-mono text-[11px] mb-8 tracking-[0.35em] uppercase z-10 opacity-0">
+          // [001] DTG Studio · Gifu JP · Est. 2024
+        </p>
 
-            {/* Sub */}
-            <p className="hero-sub opacity-0 text-white/80 text-base md:text-lg max-w-md mb-12 leading-relaxed font-light mix-blend-screen">
-              High-fidelity garments for the digital vanguard.<br />
-              Designed in Gifu, printed on demand, shipped globally.
-            </p>
+        {/* Big headline */}
+        <h1 className="relative z-10 text-[var(--h0)] leading-[0.82] tracking-tighter font-black italic mb-6 mix-blend-difference overflow-hidden flex flex-col">
+          <div className="hero-whip-1 text-gradient" style={{ opacity: 0 }}>Wear The</div>
+          <div className="hero-whip-2 text-gradient" style={{ opacity: 0 }}>Future</div>
+        </h1>
 
-            {/* CTAs */}
-            <div className="hero-cta opacity-0 flex flex-wrap gap-4">
-              <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group">
-                <span className="group-hover:invert transition-all">Shop Collection →</span>
-              </Link>
-              <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-white/80 hover:border-white hover:text-black hover:bg-white transition-all duration-500">
-                Studio →
-              </Link>
-            </div>
-          </div>
+        {/* Sub */}
+        <p className="hero-sub opacity-0 text-white/80 text-base md:text-lg max-w-md mb-12 leading-relaxed z-10 font-light mix-blend-screen">
+          High-fidelity garments for the digital vanguard.<br />
+          Designed in Gifu, printed on demand, shipped globally.
+        </p>
 
-          {/* Right: Product */}
-          <div className="hidden lg:flex items-center justify-end">
-            <HeroProduct />
-          </div>
+        {/* CTAs */}
+        <div className="hero-cta opacity-0 flex flex-wrap gap-4 z-10">
+          <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group">
+            <span className="group-hover:invert transition-all">Shop Collection →</span>
+          </Link>
+          <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-white/80 hover:border-white hover:text-black hover:bg-white transition-all duration-500">
+            Studio →
+          </Link>
         </div>
 
         {/* Bottom status bar */}
