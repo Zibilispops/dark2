@@ -37,7 +37,7 @@ export function AccountEmailForm({ currentEmail }: { currentEmail?: string }) {
   if (!isEditing && !message) {
     return (
       <div className="flex justify-between items-center border-b border-white/5 pb-3">
-        <span className="font-mono text-[11px] uppercase tracking-widest text-[#555]">Email</span>
+        <span className="font-mono text-[11px] uppercase tracking-widest text-white/80">Email</span>
         <div className="flex items-center gap-4">
           <span className="text-[16px] font-mono text-[var(--accent)]">{currentEmail}</span>
           <button 
@@ -62,11 +62,11 @@ export function AccountEmailForm({ currentEmail }: { currentEmail?: string }) {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-3">
           <div className="flex justify-between items-center mb-1">
-            <span className="font-mono text-[11px] uppercase tracking-widest text-[#555]">Email Update Protocol</span>
+            <span className="font-mono text-[11px] uppercase tracking-widest text-white/80">Email Update Protocol</span>
             <button 
               type="button"
               onClick={() => setIsEditing(false)}
-              className="text-[10px] font-mono border border-red-500/20 px-2 py-0.5 hover:border-red-500 hover:text-red-500 transition-all uppercase text-[#444]"
+              className="text-[10px] font-mono border border-red-500/20 px-2 py-0.5 hover:border-red-500 hover:text-red-500 transition-all uppercase text-white/60"
             >
               [ Cancel ]
             </button>

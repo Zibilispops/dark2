@@ -10,7 +10,7 @@ export default function AboutPage() {
           <h1 className="mb-4 text-gradient">The Studio</h1>
         </WhipPan>
         <FadeUp delay={0.3} mode="animate">
-          <p className="text-[#666] max-w-lg mb-8 uppercase text-[14px] tracking-widest font-mono">
+          <p className="text-white/90 max-w-lg mb-8 uppercase text-[14px] tracking-widest font-mono">
             // [001] Gifu Studio · Official <span className="font-black text-white whitespace-nowrap">Bad Printer</span> Reseller
           </p>
         </FadeUp>
@@ -22,12 +22,12 @@ export default function AboutPage() {
             <h2 className="text-[var(--accent)]">Premium Comfort</h2>
           </WhipPan>
           <FadeUp delay={0.1}>
-            <p className="text-[#888] leading-relaxed">
+            <p className="text-white leading-relaxed">
               Dark Factory is a small, independent studio in Gifu. We are the authorized reseller for <span className="font-black text-white whitespace-nowrap">Bad Printer</span>, specializing in Heavyweight 6.6oz (225 GSM) premium cotton for a perfect unisex fit.
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>
-            <p className="text-[#888] leading-relaxed">
+            <p className="text-white leading-relaxed">
               Choosing a <span className="font-black text-white whitespace-nowrap">Bad Printer</span> tee isn't just a purchase; it's an act of manifestation. It's the moment your digital aesthetic finally becomes a physical reality. We prioritize skin-soft comfort above all else—intentionally choosing a soft, breathable DTG touch over clinical sharpness.
             </p>
           </FadeUp>
@@ -86,12 +86,12 @@ export default function AboutPage() {
               </h2>
             </WhipPan>
             <FadeUp delay={0.1}>
-              <p className="text-[#888] leading-relaxed mb-6">
+              <p className="text-white leading-relaxed mb-6">
                 Not all blanks are equal. The <span className="text-white font-black">Bad Printer</span> Heavyweight is 225 GSM (6.6oz) — 15/- Tenshiku Single Jersey woven with open-end yarn. That construction creates a dry, crisp texture with a classic American feel, holding shape wash after wash.
               </p>
             </FadeUp>
             <FadeUp delay={0.2}>
-              <p className="text-[#888] leading-relaxed">
+              <p className="text-white leading-relaxed">
                 DTG printing on this blank produces zero transparency even on white — ink sits in the fiber, not on top of it. Side-seam (Waki-shiyo) construction prevents torso twisting after washing. The double-stitched neckline ensures long-term stretch resistance.
               </p>
             </FadeUp>
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 <div className="border border-white/5 p-4 bg-[#0c0c0c] h-full">
                   <p className="text-[var(--accent)] font-black italic text-2xl tracking-tighter mb-1">{stat}</p>
                   <p className="font-mono text-[10px] uppercase tracking-widest text-white mb-1">{label}</p>
-                  <p className="font-mono text-[9px] uppercase tracking-widest text-[#333]">{detail}</p>
+                  <p className="font-mono text-[9px] uppercase tracking-widest text-white/40">{detail}</p>
                 </div>
               </FadeUp>
             ))}
@@ -125,7 +125,7 @@ export default function AboutPage() {
             </h2>
           </FadeUp>
           <FadeUp delay={0.15}>
-            <p className="text-[#666] leading-relaxed italic text-lg">
+            <p className="text-white/90 leading-relaxed italic text-lg">
               &quot;Authorized by <span className="font-black text-white whitespace-nowrap">Bad Printer</span>. Manifest in our Gifu studio—because some things aren&apos;t meant to stay on a screen.&quot;
             </p>
           </FadeUp>

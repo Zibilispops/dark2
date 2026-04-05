@@ -37,7 +37,7 @@ export default async function ShopPage() {
           </WhipPan>
         </div>
         <FadeUp mode="animate" delay={0.6}>
-          <p className="text-[#333] font-mono text-[11px] uppercase tracking-widest md:text-right">
+          <p className="text-white/40 font-mono text-[11px] uppercase tracking-widest md:text-right">
             {products.length} Items Available<br />
             Bad Printer 6.6oz · Ships Worldwide
           </p>

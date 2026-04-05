@@ -34,18 +34,18 @@ export default async function AccountPage() {
       {/* User Info Card */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="p-8 bg-[#0c0c0c] border border-white/5 col-span-2">
-          <h2 className="font-mono text-[11px] uppercase tracking-widest text-[#444] mb-4">
+          <h2 className="font-mono text-[11px] uppercase tracking-widest text-white/60 mb-4">
             [ Operator Profile ]
           </h2>
           <div className="space-y-4">
             <AccountEmailForm currentEmail={user.email} />
             <div className="flex justify-between items-center border-b border-white/5 pb-3">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-[#555]">User ID</span>
-              <span className="text-[11px] font-mono text-[#444]">{user.id.slice(0, 12)}...</span>
+              <span className="font-mono text-[11px] uppercase tracking-widest text-white/80">User ID</span>
+              <span className="text-[11px] font-mono text-white/60">{user.id.slice(0, 12)}...</span>
             </div>
             <div className="flex justify-between items-center border-b border-white/5 pb-3">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-[#555]">Joined</span>
-              <span className="text-[11px] font-mono text-[#444]">
+              <span className="font-mono text-[11px] uppercase tracking-widest text-white/80">Joined</span>
+              <span className="text-[11px] font-mono text-white/60">
                 {new Date(user.created_at).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
@@ -54,7 +54,7 @@ export default async function AccountPage() {
               </span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="font-mono text-[11px] uppercase tracking-widest text-[#555]">Status</span>
+              <span className="font-mono text-[11px] uppercase tracking-widest text-white/80">Status</span>
               <span className="text-[11px] font-mono text-[var(--accent)] border border-[var(--accent)]/30 px-2 py-0.5">ACTIVE</span>
             </div>
           </div>
@@ -62,13 +62,13 @@ export default async function AccountPage() {
 
         <div className="p-8 bg-[#0c0c0c] border border-white/5 flex flex-col justify-between">
           <div>
-            <h2 className="font-mono text-[11px] uppercase tracking-widest text-[#444] mb-4">
+            <h2 className="font-mono text-[11px] uppercase tracking-widest text-white/60 mb-4">
               [ Quick Actions ]
             </h2>
             <div className="space-y-3">
               <Link
                 href="/shop"
-                className="block w-full text-center py-3 border border-white/10 text-[14px] font-mono uppercase tracking-widest text-[#666] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
+                className="block w-full text-center py-3 border border-white/10 text-[14px] font-mono uppercase tracking-widest text-white/90 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
               >
                 Browse Collection
               </Link>
@@ -82,7 +82,7 @@ export default async function AccountPage() {
       <section>
         <div className="flex items-end justify-between mb-8">
           <h2 className="text-3xl font-black italic tracking-tighter uppercase">Order History</h2>
-          <span className="font-mono text-[11px] uppercase tracking-widest text-[#333]">
+          <span className="font-mono text-[11px] uppercase tracking-widest text-white/40">
             {orders?.length || 0} Records
           </span>
         </div>
@@ -91,7 +91,7 @@ export default async function AccountPage() {
 
         {(!orders || orders.length === 0) ? (
           <div className="p-16 bg-[#0c0c0c] border border-white/5 text-center">
-            <p className="text-[#333] font-mono text-[14px] uppercase tracking-widest mb-4">
+            <p className="text-white/40 font-mono text-[14px] uppercase tracking-widest mb-4">
               No orders yet
             </p>
             <Link href="/shop" className="btn-primary inline-block px-8 py-3 text-[14px]">
@@ -106,7 +106,7 @@ export default async function AccountPage() {
                 className="p-6 bg-[#0c0c0c] border border-white/5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-white/10 transition-colors"
               >
                 <div className="flex items-center gap-6">
-                  <span className="font-mono text-[11px] uppercase tracking-widest text-[#333]">
+                  <span className="font-mono text-[11px] uppercase tracking-widest text-white/40">
                     {order.id.slice(0, 8)}
                   </span>
                   <span className={`text-[11px] font-mono uppercase tracking-widest px-2 py-0.5 border ${
@@ -114,7 +114,7 @@ export default async function AccountPage() {
                       ? 'text-[var(--accent)] border-[var(--accent)]/30'
                       : order.status === 'pending'
                       ? 'text-yellow-400 border-yellow-400/30'
-                      : 'text-[#555] border-white/10'
+                      : 'text-white/80 border-white/10'
                   }`}>
                     {order.status}
                   </span>
@@ -123,7 +123,7 @@ export default async function AccountPage() {
                   <span className="text-[16px] font-black">
                     ¥{order.total_cents.toLocaleString()} {order.currency?.toUpperCase()}
                   </span>
-                  <span className="font-mono text-[11px] text-[#333]">
+                  <span className="font-mono text-[11px] text-white/40">
                     {new Date(order.created_at).toLocaleDateString()}
                   </span>
                 </div>

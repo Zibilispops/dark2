@@ -101,7 +101,7 @@ export default function AdminPage() {
           </div>
           <button
             onClick={() => { setAuthed(false); setOrders([]); setToken(''); }}
-            className="font-mono text-[11px] text-[#444] uppercase tracking-widest hover:text-white transition-colors"
+            className="font-mono text-[11px] text-white/60 uppercase tracking-widest hover:text-white transition-colors"
           >
             [Exit]
           </button>
@@ -120,7 +120,7 @@ export default function AdminPage() {
             },
           ].map((stat) => (
             <div key={stat.label} className="border border-white/5 p-6">
-              <p className="font-mono text-[11px] uppercase tracking-widest text-[#444] mb-2">
+              <p className="font-mono text-[11px] uppercase tracking-widest text-white/60 mb-2">
                 {stat.label}
               </p>
               <p className="text-3xl font-black italic tracking-tighter">{stat.value}</p>
@@ -131,14 +131,14 @@ export default function AdminPage() {
         {/* Orders Table */}
         {orders.length === 0 ? (
           <div className="border border-white/5 p-16 text-center">
-            <p className="font-mono text-[11px] uppercase tracking-widest text-[#333]">
+            <p className="font-mono text-[11px] uppercase tracking-widest text-white/40">
               // No orders yet
             </p>
           </div>
         ) : (
           <div className="border border-white/5">
             {/* Table Header */}
-            <div className="grid grid-cols-5 px-6 py-3 border-b border-white/5 font-mono text-[10px] uppercase tracking-widest text-[#333]">
+            <div className="grid grid-cols-5 px-6 py-3 border-b border-white/5 font-mono text-[10px] uppercase tracking-widest text-white/40">
               <span>Order ID</span>
               <span>Customer</span>
               <span>Amount</span>
@@ -152,10 +152,10 @@ export default function AdminPage() {
                 key={order.id}
                 className="grid grid-cols-5 px-6 py-4 border-b border-white/5 hover:bg-white/2 transition-colors"
               >
-                <span className="font-mono text-[13px] text-[#666] truncate pr-4">
+                <span className="font-mono text-[13px] text-white/90 truncate pr-4">
                   {order.id}
                 </span>
-                <span className="font-mono text-[13px] text-[#888] truncate pr-4">
+                <span className="font-mono text-[13px] text-white truncate pr-4">
                   {order.user_id ?? '—'}
                 </span>
                 <span className="font-mono text-[13px] font-bold text-white">
@@ -166,13 +166,13 @@ export default function AdminPage() {
                     className={`font-mono text-[10px] uppercase tracking-widest px-2 py-1 ${
                       order.status === 'paid'
                         ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
-                        : 'bg-white/5 text-[#555]'
+                        : 'bg-white/5 text-white/80'
                     }`}
                   >
                     {order.status}
                   </span>
                 </span>
-                <span className="font-mono text-[11px] text-[#444]">
+                <span className="font-mono text-[11px] text-white/60">
                   {formatDate(order.created_at)}
                 </span>
               </div>
@@ -182,7 +182,7 @@ export default function AdminPage() {
 
         <button
           onClick={() => fetchOrders(token)}
-          className="mt-8 font-mono text-[11px] text-[#444] uppercase tracking-widest hover:text-[var(--accent)] transition-colors"
+          className="mt-8 font-mono text-[11px] text-white/60 uppercase tracking-widest hover:text-[var(--accent)] transition-colors"
         >
           [↻ Refresh]
         </button>

@@ -71,7 +71,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                   </motion.h2>
                   <button
                     onClick={onClose}
-                    className="p-2 text-[#666] hover:text-white transition-colors"
+                    className="p-2 text-white/90 hover:text-white transition-colors"
                   >
                     <X size={32} strokeWidth={1.5} />
                   </button>
@@ -85,7 +85,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                     className="h-[60vh] flex flex-col items-center justify-center space-y-6"
                   >
                     <ShoppingBag size={64} className="text-[#1a1a1a]" strokeWidth={1} />
-                    <p className="text-[#444] font-mono text-[14px] uppercase tracking-[0.2em]">Your cart is empty</p>
+                    <p className="text-white/60 font-mono text-[14px] uppercase tracking-[0.2em]">Your cart is empty</p>
                   </motion.div>
                 ) : (
                   <div className="space-y-12">
@@ -113,14 +113,14 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                               </h3>
                               <p className="ml-4 font-black">¥{item.price.toLocaleString()}</p>
                             </div>
-                            <p className="mt-1 text-[#444] text-[11px] font-mono uppercase tracking-widest leading-none">
+                            <p className="mt-1 text-white/60 text-[11px] font-mono uppercase tracking-widest leading-none">
                               Qty: {item.quantity} · Size: {item.selectedSize}
                             </p>
                           </div>
                           <div className="flex items-center justify-between">
                             <button
                               onClick={() => removeFromCart(item.cartKey)}
-                              className="text-[11px] font-mono uppercase text-[#444] hover:text-[var(--accent)] transition-colors flex items-center gap-1"
+                              className="text-[11px] font-mono uppercase text-white/60 hover:text-[var(--accent)] transition-colors flex items-center gap-1"
                             >
                               <Trash2 size={10} /> [Remove]
                             </button>
@@ -139,10 +139,10 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
                 className="border-t border-white/10 py-8 px-8 bg-[#0d0d0d]"
               >
                 <div className="flex justify-between text-base font-black mb-1">
-                  <p className="uppercase text-[14px] font-mono text-[#666] tracking-widest">Subtotal</p>
+                  <p className="uppercase text-[14px] font-mono text-white/90 tracking-widest">Subtotal</p>
                   <p>¥{totalPrice.toLocaleString()}</p>
                 </div>
-                <p className="mt-0.5 text-[11px] font-mono text-[#444] uppercase tracking-widest mb-8">
+                <p className="mt-0.5 text-[11px] font-mono text-white/60 uppercase tracking-widest mb-8">
                   // Shipping and taxes calculated at entry
                 </p>
 
@@ -160,7 +160,7 @@ export const Cart = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void
 
                 <button
                   onClick={onClose}
-                  className="w-full mt-4 py-2 text-[11px] font-mono text-[#444] uppercase tracking-widest hover:text-white transition-colors"
+                  className="w-full mt-4 py-2 text-[11px] font-mono text-white/60 uppercase tracking-widest hover:text-white transition-colors"
                 >
                   Keep Exploring
                 </button>

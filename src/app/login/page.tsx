@@ -61,7 +61,7 @@ export default function LoginPage() {
         <FadeUp mode="animate" delay={0.5}>
           <form onSubmit={handleLogin} className="space-y-6">
             <div>
-              <label className="block font-mono text-[11px] uppercase tracking-widest text-[#444] mb-2">
+              <label className="block font-mono text-[11px] uppercase tracking-widest text-white/60 mb-2">
                 Email Address
               </label>
               <input
@@ -69,13 +69,13 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+                className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-white/40"
                 placeholder="operator@darkfactory.jp"
               />
             </div>
 
             <div>
-              <label className="block font-mono text-[11px] uppercase tracking-widest text-[#444] mb-2">
+              <label className="block font-mono text-[11px] uppercase tracking-widest text-white/60 mb-2">
                 Password
               </label>
               <input
@@ -83,7 +83,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+                className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-white/40"
                 placeholder="••••••••"
               />
             </div>
@@ -107,13 +107,13 @@ export default function LoginPage() {
           <div className="mt-8 flex justify-between items-center">
             <Link
               href="/register"
-              className="text-[11px] font-mono uppercase tracking-widest text-[#444] hover:text-[var(--accent)] transition-colors"
+              className="text-[11px] font-mono uppercase tracking-widest text-white/60 hover:text-[var(--accent)] transition-colors"
             >
               [Create Account]
             </Link>
             <Link
               href="/"
-              className="text-[11px] font-mono uppercase tracking-widest text-[#444] hover:text-white transition-colors"
+              className="text-[11px] font-mono uppercase tracking-widest text-white/60 hover:text-white transition-colors"
             >
               ← Back
             </Link>
@@ -126,7 +126,7 @@ export default function LoginPage() {
             <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-3">
               // Operator Benefits
             </p>
-            <ul className="space-y-2 font-mono text-[10px] uppercase tracking-widest text-[#333]">
+            <ul className="space-y-2 font-mono text-[10px] uppercase tracking-widest text-white/40">
               <li>[+] Order tracking &amp; history</li>
               <li>[+] Early access to Collection 002</li>
               <li>[+] Size memory across devices</li>
@@ -136,7 +136,7 @@ export default function LoginPage() {
 
         {/* Status bar */}
         <FadeUp mode="animate" delay={0.95}>
-          <div className="mt-8 pt-6 border-t border-white/5 flex justify-between font-mono text-[10px] uppercase tracking-widest text-[#222]">
+          <div className="mt-8 pt-6 border-t border-white/5 flex justify-between font-mono text-[10px] uppercase tracking-widest text-white/20">
             <span>Protocol: Supabase Auth</span>
             <span>Encryption: AES-256</span>
           </div>

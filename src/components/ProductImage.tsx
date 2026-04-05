@@ -83,23 +83,23 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
         <div className="flex items-center gap-2">
           <button
             onClick={() => zoom(1.4)}
-            className="font-mono text-[11px] uppercase tracking-widest text-[#555] active:text-[var(--accent)] border border-white/10 px-3 py-2 transition-all"
+            className="font-mono text-[11px] uppercase tracking-widest text-white/80 active:text-[var(--accent)] border border-white/10 px-3 py-2 transition-all"
           >
             + Zoom
           </button>
-          <span className="font-mono text-[10px] text-[#333] tracking-widest min-w-[4ch] text-center">
+          <span className="font-mono text-[10px] text-white/40 tracking-widest min-w-[4ch] text-center">
             {Math.round(scale * 100)}%
           </span>
           <button
             onClick={() => zoom(1 / 1.4)}
-            className="font-mono text-[11px] uppercase tracking-widest text-[#555] active:text-white border border-white/10 px-3 py-2 transition-all"
+            className="font-mono text-[11px] uppercase tracking-widest text-white/80 active:text-white border border-white/10 px-3 py-2 transition-all"
           >
             − Zoom
           </button>
           {scale > 1 && (
             <button
               onClick={() => { setScale(1); setOffset({ x: 0, y: 0 }); }}
-              className="font-mono text-[11px] uppercase tracking-widest text-[#333] border border-white/10 px-3 py-2"
+              className="font-mono text-[11px] uppercase tracking-widest text-white/40 border border-white/10 px-3 py-2"
             >
               Reset
             </button>
@@ -193,7 +193,7 @@ export function ProductImage({ frontImage, backImage, name }: ProductImageProps)
               className={`px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest border transition-all ${
                 !showBack
                   ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
-                  : 'border-white/10 text-[#444] hover:border-white/30 hover:text-white'
+                  : 'border-white/10 text-white/60 hover:border-white/30 hover:text-white'
               }`}
             >
               Front
@@ -203,7 +203,7 @@ export function ProductImage({ frontImage, backImage, name }: ProductImageProps)
               className={`px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest border transition-all ${
                 showBack
                   ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
-                  : 'border-white/10 text-[#444] hover:border-white/30 hover:text-white'
+                  : 'border-white/10 text-white/60 hover:border-white/30 hover:text-white'
               }`}
             >
               Back

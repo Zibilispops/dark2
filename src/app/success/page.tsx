@@ -27,18 +27,18 @@ export default function SuccessPage() {
           <p className="font-mono text-[11px] uppercase tracking-widest text-[var(--accent)]">
             You&apos;re now an Operator
           </p>
-          <p className="font-mono text-[10px] uppercase tracking-widest text-[#444] mt-1">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-white/60 mt-1">
             Watch your inbox for Collection 002
           </p>
         </div>
 
-        <p className="text-[#555] text-[16px] font-mono leading-relaxed mb-12">
+        <p className="text-white/80 text-[16px] font-mono leading-relaxed mb-12">
           Your registry entry has been logged.<br />
           Production begins within 48 hours.<br />
           Gifu Studio will dispatch when ready.
         </p>
 
-        <div className="border border-white/5 p-6 mb-12 text-left font-mono text-[11px] uppercase tracking-widest text-[#333] space-y-2">
+        <div className="border border-white/5 p-6 mb-12 text-left font-mono text-[11px] uppercase tracking-widest text-white/40 space-y-2">
           <div className="flex justify-between">
             <span>Status</span>
             <span className="text-[var(--accent)]">Confirmed</span>

@@ -87,7 +87,7 @@ function EmailCapture() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="text-[#444] text-[14px] font-mono uppercase tracking-widest mb-8"
+          className="text-white/60 text-[14px] font-mono uppercase tracking-widest mb-8"
         >
           Collection 002 loading. Be first to deploy.
         </motion.p>
@@ -112,7 +112,7 @@ function EmailCapture() {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="operator@domain.com"
-              className="flex-1 bg-[#111] border border-white/10 px-4 py-3 text-white text-[14px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="flex-1 bg-[#111] border border-white/10 px-4 py-3 text-white text-[14px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-white/40"
             />
             <button
               type="submit"
@@ -130,7 +130,7 @@ function EmailCapture() {
           </p>
         )}
 
-        <p className="mt-6 text-[#222] font-mono text-[10px] uppercase tracking-widest">
+        <p className="mt-6 text-white/20 font-mono text-[10px] uppercase tracking-widest">
           No noise. Drop alerts only. Unsubscribe anytime.
         </p>
       </div>
@@ -256,7 +256,7 @@ export default function Home() {
         </h1>
 
         {/* Sub */}
-        <p className="hero-sub opacity-0 text-[#555] text-base md:text-lg max-w-md mb-12 leading-relaxed z-10 font-light mix-blend-screen">
+        <p className="hero-sub opacity-0 text-white/80 text-base md:text-lg max-w-md mb-12 leading-relaxed z-10 font-light mix-blend-screen">
           High-fidelity garments for the digital vanguard.<br />
           Designed in Gifu, printed on demand, shipped globally.
         </p>
@@ -266,7 +266,7 @@ export default function Home() {
           <Link href="/shop" className="btn-primary px-10 py-4 text-[14px] group">
             <span className="group-hover:invert transition-all">Shop Collection →</span>
           </Link>
-          <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-[#555] hover:border-white hover:text-black hover:bg-white transition-all duration-500">
+          <Link href="/about" className="px-10 py-4 text-[14px] font-mono uppercase tracking-widest border border-white/10 text-white/80 hover:border-white hover:text-black hover:bg-white transition-all duration-500">
             Studio →
           </Link>
         </div>
@@ -292,7 +292,7 @@ export default function Home() {
       >
         <div className="marquee-track">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={i} className="flex items-center gap-6 px-6 text-[11px] font-mono uppercase tracking-[0.25em] text-[#333] whitespace-nowrap">
+            <span key={i} className="flex items-center gap-6 px-6 text-[11px] font-mono uppercase tracking-[0.25em] text-white/40 whitespace-nowrap">
               <span className="text-[var(--accent)] opacity-50">◆</span>
               {item}
             </span>

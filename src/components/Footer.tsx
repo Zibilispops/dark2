@@ -23,7 +23,7 @@ export function Footer() {
             <p className="font-black italic text-lg tracking-tighter uppercase mb-3 text-white">
               DARK <span className="text-[var(--accent)]">FACTORY</span>
             </p>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-[#333] leading-relaxed">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 leading-relaxed">
               // DTG Studio · Gifu, Japan<br />
               // Authorized Bad Printer Reseller<br />
               // Collection 001
@@ -47,7 +47,7 @@ export function Footer() {
                 { href: '/login', label: 'Operator Login' },
               ].map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} className="text-[#444] hover:text-[var(--accent)] transition-colors">
+                  <Link href={href} className="text-white/60 hover:text-[var(--accent)] transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -64,14 +64,14 @@ export function Footer() {
             <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-4">
               // Contact
             </p>
-            <div className="space-y-2 font-mono text-[11px] uppercase tracking-widest text-[#444]">
+            <div className="space-y-2 font-mono text-[11px] uppercase tracking-widest text-white/60">
               <p>
                 <a href="mailto:orders@dark-factory.co" className="hover:text-[var(--accent)] transition-colors">
                   orders@dark-factory.co
                 </a>
               </p>
               <p>Orders &amp; Returns</p>
-              <p className="pt-2 text-[#222]">Response: 1–2 business days</p>
+              <p className="pt-2 text-white/20">Response: 1–2 business days</p>
             </div>
           </motion.div>
         </div>
@@ -81,7 +81,7 @@ export function Footer() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 5, ease: "easeOut" }}
-          className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-[10px] uppercase tracking-widest text-[#222]"
+          className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 font-mono text-[10px] uppercase tracking-widest text-white/20"
         >
           <p>© 2024 Dark Factory · Gifu Studio · All rights reserved</p>
           <p>Printed on demand · Bad Printer 6.6oz · Ships worldwide</p>

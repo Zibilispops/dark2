@@ -65,7 +65,7 @@ export function ProductNavigation({ prevSlug, nextSlug }: ProductNavigationProps
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
         onClick={() => router.push(`/shop/${prevSlug}`)}
-        className="pointer-events-auto bg-black/40 border border-white/10 p-4 text-[#333] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all flex items-center justify-center font-mono text-[14px] uppercase tracking-widest gap-2"
+        className="pointer-events-auto bg-black/40 border border-white/10 p-4 text-white/40 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all flex items-center justify-center font-mono text-[14px] uppercase tracking-widest gap-2"
         aria-label="Previous product"
       >
         <span className="text-lg">←</span>
@@ -75,7 +75,7 @@ export function ProductNavigation({ prevSlug, nextSlug }: ProductNavigationProps
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
         onClick={() => router.push(`/shop/${nextSlug}`)}
-        className="pointer-events-auto bg-black/40 border border-white/10 p-4 text-[#333] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all flex items-center justify-center font-mono text-[14px] uppercase tracking-widest gap-2"
+        className="pointer-events-auto bg-black/40 border border-white/10 p-4 text-white/40 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all flex items-center justify-center font-mono text-[14px] uppercase tracking-widest gap-2"
         aria-label="Next product"
       >
         <span className="text-lg">→</span>

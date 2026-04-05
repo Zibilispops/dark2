@@ -54,7 +54,7 @@ export default function RegisterPage() {
             <h1 className="text-5xl font-black italic tracking-tighter uppercase leading-[0.85] mb-6">
               Check Your Email
             </h1>
-            <p className="text-[#666] text-[16px] leading-relaxed">
+            <p className="text-white/90 text-[16px] leading-relaxed">
               We&apos;ve sent a confirmation link to <span className="text-[var(--accent)]">{email}</span>.
               Click the link to activate your account.
             </p>
@@ -93,7 +93,7 @@ export default function RegisterPage() {
         {/* Form */}
         <form onSubmit={handleRegister} className="space-y-6">
           <div>
-            <label className="block font-mono text-[11px] uppercase tracking-widest text-[#444] mb-2">
+            <label className="block font-mono text-[11px] uppercase tracking-widest text-white/60 mb-2">
               Email Address
             </label>
             <input
@@ -101,13 +101,13 @@ export default function RegisterPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-white/40"
               placeholder="operator@darkfactory.jp"
             />
           </div>
 
           <div>
-            <label className="block font-mono text-[11px] uppercase tracking-widest text-[#444] mb-2">
+            <label className="block font-mono text-[11px] uppercase tracking-widest text-white/60 mb-2">
               Password
             </label>
             <input
@@ -116,13 +116,13 @@ export default function RegisterPage() {
               onChange={(e) => setPassword(e.target.value)}
               required
               minLength={8}
-              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-white/40"
               placeholder="Min. 8 characters"
             />
           </div>
 
           <div>
-            <label className="block font-mono text-[11px] uppercase tracking-widest text-[#444] mb-2">
+            <label className="block font-mono text-[11px] uppercase tracking-widest text-white/60 mb-2">
               Confirm Password
             </label>
             <input
@@ -131,7 +131,7 @@ export default function RegisterPage() {
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
               minLength={8}
-              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[#333]"
+              className="w-full bg-[#0f0f0f] border border-white/10 px-4 py-4 text-white text-[16px] font-mono focus:outline-none focus:border-[var(--accent)] transition-colors placeholder:text-white/40"
               placeholder="••••••••"
             />
           </div>
@@ -153,13 +153,13 @@ export default function RegisterPage() {
         <div className="mt-8 flex justify-between items-center">
           <Link
             href="/login"
-            className="text-[11px] font-mono uppercase tracking-widest text-[#444] hover:text-[var(--accent)] transition-colors"
+            className="text-[11px] font-mono uppercase tracking-widest text-white/60 hover:text-[var(--accent)] transition-colors"
           >
             [Already Registered]
           </Link>
           <Link
             href="/"
-            className="text-[11px] font-mono uppercase tracking-widest text-[#444] hover:text-white transition-colors"
+            className="text-[11px] font-mono uppercase tracking-widest text-white/60 hover:text-white transition-colors"
           >
             ← Back
           </Link>
@@ -170,7 +170,7 @@ export default function RegisterPage() {
           <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] mb-3">
             // Operator Benefits
           </p>
-          <ul className="space-y-2 font-mono text-[10px] uppercase tracking-widest text-[#333]">
+          <ul className="space-y-2 font-mono text-[10px] uppercase tracking-widest text-white/40">
             <li>[+] Order tracking &amp; history</li>
             <li>[+] Early access to Collection 002</li>
             <li>[+] Size memory across devices</li>
@@ -178,7 +178,7 @@ export default function RegisterPage() {
         </div>
 
         {/* Status bar */}
-        <div className="mt-8 pt-6 border-t border-white/5 flex justify-between font-mono text-[10px] uppercase tracking-widest text-[#222]">
+        <div className="mt-8 pt-6 border-t border-white/5 flex justify-between font-mono text-[10px] uppercase tracking-widest text-white/20">
           <span>Protocol: Supabase Auth</span>
           <span>Gate G6: Secure Cookies</span>
         </div>
