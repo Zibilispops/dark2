@@ -165,18 +165,18 @@ function HeroProduct() {
   return (
     <Link
       href={`/shop/${product.slug}`}
-      className="absolute right-0 top-0 h-full w-[65vw] max-w-[1200px] hidden lg:flex items-end overflow-hidden group"
+      className="absolute right-0 top-0 h-full w-[80vw] max-w-[1600px] hidden lg:flex items-end overflow-hidden group z-0"
       style={{ pointerEvents: 'auto' }}
     >
       {/* Gradient mask — fades left edge into bg */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '15%' }} />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-transparent z-10 pointer-events-none" style={{ width: '10%' }} />
       <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808] z-10 pointer-events-none" style={{ bottom: 0, height: '20%' }} />
 
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-full object-cover object-top transition-opacity duration-400 scale-125 group-hover:scale-[130%] transition-transform duration-1000 ease-out"
-        style={{ opacity: fading ? 0 : 0.7 }}
+        className="w-full h-full object-cover object-top transition-opacity duration-400 scale-115 group-hover:scale-125 transition-transform duration-1000 ease-out"
+        style={{ opacity: fading ? 0 : 0.8 }}
       />
 
       {/* Serial tag */}
